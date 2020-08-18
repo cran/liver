@@ -1,0 +1,32 @@
+\name{mse}
+\alias{mse}
+
+\title{	Mean Squared Error (MSE) }
+\description{
+	Computes mean squared error. 
+}
+\usage{
+mse( pred, true, weight = 1, na.rm = FALSE )
+}
+
+\arguments{
+    \item{pred}{a numerical vector of estimated values. }
+    \item{true}{a numerical vector of true values. }
+    \item{weight}{a numerical vector of weights the same length as \code{pred}. }
+    \item{na.rm}{a logical value indicating whether NA values in \code{pred} should be stripped before the computation proceeds. }
+}
+
+\value{ The computed mean squared error (numeric value). }
+
+\author{ Reza Mohammadi \email{a.mohammadi@uva.nl} and Kevin Burke \email{kevin.burke@ul.ie} }
+
+\examples{
+pred = c( 2.3, -1.4, 0, 3.45 )
+true = c( 2.1, -0.9, 0, 2.99 )
+  
+mse( pred, true )
+   
+}
+
+\keyword{parameter learning}
+
