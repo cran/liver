@@ -16,7 +16,7 @@ The \code{adult} dataset, as a data frame, contains \eqn{48842} rows (customers)
 
 \item \code{age}: age in years.
 \item \code{workclass}: a factor with 9 levels.
-\item \code{fnlwgt}: the demographics to describe a person.
+\item \code{demogweight}: the demographics to describe a person.
 \item \code{education}: a factor with 16 levels.
 \item \code{education.num}: number of years of education.
 \item \code{marital.status}: a factor with 7 levels.

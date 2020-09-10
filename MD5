@@ -1,4 +1,4 @@
-a89d0d616b6c8871824b2a9edec7cf34 *DESCRIPTION
+c2dd9edba4ac71d9cbe21c78f8204dcf *DESCRIPTION
 db7c22c10685563e5adbd3e46116fda3 *NAMESPACE
 c8192d96c1b8a3dfb9f37b70f7ac6920 *NEWS.md
 2737107ce650a78886cfd42613f28823 *R/find.na.R
@@ -9,12 +9,12 @@ b63d81d6d447ffed77414bfffb8732e8 *R/skewness.R
 06b4559ae4bcd2068a70a0ce60d243cb *R/transform.R
 d9ddfd06eb07c2972748a2873f3002bb *R/zscore.R
 fa784986df36a90387e966625ad3b54a *README.md
-90de429cf4f4bcf5746b82edb8f99dfd *data/adult.RData
+518c662cb0c6a63673fc139005380a5b *data/adult.RData
 8196a975ffaa49f915a2c895fedb9725 *data/churn.RData
 c364d271061e55d57bb7041e1e8ff695 *data/churnTel.RData
 dc1656ce605a0f7a316e34b9ad046641 *data/classifyRisk.RData
 24400541f7bdc3dd42befe4b01fb134f *data/housePrice.RData
-017c0c77336e30b595057dee1b085757 *man/adult.Rd
+6d4124fb46f8bf7ca08a9f12a31c77d8 *man/adult.Rd
 d129cad91974ece422fd40fdfaeccef0 *man/churn.Rd
 109b39fd09569e7eec1919e06e3027f2 *man/churnTel.Rd
 fb8588ef9691ec72d10ffb3ed94a4222 *man/classifyRisk.Rd
