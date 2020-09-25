@@ -21,7 +21,7 @@ For more information related to the dataset see:
 https://www.kaggle.com/blastchar/telco-customer-churn
 }
 
-\seealso{ \code{\link{adult}}, \code{\link{churn}}, \code{\link{classifyRisk}}, \code{\link{housePrice}} }
+\seealso{ \code{\link{churn}}, \code{\link{adult}}, \code{\link{bank}}, \code{\link{classifyRisk}}, \code{\link{housePrice}} }
 
 \examples{
 data( churnTel )

@@ -2,12 +2,17 @@ importFrom( stats, weighted.mean )
 importFrom( stats, sd )
 importFrom( stats, median )
 
+importFrom( stats, as.formula, model.frame, delete.response, model.response, model.matrix )
+
+import( "class" )
+
 export( mse,
         transform,
       	minmax,
         zscore,
         partition,
-	skewness,
-	find.na
+	    skewness,
+	    find.na,
+	    kNN
       )
 

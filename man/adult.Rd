@@ -46,7 +46,7 @@ http://www.cs.toronto.edu/~delve/data/adult/adultDetail.html
 Kohavi, R. (1996). Scaling up the accuracy of naive-bayes classifiers: A decision-tree hybrid. \emph{Kdd}.
 }
 
-\seealso{ \code{\link{churn}}, \code{\link{churnTel}}, \code{\link{classifyRisk}}, \code{\link{housePrice}} }
+\seealso{ \code{\link{bank}}, \code{\link{churn}}, \code{\link{churnTel}}, \code{\link{classifyRisk}}, \code{\link{housePrice}} }
 
 \examples{
 data( adult )

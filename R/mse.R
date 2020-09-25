@@ -25,6 +25,9 @@ mse = function( pred, true, weight = 1, na.rm = FALSE )
     
     if( length( weight ) == 1 ) weight = rep( weight, length( pred ) )
     
+    if( !is.numeric( pred ) ) pred = as.numeric( pred )
+    if( !is.numeric( true ) ) true = as.numeric( true )
+    
     mse_value = weighted.mean( ( pred - true ) ^ 2, w = weight, na.rm = na.rm )
 
     return( mse_value )
