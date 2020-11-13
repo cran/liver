@@ -12,10 +12,10 @@
 #     Compute a Mean Square Error (MSE)
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
 
-mse = function( pred, true, weight = 1, na.rm = FALSE ) 
+mse = function( pred, actual, weight = 1, na.rm = FALSE ) 
 {
-    if( length( pred ) != length( true ) )
-        stop( "prod & true must have the same length" )
+    if( length( pred ) != length( actual ) )
+        stop( "prod & actual must have the same length" )
 
     if( !is.numeric( weight ) )
         stop( "weight must be numeric" )
@@ -25,10 +25,10 @@ mse = function( pred, true, weight = 1, na.rm = FALSE )
     
     if( length( weight ) == 1 ) weight = rep( weight, length( pred ) )
     
-    if( !is.numeric( pred ) ) pred = as.numeric( pred )
-    if( !is.numeric( true ) ) true = as.numeric( true )
+    if( !is.numeric( pred   ) ) pred   = as.numeric( pred   )
+    if( !is.numeric( actual ) ) actual = as.numeric( actual )
     
-    mse_value = weighted.mean( ( pred - true ) ^ 2, w = weight, na.rm = na.rm )
+    mse_value = weighted.mean( ( pred - actual ) ^ 2, w = weight, na.rm = na.rm )
 
     return( mse_value )
 }

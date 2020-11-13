@@ -52,14 +52,14 @@ Target variable:
 \details{
 This dataset can be downloaded from the UCI machine learning repository:
 
-http://archive.ics.uci.edu/ml/datasets/Bank+Marketing
+\url{http://archive.ics.uci.edu/ml/datasets/Bank+Marketing}
 }
 
 \references{
 Moro, S., Laureano, R. and Cortez, P. (2011) Using Data Mining for Bank Direct Marketing: An Application of the CRISP-DM Methodology. In P. Novais et al. (Eds.), Proceedings of the European Simulation and Modelling Conference.
 }
 
-\seealso{ \code{\link{churn}}, \code{\link{adult}}, \code{\link{churnTel}}, \code{\link{classifyRisk}}, \code{\link{housePrice}} }
+\seealso{ \code{\link{adult}}, \code{\link{classifyRisk}}, \code{\link{churn}}, \code{\link{churnTel}}, \code{\link{advertising}}, \code{\link{marketing}}, \code{\link{insurance}}, \code{\link{cereal}}, \code{\link{housePrice}}, \code{\link{house}} }
 
 \examples{
 data( bank )

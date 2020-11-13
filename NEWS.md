@@ -5,9 +5,19 @@
 
 ## **liver** NEWS
 
-### **liver** Version 1.2
+### **liver** Version 1.3
 
 * Data set `marketing` is added.
+* Data set `advertising` is added.
+* Data set `insurance` is added.
+* Data set `cereal` is added.
+* Data set `house` is added.
+
+* Data set `churn` is updated.
+
+### **liver** Version 1.2
+
+* Data set `bank` is added.
 * Function kNN() is added to the package.
 
 ### **liver** Version 1.0

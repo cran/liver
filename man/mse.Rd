@@ -6,12 +6,12 @@
 	Computes mean squared error. 
 }
 \usage{
-mse( pred, true, weight = 1, na.rm = FALSE )
+mse( pred, actual, weight = 1, na.rm = FALSE )
 }
 
 \arguments{
     \item{pred}{a numerical vector of estimated values. }
-    \item{true}{a numerical vector of true values. }
+    \item{actual}{a numerical vector of actual values. }
     \item{weight}{a numerical vector of weights the same length as \code{pred}. }
     \item{na.rm}{a logical value indicating whether NA values in \code{pred} should be stripped before the computation proceeds. }
 }
@@ -21,10 +21,10 @@ mse( pred, true, weight = 1, na.rm = FALSE )
 \author{ Reza Mohammadi \email{a.mohammadi@uva.nl} and Kevin Burke \email{kevin.burke@ul.ie} }
 
 \examples{
-pred = c( 2.3, -1.4, 0, 3.45 )
-true = c( 2.1, -0.9, 0, 2.99 )
+pred   = c( 2.3, -1.4, 0, 3.45 )
+actual = c( 2.1, -0.9, 0, 2.99 )
   
-mse( pred, true )
+mse( pred, actual )
    
 }
 

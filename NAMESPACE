@@ -4,7 +4,8 @@ importFrom( stats, median )
 
 importFrom( stats, as.formula, model.frame, delete.response, model.response, model.matrix )
 
-import( "class" )
+importFrom( class, knn )
+
 
 export( mse,
         transform,

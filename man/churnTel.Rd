@@ -18,10 +18,10 @@ The \code{churnTel} dataset, as a data frame, contains \eqn{7043} rows (customer
 \details{
 For more information related to the dataset see:
 
-https://www.kaggle.com/blastchar/telco-customer-churn
+\url{https://www.kaggle.com/blastchar/telco-customer-churn}
 }
 
-\seealso{ \code{\link{churn}}, \code{\link{adult}}, \code{\link{bank}}, \code{\link{classifyRisk}}, \code{\link{housePrice}} }
+\seealso{ \code{\link{adult}}, \code{\link{classifyRisk}}, \code{\link{churn}}, \code{\link{bank}}, \code{\link{advertising}}, \code{\link{marketing}}, \code{\link{insurance}}, \code{\link{cereal}}, \code{\link{housePrice}}, \code{\link{house}} }
 
 \examples{
 data( churnTel )

@@ -11,7 +11,7 @@ The adult dataset contains \eqn{15} features and \eqn{48842} records. It was col
 
 \format{ 
 
-The \code{adult} dataset, as a data frame, contains \eqn{48842} rows (customers) and \eqn{15} columns (variables/features). The \eqn{15} variables are:
+The \code{adult} dataset, as a data frame, contains \eqn{48842} rows and \eqn{15} columns (variables/features). The \eqn{15} variables are:
  \itemize{
 
 \item \code{age}: age in years.
@@ -35,18 +35,18 @@ The \code{adult} dataset, as a data frame, contains \eqn{48842} rows (customers)
 \details{
 This dataset can be downloaded from the UCI machine learning repository:
 
-http://www.cs.toronto.edu/~delve/data/adult/desc.html
+\url{http://www.cs.toronto.edu/~delve/data/adult/desc.html}
 
 The detailed description on the dataset can be found in the UCI documentation
 
-http://www.cs.toronto.edu/~delve/data/adult/adultDetail.html
+\url{http://www.cs.toronto.edu/~delve/data/adult/adultDetail.html}
 }
 
 \references{
 Kohavi, R. (1996). Scaling up the accuracy of naive-bayes classifiers: A decision-tree hybrid. \emph{Kdd}.
 }
 
-\seealso{ \code{\link{bank}}, \code{\link{churn}}, \code{\link{churnTel}}, \code{\link{classifyRisk}}, \code{\link{housePrice}} }
+\seealso{ \code{\link{classifyRisk}}, \code{\link{churn}}, \code{\link{churnTel}}, \code{\link{bank}}, \code{\link{advertising}}, \code{\link{marketing}}, \code{\link{insurance}}, \code{\link{cereal}}, \code{\link{housePrice}}, \code{\link{house}} }
 
 \examples{
 data( adult )

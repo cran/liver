@@ -14,7 +14,7 @@ install.packages( "liver" )
 ```
 
 ``` r
-require( "liver" )
+library( "liver" )
 ```
 
 

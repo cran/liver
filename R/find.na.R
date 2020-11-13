@@ -18,7 +18,7 @@ find.na = function( x )
     
     ind = which( is.na( x ), arr.ind = TRUE )
     
-    if( length( ind ) == 0 ) print( "There is no any missing values (NA)." )
+    if( length( ind ) == 0 ) print( "  There is no missing values (NA)." )
     
     return( ind )
 }

@@ -6,7 +6,8 @@
 \code{kNN} is used to perform k-nearest neighbour classification for test set using training set. For each row of the test set, the \code{k} nearest (based on Euclidean distance) training set vectors are found. Then, the classification is done by majority vote (ties broken at random). This function provides a formula interface to the \code{\link[class]{knn}} function of \code{R} package \code{class}. In addition, it allows normalization of the given data using the \code{\link[liver]{transform}} function.
 }
 \usage{
-kNN( formula, train, test, k = 1, transform = FALSE, l = 0, prob = FALSE, use.all = TRUE )
+kNN( formula, train, test, k = 1, transform = FALSE, l = 0, prob = FALSE, 
+     use.all = TRUE, na.rm = FALSE )
 }
 
 \arguments{
@@ -26,6 +27,7 @@ is increased by ties.) }
 are returned as attribute \code{prob}. }  
   \item{use.all}{ controls handling of ties. If true, all distances equal to the \code{k}th largest are included. If false, a random selection of distances equal to the \code{k}th is chosen to use exactly \code{k} neighbours.
  }  
+  \item{na.rm}{a logical value indicating whether NA values in \code{x} should be stripped before the computation proceeds. }
 }
 
 \value{ 
@@ -45,12 +47,12 @@ Factor of classifications for the test set, in which the \code{doubt} will be re
 \seealso{ \code{\link{knn}}, \code{\link{transform}} }
 
 \examples{
-data( churn )
+data( classifyRisk )
 
-train = churn[ 1:100, ]
-test  = churn[   101, ]
+train = classifyRisk[ 1:100, ]
+test  = classifyRisk[   101, ]
 
-kNN( Churn ~ CustServ.Calls + Int.l.Plan, train = train, test = test )
+kNN( risk ~ income + age, train = train, test = test )
 }
 
 \keyword{models}

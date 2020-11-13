@@ -27,7 +27,7 @@ The \code{classifyRisk} dataset, as a data frame, contains \eqn{246} rows (custo
 Larose, D. T. and Larose, C. D. (2014). Discovering knowledge in data: an introduction to data mining. \emph{John Wiley & Sons}.
 }
 
-\seealso{ \code{\link{bank}}, \code{\link{adult}}, \code{\link{churn}}, \code{\link{churnTel}}, \code{\link{housePrice}} }
+\seealso{ \code{\link{adult}}, \code{\link{churn}}, \code{\link{churnTel}}, \code{\link{bank}}, \code{\link{advertising}}, \code{\link{marketing}}, \code{\link{insurance}}, \code{\link{cereal}}, \code{\link{housePrice}}, \code{\link{house}} }
 
 \examples{
 data( classifyRisk )
