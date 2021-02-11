@@ -25,7 +25,7 @@ The \code{insurance} dataset, as a data frame, contains \eqn{1338} rows (custome
 }
 
 \details{
-The detailed description on the dataset can be found:
+A detailed description of the dataset can be found:
 \url{https://www.kaggle.com/mirichoi0218/insurance}
 }
 
@@ -33,7 +33,7 @@ The detailed description on the dataset can be found:
 Brett Lantz (2019). Machine Learning with R: Expert techniques for predictive modeling. \emph{Packt Publishing Ltd}.
 }
 
-\seealso{ \code{\link{adult}}, \code{\link{classifyRisk}}, \code{\link{churn}}, \code{\link{churnTel}}, \code{\link{bank}}, \code{\link{advertising}}, \code{\link{marketing}}, \code{\link{cereal}}, \code{\link{housePrice}}, \code{\link{house}} }
+\seealso{ \code{\link{adult}}, \code{\link{risk}}, \code{\link{churn}}, \code{\link{churnTel}}, \code{\link{bank}}, \code{\link{advertising}}, \code{\link{marketing}}, \code{\link{cereal}}, \code{\link{housePrice}}, \code{\link{house}} }
 
 \examples{
 data( insurance )

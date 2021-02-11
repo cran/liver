@@ -47,7 +47,7 @@ These datasets have been gathered and cleaned up by Petra Isenberg, Pierre Dragi
 }
 
 
-\seealso{ \code{\link{adult}}, \code{\link{classifyRisk}}, \code{\link{churn}}, \code{\link{churnTel}}, \code{\link{bank}}, \code{\link{advertising}}, \code{\link{marketing}}, \code{\link{insurance}}, \code{\link{housePrice}}, \code{\link{house}} }
+\seealso{ \code{\link{adult}}, \code{\link{risk}}, \code{\link{churn}}, \code{\link{churnTel}}, \code{\link{bank}}, \code{\link{advertising}}, \code{\link{marketing}}, \code{\link{insurance}}, \code{\link{housePrice}}, \code{\link{house}} }
 
 \examples{
 data( cereal )

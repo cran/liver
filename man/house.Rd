@@ -23,12 +23,12 @@ The \code{house} dataset, as a data frame, contains \eqn{414} rows and \eqn{6} c
 }
 
 \details{
-The detailed description on the dataset can be found:
+A detailed description of the dataset can be found:
 
 \url{https://www.kaggle.com/quantbruce/real-estate-price-prediction}
 }
 
-\seealso{ \code{\link{adult}}, \code{\link{classifyRisk}}, \code{\link{churn}}, \code{\link{churnTel}}, \code{\link{bank}}, \code{\link{advertising}}, \code{\link{marketing}}, \code{\link{insurance}}, \code{\link{cereal}}, \code{\link{housePrice}} }
+\seealso{ \code{\link{adult}}, \code{\link{risk}}, \code{\link{churn}}, \code{\link{churnTel}}, \code{\link{bank}}, \code{\link{advertising}}, \code{\link{marketing}}, \code{\link{insurance}}, \code{\link{cereal}}, \code{\link{housePrice}} }
 
 \examples{
 data( house )

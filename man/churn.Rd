@@ -42,7 +42,7 @@ Larose, D. T. and Larose, C. D. (2014). Discovering knowledge in data: an introd
 }
 
 
-\seealso{ \code{\link{adult}}, \code{\link{classifyRisk}}, \code{\link{churnTel}}, \code{\link{bank}}, \code{\link{advertising}}, \code{\link{marketing}}, \code{\link{insurance}}, \code{\link{cereal}}, \code{\link{housePrice}}, \code{\link{house}} }
+\seealso{ \code{\link{adult}}, \code{\link{risk}}, \code{\link{churnTel}}, \code{\link{bank}}, \code{\link{advertising}}, \code{\link{marketing}}, \code{\link{insurance}}, \code{\link{cereal}}, \code{\link{housePrice}}, \code{\link{house}} }
 
 \examples{
 data( churn )

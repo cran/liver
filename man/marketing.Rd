@@ -26,12 +26,12 @@ The \code{marketing} dataset, as a data frame, contains \eqn{40} rows and \eqn{8
 }
 
 \details{
-The detailed description on the dataset can be found:
+A detailed description of the dataset can be found:
 
 \url{https://github.com/chrisBow/marketing-regression-part-one}
 }
 
-\seealso{ \code{\link{adult}}, \code{\link{classifyRisk}}, \code{\link{churn}}, \code{\link{churnTel}}, \code{\link{bank}}, \code{\link{advertising}}, \code{\link{insurance}}, \code{\link{cereal}}, \code{\link{housePrice}}, \code{\link{house}} }
+\seealso{ \code{\link{adult}}, \code{\link{risk}}, \code{\link{churn}}, \code{\link{churnTel}}, \code{\link{bank}}, \code{\link{advertising}}, \code{\link{insurance}}, \code{\link{cereal}}, \code{\link{housePrice}}, \code{\link{house}} }
 
 \examples{
 data( marketing )

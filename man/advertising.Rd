@@ -4,7 +4,7 @@
 \title{ advertising data set }
 
 \description{ 
-The advertising dataset contains \eqn{11} features and \eqn{1143} records. 
+The dataset is from an anonymous organisation's social media ad campaign. The advertising dataset contains \eqn{11} features and \eqn{1143} records. 
 }
 
 \usage{ data( advertising ) }
@@ -28,12 +28,12 @@ The \code{advertising} dataset, as a data frame, contains \eqn{1143} rows and \e
 }
 
 \details{
-The detailed description on the dataset can be found:
+A detailed description of the dataset can be found:
 
 \url{https://www.kaggle.com/loveall/clicks-conversion-tracking}
 }
 
-\seealso{ \code{\link{adult}}, \code{\link{classifyRisk}}, \code{\link{churn}}, \code{\link{churnTel}}, \code{\link{bank}}, \code{\link{marketing}}, \code{\link{insurance}}, \code{\link{cereal}}, \code{\link{housePrice}}, \code{\link{house}} }
+\seealso{ \code{\link{adult}}, \code{\link{risk}}, \code{\link{churn}}, \code{\link{churnTel}}, \code{\link{bank}}, \code{\link{marketing}}, \code{\link{insurance}}, \code{\link{cereal}}, \code{\link{housePrice}}, \code{\link{house}} }
 
 \examples{
 data( advertising )

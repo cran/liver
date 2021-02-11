@@ -47,10 +47,10 @@ Factor of classifications for the test set, in which the \code{doubt} will be re
 \seealso{ \code{\link{knn}}, \code{\link{transform}} }
 
 \examples{
-data( classifyRisk )
+data( risk )
 
-train = classifyRisk[ 1:100, ]
-test  = classifyRisk[   101, ]
+train = risk[ 1:100, ]
+test  = risk[   101, ]
 
 kNN( risk ~ income + age, train = train, test = test )
 }
