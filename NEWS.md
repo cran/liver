@@ -5,6 +5,14 @@
 
 ## **liver** NEWS
 
+### **liver** Version 1.5
+
+* Function `conf_mat()` is added to the package.
+
+* Option `columns` is added to function `transform()`.
+* Option `columns` is added to function `minmax()`.
+* Option `columns` is added to function `zscore()`.
+
 ### **liver** Version 1.4
 
 * Data set `fertilizer` is added.
@@ -25,7 +33,7 @@
 ### **liver** Version 1.2
 
 * Data set `bank` is added.
-* Function kNN() is added to the package.
+* Function `kNN()` is added to the package.
 
 ### **liver** Version 1.0
 
