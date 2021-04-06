@@ -9,10 +9,11 @@
 #                                                                              |
 #     Maintainer: Reza Mohammadi <a.mohammadi@uva.nl>                          |
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
-#     Create a Confusion Matrix
+#     Plot a Confusion Matrix
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
 
-conf.mat = function( pred, actual, cutoff = NULL, dnn = c( "Prediction", "Actual" ), ... )
+conf.mat.plot = function( pred, actual, cutoff = NULL, conf.level = 0, 
+                          margin = 1, color = c( "#ff83a8", "#83ff9b" ), ... )
 {
     if( length( pred ) != length( actual ) )
         stop( "prod & actual must have the same length" )
@@ -24,19 +25,20 @@ conf.mat = function( pred, actual, cutoff = NULL, dnn = c( "Prediction", "Actual
         if( length( levels )  < 2 ) stop( " 'actual' must have more than two levels." )
         if( length( levels ) != 2 ) stop( " For the case 'cutoff!=NULL', 'actual' must have two levels." )
         
-        if( levels[ 1 ] == 0 ) levels = c( levels[ 2 ], levels[ 1 ] ) 
+        if( ( levels[ 1 ] == 1 ) | ( levels[ 1 ] == "no" ) | ( levels[ 1 ] == "No" ) | ( levels[ 1 ] == FALSE ) )
+            levels = c( levels[ 2 ], levels[ 1 ] ) 
         
         cat( paste( c( "Setting levels: control = \"", levels[ 1 ], "\", case = \"", levels[ 2 ],"\"  \n" ), collapse = "" ) ) 
         
         pred = ifelse( pred >= cutoff, levels[ 1 ], levels[ 2 ] )
         
-        pred = factor( pred, levels = levels )
+        pred   = factor( pred  , levels = levels )
         actual = factor( actual, levels = levels )
     }
     
-    output = table( pred, actual, dnn = dnn, ... )
-    
-    return( output )
+    prediction = pred
+    graphics::fourfoldplot( table( prediction, actual ), conf.level = conf.level, 
+                            margin = margin, color = color, ... )
 }
    
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |

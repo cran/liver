@@ -10,7 +10,6 @@ The marketing dataset contains \eqn{8} features and \eqn{40} records as 40 days 
 \usage{ data( marketing ) }
 
 \format{ 
-
 The \code{marketing} dataset, as a data frame, contains \eqn{40} rows and \eqn{8} columns (variables/features). The \eqn{8} variables are:
  \itemize{
 

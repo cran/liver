@@ -5,9 +5,15 @@
 
 ## **liver** NEWS
 
+### **liver** Version 1.6
+
+* Function `kNN.plot()` is added to the package.
+* Function `conf.mat.plot()` is added to the package.
+* Function `mae()` is added to the package.
+
 ### **liver** Version 1.5
 
-* Function `conf_mat()` is added to the package.
+* Function `conf.mat()` is added to the package.
 
 * Option `columns` is added to function `transform()`.
 * Option `columns` is added to function `minmax()`.

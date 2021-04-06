@@ -21,6 +21,8 @@ conf.mat( pred, actual, cutoff = NULL, dnn = c( "Prediction", "Actual" ), ... )
 
 \author{ Reza Mohammadi \email{a.mohammadi@uva.nl} and Kevin Burke \email{kevin.burke@ul.ie} }
 
+\seealso{ \code{\link{conf.mat.plot}} }
+
 \examples{
 pred   = c( "no", "yes", "yes", "no", "no", "yes", "no", "no" )
 actual = c( "yes", "no", "yes", "no", "no", "no", "yes", "yes" )

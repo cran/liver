@@ -1,12 +1,12 @@
-\name{mse}
-\alias{mse}
+\name{mae}
+\alias{mae}
 
-\title{	Mean Squared Error (MSE) }
+\title{	Mean Absolute Error (MAE) }
 \description{
-	Computes mean squared error. 
+	Computes mean absolute error. 
 }
 \usage{
-mse( pred, actual, weight = 1, na.rm = FALSE )
+mae( pred, actual, weight = 1, na.rm = FALSE )
 }
 
 \arguments{
@@ -20,14 +20,13 @@ mse( pred, actual, weight = 1, na.rm = FALSE )
 
 \author{ Reza Mohammadi \email{a.mohammadi@uva.nl} and Kevin Burke \email{kevin.burke@ul.ie} }
 
-\seealso{ \code{\link{mae}} }
+\seealso{ \code{\link{mse}} }
 
 \examples{
 pred   = c( 2.3, -1.4, 0, 3.45 )
 actual = c( 2.1, -0.9, 0, 2.99 )
   
-mse( pred, actual )
-   
+mae( pred, actual )
 }
 
 \keyword{parameter learning}

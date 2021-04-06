@@ -5,9 +5,12 @@ importFrom( stats, median )
 importFrom( stats, as.formula, model.frame, delete.response, model.response, model.matrix )
 
 importFrom( class, knn )
-
+importFrom( ggplot2, ggplot, geom_line, geom_point, theme_minimal, 
+                     scale_x_continuous, ggtitle, labs, theme, 
+                     aes, element_line, element_blank )
 
 export( mse,
+        mae,
         transform,
       	minmax,
         zscore,
@@ -15,6 +18,8 @@ export( mse,
 	    skewness,
 	    find.na,
 	    kNN,
-        conf.mat
+        kNN.plot,
+        conf.mat,
+        conf.mat.plot
       )
 

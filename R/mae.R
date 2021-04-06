@@ -9,45 +9,28 @@
 #                                                                              |
 #     Maintainer: Reza Mohammadi <a.mohammadi@uva.nl>                          |
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
-#     Partition a dataset
+#     Compute a Mean Absolute Error (MAE)
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
 
-partition = function( data, prob = c( 0.7, 0.3 ), set.seed = NULL )
+mae = function( pred, actual, weight = 1, na.rm = FALSE ) 
 {
-    if( !is.matrix( data ) & !is.data.frame( data ) ) stop( " data must be a matrix, or dataframe" )
+    if( length( pred ) != length( actual ) )
+        stop( "prod & actual must have the same length" )
+
+    if( !is.numeric( weight ) )
+        stop( "weight must be numeric" )
+
+    if( length( weight ) > 1 & length( weight ) != length( pred ) )
+        stop( "prod & weight must have the same length" )
     
-    if( !is.null( set.seed ) ) set.seed( set.seed )
+    if( length( weight ) == 1 ) weight = rep( weight, length( pred ) )
     
-    length_prob = length( prob )
+    if( !is.numeric( pred   ) ) pred   = as.numeric( pred   )
+    if( !is.numeric( actual ) ) actual = as.numeric( actual )
     
-    if( length_prob > nrow( data ) ) stop( "length of prob must be smaller or equal to number of observations." )
-    
-    ind = sample( length_prob, nrow( data ), replace = TRUE, prob = prob )
-    
-    if( length_prob == 1 ){
-        partitions = data[ ind == 1, ]
-    }else{
-        name_list = vector( length = length_prob )
-        partitions = list()
-        
-        for( i in 1:length_prob ){
-            partitions[[ i ]] = data[ ind == i, ]
-            
-            name_list[ i ] = paste( c( "part", i ), collapse = "" )
-        }
-        
-        names( partitions ) = name_list
-    }
-    
-    return( partitions )    
+    mae_value = weighted.mean( abs( pred - actual ), w = weight, na.rm = na.rm )
+
+    return( mae_value )
 }
    
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
-
-
-
-
-
-
-
-
