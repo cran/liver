@@ -12,7 +12,8 @@
 #     Create a Confusion Matrix
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
 
-conf.mat = function( pred, actual, cutoff = NULL, dnn = c( "Prediction", "Actual" ), ... )
+conf.mat = function( pred, actual, cutoff = NULL, reference = NULL, 
+                     proportion = FALSE, dnn = c( "Prediction", "Actual" ), ... )
 {
     if( length( pred ) != length( actual ) )
         stop( "prod & actual must have the same length" )
@@ -26,19 +27,26 @@ conf.mat = function( pred, actual, cutoff = NULL, dnn = c( "Prediction", "Actual
         
         if( levels[ 1 ] == 0 ) levels = c( levels[ 2 ], levels[ 1 ] ) 
         
-        cat( paste( c( "Setting levels: control = \"", levels[ 1 ], "\", case = \"", levels[ 2 ],"\"  \n" ), collapse = "" ) ) 
+        if( !is.null( reference ) )
+            if( which( levels == reference ) == 2 ) levels = c( levels[ 2 ], levels[ 1 ] ) 
+        
+        cat( paste( c( "Setting levels: reference = \"", levels[ 1 ], "\", case = \"", levels[ 2 ],"\"  \n" ), collapse = "" ) ) 
         
         pred = ifelse( pred >= cutoff, levels[ 1 ], levels[ 2 ] )
         
-        pred = factor( pred, levels = levels )
+        pred   = factor( pred  , levels = levels )
         actual = factor( actual, levels = levels )
     }
     
-    output = table( pred, actual, dnn = dnn, ... )
+    conf_mat = table( pred, actual, dnn = dnn, ... )
     
-    return( output )
+    if( proportion == TRUE ){
+        conf_mat = round( conf_mat / sum( conf_mat ), 3 )
+    }
+    
+    return( conf_mat )
 }
-   
+
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
 
 

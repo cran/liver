@@ -1,9 +1,20 @@
 # **liver** 
   
-![](https://www.r-pkg.org/badges/version/liver) ![](https://www.r-pkg.org/badges/last-release/liver) ![](https://cranlogs.r-pkg.org/badges/liver) 
+![](https://www.r-pkg.org/badges/version/liver) 
+![](https://www.r-pkg.org/badges/last-release/liver) 
+![](https://cranlogs.r-pkg.org/badges/liver) 
 ![](https://cranlogs.r-pkg.org/badges/grand-total/liver) 
 
 ## **liver** NEWS
+
+### **liver** Version 1.7
+
+* Function `accuracy()` is added to the package.
+
+* Option `base` is added to function `kNN.plot()`.
+* Option `reference` is added to function `conf.mat.plot()`.
+* Option `reference` is added to function `conf.mat()`.
+* Option `proportion` is added to function `conf.mat()`.
 
 ### **liver** Version 1.6
 

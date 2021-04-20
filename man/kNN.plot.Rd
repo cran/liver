@@ -3,10 +3,11 @@
 
 \title{ Visualizing the Optimal Number of k }
 \description{
-Visualizing the Optimal Number of k for k-Nearest Neighbour Classification\code{kNN} based on Mean Square Error (MSE). 
+Visualizing the Optimal Number of k for k-Nearest Neighbour Classification\code{kNN} based on accuracy or Mean Square Error (MSE). 
 }
 \usage{
-kNN.plot( formula, train, test, k.max = 10, transform = FALSE, set.seed = NULL, ... )
+kNN.plot( formula, train, test, k.max = 10, transform = FALSE, base = "error", 
+          set.seed = NULL, ... )
 }
 
 \arguments{
@@ -18,6 +19,7 @@ kNN.plot( formula, train, test, k.max = 10, transform = FALSE, set.seed = NULL, 
   \item{transform}{a character with options \code{FALSE} (default), \code{"minmax"}, and \code{"zscore"}. 
   Option \code{"minmax"} means no transformation. This option allows the users to use normalized version of the train and test sets for the kNN aglorithm. 
   }  
+  \item{base}{ base measurement: \code{error} (default), \code{accuracy}, or \code{MSE} for Mean Square Error.  }  
   
   \item{set.seed}{a single value, interpreted as an integer, or NULL. }
   \item{ \dots }{options to be passed to \code{kNN()}. }
@@ -38,10 +40,11 @@ kNN.plot( formula, train, test, k.max = 10, transform = FALSE, set.seed = NULL, 
 \examples{
 data( risk )
 
-train = risk[ 1:150, ]
-test  = risk[ 150:246, ]
+train = risk[   1:150, ]
+test  = risk[ 151:246, ]
 
 kNN.plot( risk ~ income + age, train = train, test = test )
+kNN.plot( risk ~ income + age, train = train, test = test, base = "accuracy" )
 }
 
 \keyword{models}
