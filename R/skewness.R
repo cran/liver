@@ -17,8 +17,7 @@ skewness = function( x, na.rm = FALSE )
     if( !is.vector( x ) & !is.matrix( x ) & !is.data.frame( x ) ) stop( " x must be a vector, matrix, or dataframe" )
     if( is.data.frame( x ) ) x = data.matrix( x )
 
-    if( any( is.na( x ) ) & ( na.rm == FALSE ) )
-        na.rm = TRUE
+    if( any( is.na( x ) ) & ( na.rm == FALSE ) ) na.rm = TRUE
     
     if( is.vector( x ) ){
         skew = 3 * ( mean( x, na.rm = na.rm ) - median( x, na.rm = na.rm ) ) / sd( x, na.rm = na.rm )

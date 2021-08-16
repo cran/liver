@@ -7,6 +7,10 @@
 
 ## **liver** NEWS
 
+### **liver** Version 1.8
+
+* Function `kNN()` is updated.
+
 ### **liver** Version 1.7
 
 * Function `accuracy()` is added to the package.

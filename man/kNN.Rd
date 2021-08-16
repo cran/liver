@@ -2,9 +2,11 @@
 \alias{kNN}
 
 \title{	k-Nearest Neighbour Classification }
+
 \description{
 \code{kNN} is used to perform k-nearest neighbour classification for test set using training set. For each row of the test set, the \code{k} nearest (based on Euclidean distance) training set vectors are found. Then, the classification is done by majority vote (ties broken at random). This function provides a formula interface to the \code{\link[class]{knn}} function of \code{R} package \code{class}. In addition, it allows normalization of the given data using the \code{\link[liver]{transform}} function.
 }
+
 \usage{
 kNN( formula, train, test, k = 1, transform = FALSE, l = 0, prob = FALSE, 
      use.all = TRUE, na.rm = FALSE )
@@ -31,15 +33,13 @@ are returned as attribute \code{prob}. }
 }
 
 \value{ 
-Factor of classifications for the test set, in which the \code{doubt} will be returned as \code{NA}; basically, the return value is the same as in the \code{\link[class]{knn}} function of \code{R} package \code{class}.
+Factor of classifications for the test set, in which the \code{doubt} will be returned as \code{NA}. If \code{prob = TRUE}, a matrix of class probabilities.
  }
 
 \references{
-  Ripley, B. D. (1996)
-  \emph{Pattern Recognition and Neural Networks.} Cambridge.
+  Ripley, B. D. (1996) \emph{Pattern Recognition and Neural Networks.} Cambridge.
 
-  Venables, W. N. and Ripley, B. D. (2002)
-  \emph{Modern Applied Statistics with S.} Fourth edition.  Springer.
+  Venables, W. N. and Ripley, B. D. (2002) \emph{Modern Applied Statistics with S.} Fourth edition. Springer.
 }
 
 \author{ Reza Mohammadi \email{a.mohammadi@uva.nl} and Kevin Burke \email{kevin.burke@ul.ie} }

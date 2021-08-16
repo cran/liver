@@ -2,9 +2,8 @@
 \alias{conf.mat}
 
 \title{	Confusion Matrix }
-\description{
-	Create a Confusion Matrix.
-}
+\description{ Create a Confusion Matrix. }
+
 \usage{
 conf.mat( pred, actual, cutoff = NULL, reference = NULL, 
           proportion = FALSE, dnn = c( "Prediction", "Actual" ), ... )

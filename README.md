@@ -1,5 +1,7 @@
-# **liver** 
-  
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+# **liver** <a href='https://CRAN.R-project.org/package=liver'><img src='man/figures/logo.png' align="right" height="150" /></a>
+
 ![](https://www.r-pkg.org/badges/version/liver) 
 ![](https://www.r-pkg.org/badges/last-release/liver) 
 ![](https://cranlogs.r-pkg.org/badges/liver) 
@@ -15,5 +17,10 @@ To install the latest version of this package from [CRAN](https://cran.r-project
 install.packages( "liver" )
 ```
 
+### Loading
+
+``` r
+require( liver )
+```
 
 
