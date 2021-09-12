@@ -7,6 +7,10 @@
 
 ## **liver** NEWS
 
+### **liver** Version 1.9
+
+* Data set `corona` is added.
+
 ### **liver** Version 1.8
 
 * Function `kNN()` is updated.

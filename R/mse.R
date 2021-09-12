@@ -28,7 +28,7 @@ mse = function( pred, actual, weight = 1, na.rm = FALSE )
     if( !is.numeric( pred   ) ) pred   = as.numeric( pred   )
     if( !is.numeric( actual ) ) actual = as.numeric( actual )
     
-    mse_value = weighted.mean( ( pred - actual ) ^ 2, w = weight, na.rm = na.rm )
+    mse_value = stats::weighted.mean( ( pred - actual ) ^ 2, w = weight, na.rm = na.rm )
 
     return( mse_value )
 }

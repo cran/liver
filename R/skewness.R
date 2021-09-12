@@ -20,11 +20,11 @@ skewness = function( x, na.rm = FALSE )
     if( any( is.na( x ) ) & ( na.rm == FALSE ) ) na.rm = TRUE
     
     if( is.vector( x ) ){
-        skew = 3 * ( mean( x, na.rm = na.rm ) - median( x, na.rm = na.rm ) ) / sd( x, na.rm = na.rm )
+        skew = 3 * ( mean( x, na.rm = na.rm ) - stats::median( x, na.rm = na.rm ) ) / stats::sd( x, na.rm = na.rm )
     }
     
     if( is.matrix( x ) ){
-        skew = 3 * ( apply( x, 2, mean, na.rm = na.rm ) - apply( x, 2, median, na.rm = na.rm ) ) / apply( x, 2, sd, na.rm = na.rm )
+        skew = 3 * ( apply( x, 2, mean, na.rm = na.rm ) - apply( x, 2, stats::median, na.rm = na.rm ) ) / apply( x, 2, stats::sd, na.rm = na.rm )
      }
     
     return( skew )

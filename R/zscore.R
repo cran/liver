@@ -21,7 +21,7 @@ zscore = function( x, columns = NULL, na.rm = FALSE )
     if( any( is.na( x ) ) & ( na.rm == FALSE ) ) na.rm = TRUE
     
     if( is.vector( x ) ){
-        z = ( x - mean( x, na.rm = na.rm ) ) / sd( x, na.rm = na.rm )
+        z = ( x - mean( x, na.rm = na.rm ) ) / stats::sd( x, na.rm = na.rm )
     }
     
     if( is.null( columns ) )

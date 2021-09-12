@@ -28,7 +28,7 @@ mae = function( pred, actual, weight = 1, na.rm = FALSE )
     if( !is.numeric( pred   ) ) pred   = as.numeric( pred   )
     if( !is.numeric( actual ) ) actual = as.numeric( actual )
     
-    mae_value = weighted.mean( abs( pred - actual ), w = weight, na.rm = na.rm )
+    mae_value = stats::weighted.mean( abs( pred - actual ), w = weight, na.rm = na.rm )
 
     return( mae_value )
 }
