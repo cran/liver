@@ -12,8 +12,8 @@
 #     k-Nearest Neighbour Classification using formula interface
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
 
-kNN = function( formula, train, test, k = 1, transform = FALSE, l = 0, 
-                prob = FALSE, use.all = TRUE, na.rm = FALSE ) 
+kNN = function( formula, train, test, k = 1, transform = FALSE, type = "class", 
+                l = 0, use.all = TRUE, na.rm = FALSE ) 
 {
     formula = stats::as.formula( formula )
     
@@ -44,6 +44,8 @@ kNN = function( formula, train, test, k = 1, transform = FALSE, l = 0,
             test  = data_all[ -( 1:length( train ) ) ]
         }
     }
+    
+    prob = ifelse( type == "prob", TRUE, FALSE )
     
     output_knn = class::knn( train = train, test = test, cl = train_label, k = k, 
                              l = l, prob = prob, use.all = use.all )

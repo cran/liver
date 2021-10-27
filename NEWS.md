@@ -7,6 +7,11 @@
 
 ## **liver** NEWS
 
+### **liver** Version 1.10
+
+* In function `kNN()`, option `prob` replaced by `type`.
+* vignette is added to the package.
+
 ### **liver** Version 1.9
 
 * Data set `corona` is added.

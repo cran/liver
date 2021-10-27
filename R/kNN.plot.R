@@ -56,8 +56,8 @@ kNN.plot = function( formula, train, test, k.max = 10, transform = FALSE,
     base_list = vector( length = k.max  )
     
     for( k in k_list ){
-        #knn_k = class::knn( train = train, test = test, cl = train_label, k = k, ... )
-        knn_k = class::knn( train = train, test = test, cl = train_label, k = k )
+        knn_k = class::knn( train = train, test = test, cl = train_label, k = k, ... )
+        #knn_k = class::knn( train = train, test = test, cl = train_label, k = k )
         
         base_list[ k ] = liver::accuracy( knn_k, test_label )
     }

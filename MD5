@@ -1,12 +1,12 @@
-753a37f3142b311cfb99e2fedfef482f *DESCRIPTION
+73e3c2ca599d8a0ce3f4bee99c481ed2 *DESCRIPTION
 76b572a46c725e14609db7506b588004 *NAMESPACE
-45f9253f54ad4ebb667b4a1aa18af334 *NEWS.md
+b7ec728fbe0bb199df77c64a7dd4e67f *NEWS.md
 60830276446cad6d53553d5ce6284183 *R/accuracy.R
 66951c9ba72b21b22754e8e27a842fb1 *R/conf.mat.R
 cccda63a6dcb13e680bb5d7073aceb70 *R/conf.mat.plot.R
 ab7f6588597fb00fc71054f98d72b903 *R/find.na.R
-a6c926cf824bde080436672f24f5b227 *R/kNN.R
-2dc8eb0ec157dbc90e5509d7b65471ae *R/kNN.plot.R
+4c119fcfbb4af79394ff2d7517f63643 *R/kNN.R
+cb66675af141df37417406161d2776e4 *R/kNN.plot.R
 1db8b9d1f8c67168ba56ac1946bc8715 *R/mae.R
 f0cea9e4108c7e08af227641876ff217 *R/minmax.R
 c97026e937949dd272b4a9c312367c7b *R/mse.R
@@ -15,6 +15,7 @@ f3b6ee9dd5ad1c210b1bd8df17198675 *R/skewness.R
 5fb8f9a7886af28aa4c021ca33e4512c *R/transform.R
 8488e4b6af7ab42edd20af17a19e9747 *R/zscore.R
 db49d62de9a7754de68e77013b5eea59 *README.md
+8ecc97ea491d0691636e7af6a8754b07 *build/vignette.rds
 79045d69cc312ee0d14a2513dee6562c *data/adult.RData
 315e7a6aee74f3b2e5a67f6018cb10bc *data/advertising.RData
 df6d1d09215a038f040f52a0082530dd *data/bank.RData
@@ -29,6 +30,9 @@ f116c73410c34e6769a087344b4d979f *data/house.RData
 29346094234eae19daff0451734aa1d5 *data/insurance.RData
 d91af35fb4cc4e581eaf0bb72a6c3dc4 *data/marketing.RData
 d5c36dd5719ece104cf9f3f620f958d0 *data/risk.RData
+e5744153225eb0dcb730aef451e66913 *inst/doc/liver-example.R
+7af3719e324373ff4be6cdd2fb904d04 *inst/doc/liver-example.Rmd
+e6d2108d516d915b6e3143cb8179725a *inst/doc/liver-example.html
 74e12afb5647c3f7cef82cd8f48cfe36 *man/accuracy.Rd
 1af4e530ec36f65ca3bde66dba22a3b4 *man/adult.Rd
 115c3ef72358494dff21114473201598 *man/advertising.Rd
@@ -45,7 +49,7 @@ c4685c73886f38919176fe414eb0c4b0 *man/find.na.Rd
 9620174c84ae433ae7c91f96a7c34e4a *man/house.Rd
 49e80abca51fab01af58419a433aa317 *man/housePrice.Rd
 f06137fcf7a981a8e5e42c5527452e88 *man/insurance.Rd
-c16b7d98970c9a060ec8a49de9078263 *man/kNN.Rd
+b2565166c6e08762bac6042e86911e16 *man/kNN.Rd
 300824aaabbcd8914dce706d0830e892 *man/kNN.plot.Rd
 7cafd6a88a016a43bd924f2b9b949799 *man/liver-package.Rd
 dadcdd5f79f95958be0b2e79327b484c *man/mae.Rd
@@ -57,3 +61,4 @@ fdaeb0ead6461f63b46a419a2a7fc314 *man/risk.Rd
 edf4b9c54c3feca45819198faf0ed582 *man/skewness.Rd
 9300d78298fc5fbbe5d1a85d100370b8 *man/transform.Rd
 95028f639b260ec329fa084bdb8e4332 *man/zscore.Rd
+7af3719e324373ff4be6cdd2fb904d04 *vignettes/liver-example.Rmd

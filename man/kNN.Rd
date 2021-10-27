@@ -8,7 +8,7 @@
 }
 
 \usage{
-kNN( formula, train, test, k = 1, transform = FALSE, l = 0, prob = FALSE, 
+kNN( formula, train, test, k = 1, transform = FALSE, type = "class", l = 0, 
      use.all = TRUE, na.rm = FALSE )
 }
 
@@ -21,19 +21,24 @@ kNN( formula, train, test, k = 1, transform = FALSE, l = 0, prob = FALSE,
   \item{transform}{a character with options \code{FALSE} (default), \code{"minmax"}, and \code{"zscore"}. 
   Option \code{"minmax"} means no transformation. This option allows the users to use normalized version of the train and test sets for the kNN aglorithm. 
   }  
+
+  \item{type}{either \code{"class"} (default) for the predicted class or
+    \code{"prob"} for model confidence values.}
   
   \item{l}{ minimum vote for definite decision, otherwise \code{doubt}. (More
 precisely, less than \code{k-l} dissenting votes are allowed, even if \code{k}
-is increased by ties.) }  
-  \item{prob}{ If this is true, the proportion of the votes for the winning class
-are returned as attribute \code{prob}. }  
+is increased by ties.) } 
+
   \item{use.all}{ controls handling of ties. If true, all distances equal to the \code{k}th largest are included. If false, a random selection of distances equal to the \code{k}th is chosen to use exactly \code{k} neighbours.
  }  
   \item{na.rm}{a logical value indicating whether NA values in \code{x} should be stripped before the computation proceeds. }
 }
 
 \value{ 
-Factor of classifications for the test set, in which the \code{doubt} will be returned as \code{NA}. If \code{prob = TRUE}, a matrix of class probabilities.
+When \code{type = "class"} (default), a factor vector is returned, 
+in which the \code{doubt} will be returned as \code{NA}.
+When \code{type = "prob"}, a matrix of confidence values is returned
+(one column per class).
  }
 
 \references{
