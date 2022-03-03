@@ -7,7 +7,7 @@ Visualizing the Optimal Number of k for k-Nearest Neighbour Classification\code{
 }
 \usage{
 kNN.plot( formula, train, test, k.max = 10, transform = FALSE, base = "error", 
-          set.seed = NULL, ... )
+          report = FALSE, set.seed = NULL, ... )
 }
 
 \arguments{
@@ -21,6 +21,9 @@ kNN.plot( formula, train, test, k.max = 10, transform = FALSE, base = "error",
   }  
   \item{base}{ base measurement: \code{error} (default), \code{accuracy}, or \code{MSE} for Mean Square Error.  }  
   
+  \item{report}{a character with options \code{FALSE} (default) and \code{TRUE}. 
+  Option \code{TRUE} reports the values of the \code{base} measurement. 
+  }  
   \item{set.seed}{a single value, interpreted as an integer, or NULL. }
   \item{ \dots }{options to be passed to \code{kNN()}. }
 }

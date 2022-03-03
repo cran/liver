@@ -7,6 +7,13 @@
 
 ## **liver** NEWS
 
+### **liver** Version 1.11
+
+* Function `skim()` is added to the package.
+* In function `kNN.plot()`, option `report` is added.
+
+* Data set `churnCredit` is added.
+
 ### **liver** Version 1.10
 
 * In function `kNN()`, option `prob` replaced by `type`.

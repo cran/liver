@@ -13,7 +13,7 @@
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
 
 kNN.plot = function( formula, train, test, k.max = 10, transform = FALSE, 
-                     base = "error", set.seed = NULL, ... ) 
+                     base = "error", report = FALSE, set.seed = NULL, ... ) 
 {
     if( k.max < 2 ) stop( "  k.max must be > 1" )
     
@@ -55,7 +55,8 @@ kNN.plot = function( formula, train, test, k.max = 10, transform = FALSE,
     k_list   = 1:k.max
     base_list = vector( length = k.max  )
     
-    for( k in k_list ){
+    for( k in k_list )
+    {
         knn_k = class::knn( train = train, test = test, cl = train_label, k = k, ... )
         #knn_k = class::knn( train = train, test = test, cl = train_label, k = k )
         
@@ -84,11 +85,11 @@ kNN.plot = function( formula, train, test, k.max = 10, transform = FALSE,
         y_lab = "Error Rate"
     }
     
-    df = data.frame( k_list = as.factor( k_list ), base_list = base_list, stringsAsFactors = TRUE)
+    df = data.frame( k_list = as.factor( k_list ), base_list = base_list, stringsAsFactors = TRUE )
     
     df_gg = data.frame( k_list = k_list, base_list = base_list )
     
-    ggplot2::ggplot( df_gg, ggplot2::aes( x = k_list, y = base_list ) ) +
+    p = ggplot2::ggplot( df_gg, ggplot2::aes( x = k_list, y = base_list ) ) +
         ggplot2::geom_line( color = "#a0a0a0" ) + 
         ggplot2::geom_point( shape = 21, color = "#ff5085", fill = "#ff83a8", size = 2 ) + 
         ggplot2::theme_minimal() + 
@@ -98,6 +99,11 @@ kNN.plot = function( formula, train, test, k.max = 10, transform = FALSE,
         ggplot2::theme( axis.line = ggplot2::element_line( size = 0.4, colour = "black" ),
                         panel.grid.major = ggplot2::element_line( colour = "#f2f2f2" ), panel.grid.minor = ggplot2::element_blank(),
                         panel.border = ggplot2::element_blank(), panel.background = ggplot2::element_blank() )
+
+    if( report == FALSE ) 
+        return( p )
+    else
+        return( list( base_list, p ) )
 }
    
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |

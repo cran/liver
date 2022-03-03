@@ -10,6 +10,7 @@ export( mse,
 	    kNN,
         kNN.plot,
         conf.mat,
-        conf.mat.plot
+        conf.mat.plot,
+        skim
       )
 

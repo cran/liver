@@ -9,28 +9,23 @@
 #                                                                              |
 #     Maintainer: Reza Mohammadi <a.mohammadi@uva.nl>                          |
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
-#     Compute a Mean Absolute Error (MAE)
+#     Skim a data frame to get useful summary statistics
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
 
-mae = function( pred, actual, weight = 1, na.rm = FALSE ) 
+skim = function( data, hist = TRUE, ... )
 {
-    if( length( pred ) != length( actual ) )
-        stop( "prod & actual must have the same length" )
-
-    if( !is.numeric( weight ) )
-        stop( "weight must be numeric" )
-
-    if( length( weight ) > 1 & length( weight ) != length( pred ) )
-        stop( "prod & weight must have the same length" )
-    
-    if( length( weight ) == 1 ) weight = rep( weight, length( pred ) )
-    
-    if( !is.numeric( pred   ) ) pred   = as.numeric( pred   )
-    if( !is.numeric( actual ) ) actual = as.numeric( actual )
-    
-    mae_value = stats::weighted.mean( abs( pred - actual ), w = weight, na.rm = na.rm )
-
-    return( mae_value )
+    if( hist == TRUE ) 
+        skimr::skim( data = data, ... )
+    else
+        skimr::skim_without_charts( data = data, ... )
 }
-   
+
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+
+
+
+
+
+
+
+
