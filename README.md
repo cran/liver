@@ -1,6 +1,6 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# **liver** <a href='https://CRAN.R-project.org/package=liver'><img src='man/figures/logo.png' align="right" height="150" /></a>
+# **liver** <a href='https://CRAN.R-project.org/package=liver'><img src='man/figures/logo.png' align="right" height="300" /></a>
 
 ![](https://www.r-pkg.org/badges/version/liver) 
 ![](https://www.r-pkg.org/badges/last-release/liver) 
@@ -17,10 +17,15 @@ To install the latest version of this package from [CRAN](https://cran.r-project
 install.packages( "liver" )
 ```
 
-### Loading
+## Loading
 
 ``` r
-require( liver )
+library( liver )
 ```
 
+## Example for Data Analysis
+
+To see how to use the functionality of the package for data analysis:
+
+[https://CRAN.R-project.org/package=liver/vignettes/liver-example.html](https://CRAN.R-project.org/package=liver/vignettes/liver-example.html)
 

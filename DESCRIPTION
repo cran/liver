@@ -1,6 +1,6 @@
 Package: liver
 Title: "Eating the Liver of Data Science"
-Version: 1.11
+Version: 1.12
 Authors@R: 
     c(person(given = "Reza",
              family = "Mohammadi",
@@ -18,12 +18,12 @@ URL: https://www.uva.nl/profile/a.mohammadi
 Depends: R (>= 3.5.0)
 Imports: class, ggplot2
 Suggests: pROC, skimr, knitr, rmarkdown
-License: GPL (>= 2)
 VignetteBuilder: knitr
+License: GPL (>= 2)
 Repository: CRAN
 Author: Reza Mohammadi [aut, cre] (<https://orcid.org/0000-0001-9538-0648>),
   Kevin Burke [aut]
 Maintainer: Reza Mohammadi <a.mohammadi@uva.nl>
 NeedsCompilation: no
-Packaged: 2022-03-03 13:56:42 UTC; reza
-Date/Publication: 2022-03-03 14:40:07 UTC
+Packaged: 2022-05-06 15:02:47 UTC; reza
+Date/Publication: 2022-05-06 15:50:05 UTC

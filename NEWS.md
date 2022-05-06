@@ -7,6 +7,10 @@
 
 ## **liver** NEWS
 
+### **liver** Version 1.12
+
+* Data set `corona` removed.
+
 ### **liver** Version 1.11
 
 * Function `skim()` is added to the package.

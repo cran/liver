@@ -1,11 +1,15 @@
-## ----setup, include = FALSE---------------------------------------------------
-knitr::opts_chunk$set(echo = TRUE)
+## ----include = FALSE----------------------------------------------------------
+knitr::opts_chunk$set( collapse = TRUE, comment = ">", fig.width = 7, fig.height = 7, fig.align = "center" )
+
+## ----include = FALSE----------------------------------------------------------
 library( liver )
-library( pROC )     
+
+library( pROC )    
+
 library( ggplot2 )  
 
-## ----message = F--------------------------------------------------------------
-data( churn )        # load the 'churn' dataset
+## -----------------------------------------------------------------------------
+data( churn )       
 
 str( churn )
 
@@ -25,7 +29,7 @@ formula = churn ~ account.length + voice.plan + voice.messages + intl.plan + int
 
 predict_knn = kNN( formula, train = train_set, test = test_set, k = 8 )
 
-## ---- fig.align='center', fig.height=3, fig.width=3---------------------------
+## ---- fig.align = 'center', fig.height = 3, fig.width = 3---------------------
 conf.mat( predict_knn, actual_test )
 
 conf.mat.plot( predict_knn, actual_test )
@@ -36,8 +40,9 @@ mse( predict_knn, actual_test )
 ## -----------------------------------------------------------------------------
 predict_knn_trans = kNN( formula, train = train_set, test = test_set, k = 8, transform = "minmax" )
 
-## ---- fig.show="hold", out.width="46%"----------------------------------------
+## ----fig.show = "hold", fig.align = 'default', out.width = "46%"--------------
 conf.mat.plot( predict_knn_trans, actual_test )
+
 conf.mat.plot( predict_knn, actual_test )
 
 ## -----------------------------------------------------------------------------
@@ -58,8 +63,7 @@ ggroc( list( roc_knn, roc_knn_trans ), size = 0.8 ) +
   theme( legend.position = c( .7, .3 ), text = element_text( size = 17 ) ) + 
     geom_segment( aes( x = 1, xend = 0, y = 0, yend = 1 ), color = "grey", linetype = "dashed" )
 
-## ---- fig.align = "center"----------------------------------------------------
-
+## ----fig.align = "center"-----------------------------------------------------
 kNN.plot( formula, train = train_set, test = test_set, transform = "minmax", 
           k.max = 30, set.seed = 3 )
 

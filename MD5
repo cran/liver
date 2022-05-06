@@ -1,6 +1,6 @@
-16b5baedbb8a8425ea27611884badbf8 *DESCRIPTION
+d70eeddb28be3bca33158838027dbf9c *DESCRIPTION
 2ec95eb21dde4faf0d7c22a028a789de *NAMESPACE
-ae2965e7774b78e9f1c3e6eeb864830c *NEWS.md
+06d446e85dadd4f8390e6739b9bce6f7 *NEWS.md
 60830276446cad6d53553d5ce6284183 *R/accuracy.R
 e8c3b43d22d33b2b0065fd6c52782eaf *R/conf.mat.R
 cccda63a6dcb13e680bb5d7073aceb70 *R/conf.mat.plot.R
@@ -15,7 +15,7 @@ f3b6ee9dd5ad1c210b1bd8df17198675 *R/skewness.R
 4d9f811f9190f3baeefc8644758610e4 *R/skim.R
 5fb8f9a7886af28aa4c021ca33e4512c *R/transform.R
 8488e4b6af7ab42edd20af17a19e9747 *R/zscore.R
-db49d62de9a7754de68e77013b5eea59 *README.md
+729b214eb43bf32b916a5b760fb4b2dd *README.md
 8ecc97ea491d0691636e7af6a8754b07 *build/vignette.rds
 79045d69cc312ee0d14a2513dee6562c *data/adult.RData
 315e7a6aee74f3b2e5a67f6018cb10bc *data/advertising.RData
@@ -24,17 +24,16 @@ df6d1d09215a038f040f52a0082530dd *data/bank.RData
 339cfdc356268b2f804c53dd1e76620f *data/churn.RData
 c4386d800b957207b2f087a210724c57 *data/churnCredit.RData
 39c5da5d621253f8aefc015129a3219d *data/churnTel.RData
-8a7d7f30f18d7029d68ea3128e2957bd *data/corona.RData
-7b78a26bf506ff27ef741ceefa048337 *data/datalist
+eb576db17bc9ecac76e277a5fa3409e0 *data/datalist
 e311e3bbf5a471eaf37d95b62f7fcff4 *data/fertilizer.RData
 f116c73410c34e6769a087344b4d979f *data/house.RData
 24400541f7bdc3dd42befe4b01fb134f *data/housePrice.RData
 29346094234eae19daff0451734aa1d5 *data/insurance.RData
 d91af35fb4cc4e581eaf0bb72a6c3dc4 *data/marketing.RData
 d5c36dd5719ece104cf9f3f620f958d0 *data/risk.RData
-e5744153225eb0dcb730aef451e66913 *inst/doc/liver-example.R
-7af3719e324373ff4be6cdd2fb904d04 *inst/doc/liver-example.Rmd
-8cc1a436d04e5e19b995d3d3d29e464a *inst/doc/liver-example.html
+6f8fa04bc63d62dcd7612d30802dee7a *inst/doc/liver-example.R
+d3788f9aba4aba285cdc7ec551f3d05c *inst/doc/liver-example.Rmd
+cfad4b052045571d76bec14c4a2a767b *inst/doc/liver-example.html
 74e12afb5647c3f7cef82cd8f48cfe36 *man/accuracy.Rd
 1af4e530ec36f65ca3bde66dba22a3b4 *man/adult.Rd
 115c3ef72358494dff21114473201598 *man/advertising.Rd
@@ -45,9 +44,8 @@ e5744153225eb0dcb730aef451e66913 *inst/doc/liver-example.R
 16222a0c5649c28b739178459293339a *man/churnTel.Rd
 657fbd7c4c3861cb55056dae4297bbac *man/conf.mat.Rd
 81dd321f2858a75acb3b85fe33c52f53 *man/conf.mat.plot.Rd
-58b45e180f30f35c1f7a9988b7b65638 *man/corona.Rd
 1eefde0225872f837b8f48b9526313cf *man/fertilizer.Rd
-9bcc2010d47d4353b5e88b93b511560d *man/figures/logo.png
+63a70787bcc9085278bc87929c21d17f *man/figures/logo.png
 c4685c73886f38919176fe414eb0c4b0 *man/find.na.Rd
 9620174c84ae433ae7c91f96a7c34e4a *man/house.Rd
 49e80abca51fab01af58419a433aa317 *man/housePrice.Rd
@@ -65,4 +63,4 @@ edf4b9c54c3feca45819198faf0ed582 *man/skewness.Rd
 c16eb1e168b0c6a73cd7775e864a1bf4 *man/skim.Rd
 9300d78298fc5fbbe5d1a85d100370b8 *man/transform.Rd
 95028f639b260ec329fa084bdb8e4332 *man/zscore.Rd
-7af3719e324373ff4be6cdd2fb904d04 *vignettes/liver-example.Rmd
+d3788f9aba4aba285cdc7ec551f3d05c *vignettes/liver-example.Rmd
