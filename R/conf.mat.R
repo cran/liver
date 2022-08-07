@@ -30,8 +30,9 @@ conf.mat = function( pred, actual, cutoff = NULL, reference = NULL,
         
         if( !is.null( reference ) )
             if( which( levels == reference ) == 2 ) levels = c( levels[ 2 ], levels[ 1 ] ) 
-        
-        cat( paste( c( "Setting levels: reference = \"", levels[ 1 ], "\", case = \"", levels[ 2 ],"\"  \n" ), collapse = "" ) ) 
+
+        if( is.null( reference ) )
+            cat( paste( c( "Setting levels: reference = \"", levels[ 1 ], "\", case = \"", levels[ 2 ],"\"  \n" ), collapse = "" ) ) 
         
         pred = ifelse( pred >= cutoff, levels[ 1 ], levels[ 2 ] )
         

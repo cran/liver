@@ -89,7 +89,7 @@ kNN.plot = function( formula, train, test, k.max = 10, transform = FALSE,
     
     df_gg = data.frame( k_list = k_list, base_list = base_list )
     
-    p = ggplot2::ggplot( df_gg, ggplot2::aes( x = k_list, y = base_list ) ) +
+    plot_knn = ggplot2::ggplot( df_gg, ggplot2::aes( x = k_list, y = base_list ) ) +
         ggplot2::geom_line( color = "#a0a0a0" ) + 
         ggplot2::geom_point( shape = 21, color = "#ff5085", fill = "#ff83a8", size = 2 ) + 
         ggplot2::theme_minimal() + 
@@ -101,9 +101,9 @@ kNN.plot = function( formula, train, test, k.max = 10, transform = FALSE,
                         panel.border = ggplot2::element_blank(), panel.background = ggplot2::element_blank() )
 
     if( report == FALSE ) 
-        return( p )
+        return( plot_knn )
     else
-        return( list( base_list, p ) )
+        return( list( base_list, plot_knn ) )
 }
    
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |

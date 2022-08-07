@@ -4,7 +4,7 @@
 \title{ Cereal data set }
 
 \description{ 
-This dataset contains nutrition information for \eqn{77} breakfast cereals and includes \eqn{16} variables. The "\code{reating}" column is our target as a rating of the cereals (Possibly from Consumer Reports?).   
+This dataset contains nutrition information for \eqn{77} breakfast cereals and includes \eqn{16} variables. The "\code{rating}" column is our target as a rating of the cereals (Possibly from Consumer Reports?).   
 }
 
 \usage{ data( cereal ) }
@@ -42,7 +42,7 @@ The \code{cereal} dataset, as a data frame, contains \eqn{77} rows (breakfast ce
 }
 
 \details{
-These datasets have been gathered and cleaned up by Petra Isenberg, Pierre Dragicevic and Yvonne Jansen. The original source can be found:
+The original source can be found:
 \url{https://perso.telecom-paristech.fr/eagan/class/igr204/datasets}
 }
 

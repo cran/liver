@@ -1,14 +1,20 @@
 ---
 title: "<center> Example for Data Analysis <center>"
-output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Example for Data Analysis}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
+output:
+  knitr:::html_vignette:
+    number_sections: false
+    fig_caption: true
+    toc: false
+    theme: cosmo
+    highlight: tango
 ---
 
 ```{r include = FALSE}
-knitr::opts_chunk$set( collapse = TRUE, comment = ">", fig.width = 7, fig.height = 7, fig.align = "center" )
+knitr::opts_chunk $ set( collapse = TRUE, comment = " ", fig.width = 7, fig.height = 7, fig.align = "center" )
 ```
 
 ```{r include = FALSE}
