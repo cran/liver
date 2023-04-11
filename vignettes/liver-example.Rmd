@@ -27,7 +27,7 @@ library( ggplot2 )
 
 The `liver` package contains a collection of helper functions that make various techniques from data science more user-friendly for non-experts. 
 
-Here is an example to show how to use the functionality of the package by using the [*churn*](https://rdrr.io/cran/liver/man/churn.html) dataset which is available in the package.
+Here is an example to show how to use the functionality of the package by using the *churn* dataset which is available in the package.
 
 ```{r}
 data( churn )       

@@ -51,6 +51,9 @@ kNN.plot = function( formula, train, test, k.max = 10, transform = FALSE,
             test  = data_all[ -( 1:length( train ) ) ]
         }
     }
+
+    if(is.null(dim(train))) train = as.matrix(train)
+    if(is.null(dim(test)))  test  = as.matrix(test)
     
     k_list   = 1:k.max
     base_list = vector( length = k.max  )
@@ -58,14 +61,13 @@ kNN.plot = function( formula, train, test, k.max = 10, transform = FALSE,
     for( k in k_list )
     {
         knn_k = class::knn( train = train, test = test, cl = train_label, k = k, ... )
-        #knn_k = class::knn( train = train, test = test, cl = train_label, k = k )
         
         base_list[ k ] = liver::accuracy( knn_k, test_label )
     }
     
     if( ( base == "accuracy" ) | ( base == "Accuracy" ) )
     {
-        title = "Optimal value of k based on accuracy"
+        title = "Accuracy for Different k Values"
         y_lab = "Accuracy"
     }
     
@@ -73,7 +75,7 @@ kNN.plot = function( formula, train, test, k.max = 10, transform = FALSE,
     {
         base_list = 1 - base_list
         
-        title = "Optimal value of k based on MSE"
+        title = "MSE for Different k Values"
         y_lab = "Mean Square Error (MSE)"
     }
     
@@ -81,7 +83,7 @@ kNN.plot = function( formula, train, test, k.max = 10, transform = FALSE,
     {
         base_list = 1 - base_list
         
-        title = "Optimal value of k based on Error Rate"
+        title = "Error Rate for Different k Values"
         y_lab = "Error Rate"
     }
     

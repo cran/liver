@@ -1,6 +1,6 @@
 Package: liver
 Title: "Eating the Liver of Data Science"
-Version: 1.13
+Version: 1.14
 Authors@R: 
     c(person(given = "Reza",
              family = "Mohammadi",
@@ -25,5 +25,5 @@ Author: Reza Mohammadi [aut, cre] (<https://orcid.org/0000-0001-9538-0648>),
   Kevin Burke [aut]
 Maintainer: Reza Mohammadi <a.mohammadi@uva.nl>
 NeedsCompilation: no
-Packaged: 2022-08-07 21:11:29 UTC; reza
-Date/Publication: 2022-08-07 21:30:02 UTC
+Packaged: 2023-04-11 16:01:48 UTC; reza
+Date/Publication: 2023-04-11 16:30:02 UTC
