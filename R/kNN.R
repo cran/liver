@@ -15,6 +15,12 @@
 kNN = function( formula, train, test, k = 1, transform = FALSE, type = "class", 
                 l = 0, use.all = TRUE, na.rm = FALSE ) 
 {
+    if(any(is.na(train))) stop( "train dataset has NA" )
+    if(any(is.na(test)))  stop( "test dataset has NA" )
+
+    if(length(class(train)) > 1) class(train) = "data.frame"
+    if(length(class(test)) > 1 ) class(test)  = "data.frame"
+
     formula = stats::as.formula( formula )
     
     model_frame_train  = stats::model.frame( formula, data = train )
@@ -32,13 +38,13 @@ kNN = function( formula, train, test, k = 1, transform = FALSE, type = "class",
     {
         if( !is.vector( train ) ){
             data_all = rbind( train, test )
-            data_all = liver::transform( data_all, method = transform )
+            data_all = liver::transform( data_all, method = transform, na.rm = na.rm )
             
             train = data_all[    1:nrow( train )  , ]
             test  = data_all[ -( 1:nrow( train ) ), ]
         }else{
             data_all = c( train, test )
-            data_all = liver::transform( data_all, method = transform )
+            data_all = liver::transform( data_all, method = transform, na.rm = na.rm )
             
             train = data_all[    1:length( train )   ]
             test  = data_all[ -( 1:length( train ) ) ]
@@ -75,7 +81,7 @@ kNN = function( formula, train, test, k = 1, transform = FALSE, type = "class",
     
     return( output_knn )
 }
-
+   
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
 
 

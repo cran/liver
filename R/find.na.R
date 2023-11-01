@@ -14,7 +14,8 @@
 
 find.na = function( x ) 
 {
-    if( !is.vector( x ) & !is.matrix( x ) & !is.data.frame( x ) ) stop( " x must be a vector, matrix, or dataframe" )
+    if( !is.vector( x ) & !is.matrix( x ) & !is.data.frame( x ) ) 
+        stop( " x must be a vector, matrix, or dataframe" )
     
     ind = which( is.na( x ), arr.ind = TRUE )
     

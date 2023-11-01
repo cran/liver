@@ -16,13 +16,13 @@ minmax = function( x, columns = NULL, na.rm = FALSE )
 {
     #    if( !methods::is( x )[ 1 ] %in% c( "integer", "numeric" ) ) stop( "Categorical variable not support" )
     
-    if( !is.vector( x ) & !is.matrix( x ) & !is.data.frame( x ) ) stop( " x must be a vector, matrix, or dataframe" )
+    if( !is.vector( x ) & !is.matrix( x ) & !is.data.frame( x ) ) 
+        stop( " x must be a vector, matrix, or dataframe" )
     
     if( any( is.na( x ) ) & ( na.rm == FALSE ) ) na.rm = TRUE
     
-    if( is.vector( x ) ){
+    if( is.vector( x ) )
         x_mm = ( x - min( x, na.rm = na.rm ) ) / ( max( x, na.rm = na.rm ) - min( x, na.rm = na.rm ) )
-    }
     
     if( is.null( columns ) )
     {

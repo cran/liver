@@ -7,6 +7,10 @@
 
 ## **liver** NEWS
 
+### **liver** Version 1.15
+
+* Data sets `redWines` and `whiteWines` are added.
+
 ### **liver** Version 1.11
 
 * Function `skim()` is added to the package.
