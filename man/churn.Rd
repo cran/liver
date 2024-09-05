@@ -4,14 +4,14 @@
 \title{ Churn data set }
 
 \description{ 
-This dataset comes from IBM Sample Data Sets. Customer \emph{churn} occurs when customers stop doing business with a company, also known as customer attrition. The data set contains \eqn{5000} rows (customers) and \eqn{20} columns (features). The "Churn" column is our target which indicate whether customer churned (left the company) or not.   
+This dataset comes from IBM Sample Data Sets. Customer \emph{churn} occurs when customers stop doing business with a company, also known as customer attrition. the data set contains \eqn{5000} rows (customers) and \eqn{20} columns (features). the "Churn" column is our target which indicate whether customer churned (left the company) or not.   
 }
 
 \usage{ data( churn ) }
 
 \format{ 
 
-The \code{churn} dataset, as a data frame, contains \eqn{5000} rows (customers) and \eqn{20} columns (variables/features). The \eqn{20} variables are:
+the \code{churn} dataset, as a data frame, contains \eqn{5000} rows (customers) and \eqn{20} columns (variables/features). the \eqn{20} variables are:
  \itemize{
 
 \item \code{state}: Categorical, for the \eqn{51} states and the District of Columbia.
@@ -42,7 +42,7 @@ Larose, D. T. and Larose, C. D. (2014). Discovering knowledge in data: an introd
 }
 
 
-\seealso{ \code{\link{adult}}, \code{\link{risk}}, \code{\link{churnTel}}, \code{\link{bank}}, \code{\link{advertising}}, \code{\link{marketing}}, \code{\link{insurance}}, \code{\link{cereal}}, \code{\link{housePrice}}, \code{\link{house}} }
+\seealso{ \code{\link[liver]{adult}}, \code{\link[liver]{risk}}, \code{\link[liver]{churnTel}}, \code{\link[liver]{bank}}, \code{\link[liver]{advertising}}, \code{\link[liver]{marketing}}, \code{\link[liver]{insurance}}, \code{\link[liver]{cereal}}, \code{\link[liver]{housePrice}}, \code{\link[liver]{house}} }
 
 \examples{
 data( churn )

@@ -6,13 +6,13 @@
 \title{ Churn dataset for Credit Card Customers }
 
 \description{ 
-Customer \emph{churn} occurs when customers stop doing business with a company, also known as customer attrition. The data set contains \eqn{10127} rows (customers) and \eqn{21} columns (features). The "churn" column is our target which indicate whether customer churned (left the company) or not.   
+Customer \emph{churn} occurs when customers stop doing business with a company, also known as customer attrition. the data set contains \eqn{10127} rows (customers) and \eqn{21} columns (features). the "churn" column is our target which indicate whether customer churned (left the company) or not.   
 }
 
 \usage{ data( churnCredit ) }
 
 \format{ 
-The \code{churnCredit} dataset, as a data frame, contains \eqn{10127} rows (customers) and \eqn{21} columns (variables/features). The \eqn{21} variables are:
+the \code{churnCredit} dataset, as a data frame, contains \eqn{10127} rows (customers) and \eqn{21} columns (variables/features). the \eqn{21} variables are:
  \itemize{
 \item \code{customer.ID}: Customer ID.
 \item \code{gender}: Whether the customer is a male or a female.
@@ -43,7 +43,7 @@ For more information related to the dataset see:
 \url{https://www.kaggle.com/sakshigoyal7/credit-card-customers}
 }
 
-\seealso{ \code{\link{adult}}, \code{\link{risk}}, \code{\link{churn}}, \code{\link{churnTel}}, \code{\link{bank}}, \code{\link{advertising}}, \code{\link{marketing}}, \code{\link{insurance}}, \code{\link{cereal}}, \code{\link{housePrice}}, \code{\link{house}} }
+\seealso{ \code{\link[liver]{adult}}, \code{\link[liver]{risk}}, \code{\link[liver]{churn}}, \code{\link[liver]{churnTel}}, \code{\link[liver]{bank}}, \code{\link[liver]{advertising}}, \code{\link[liver]{marketing}}, \code{\link[liver]{insurance}}, \code{\link[liver]{cereal}}, \code{\link[liver]{housePrice}}, \code{\link[liver]{house}} }
 
 \examples{
 data( churnCredit )

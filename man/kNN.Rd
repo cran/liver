@@ -4,7 +4,7 @@
 \title{	k-Nearest Neighbour Classification }
 
 \description{
-\code{kNN} is used to perform k-nearest neighbour classification for test set using training set. For each row of the test set, the \code{k} nearest (based on Euclidean distance) training set vectors are found. Then, the classification is done by majority vote (ties broken at random). This function provides a formula interface to the \code{\link[class]{knn}} function of \code{R} package \code{class}. In addition, it allows normalization of the given data using the \code{\link[liver]{transform}} function.
+\code{kNN} is used to perform k-nearest neighbour classification for test set using training set. For each row of the test set, the \code{k} nearest (based on Euclidean distance) training set vectors are found. then, the classification is done by majority vote (ties broken at random). This function provides a formula interface to the \code{\link[class:knn]{class::knn()}} function of \code{R} package \code{class}. In addition, it allows normalization of the given data using the \code{\link[liver]{transform}} function.
 }
 
 \usage{
@@ -13,7 +13,7 @@ kNN( formula, train, test, k = 1, transform = FALSE, type = "class", l = 0,
 }
 
 \arguments{
-    \item{formula}{ a \link{formula}, with a response but no interaction terms. For the case of data frame, it is taken as the model frame (see \code{\link{model.frame})}. }
+    \item{formula}{ a \link[stats]{formula}, with a response but no interaction terms. For the case of data frame, it is taken as the model frame (see \code{\link[stats]{model.frame})}. }
   \item{train}{ data frame or matrix of train set cases. }  
   \item{test}{ data frame or matrix of test set cases. }  
   \item{k}{ number of neighbours considered. }  
@@ -49,7 +49,7 @@ When \code{type = "prob"}, a matrix of confidence values is returned
 
 \author{ Reza Mohammadi \email{a.mohammadi@uva.nl} and Kevin Burke \email{kevin.burke@ul.ie} }
 
-\seealso{ \code{\link{knn}}, \code{\link{transform}} }
+\seealso{ \code{\link[liver]{kNN}}, \code{\link[liver]{transform}} }
 
 \examples{
 data( risk )

@@ -16,11 +16,11 @@ mse( pred, actual, weight = 1, na.rm = FALSE )
     \item{na.rm}{a logical value indicating whether NA values in \code{pred} should be stripped before the computation proceeds. }
 }
 
-\value{ The computed mean squared error (numeric value). }
+\value{ the computed mean squared error (numeric value). }
 
 \author{ Reza Mohammadi \email{a.mohammadi@uva.nl} and Kevin Burke \email{kevin.burke@ul.ie} }
 
-\seealso{ \code{\link{mae}} }
+\seealso{ \code{\link[liver]{mae}} }
 
 \examples{
 pred   = c( 2.3, -1.4, 0, 3.45 )

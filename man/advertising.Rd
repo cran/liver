@@ -4,13 +4,13 @@
 \title{ advertising data set }
 
 \description{ 
-The dataset is from an anonymous organisation's social media ad campaign. The advertising dataset contains \eqn{11} features and \eqn{1143} records. 
+the dataset is from an anonymous organisation's social media ad campaign. the advertising dataset contains \eqn{11} features and \eqn{1143} records. 
 }
 
 \usage{ data( advertising ) }
 
 \format{ 
-The \code{advertising} dataset, as a data frame, contains \eqn{1143} rows and \eqn{11} columns (variables/features). The \eqn{11} variables are:
+the \code{advertising} dataset, as a data frame, contains \eqn{1143} rows and \eqn{11} columns (variables/features). the \eqn{11} variables are:
  \itemize{
 
 \item \code{ad.id}: an unique ID for each ad.
@@ -33,7 +33,7 @@ A detailed description of the dataset can be found:
 \url{https://www.kaggle.com/loveall/clicks-conversion-tracking}
 }
 
-\seealso{ \code{\link{adult}}, \code{\link{risk}}, \code{\link{churn}}, \code{\link{churnTel}}, \code{\link{bank}}, \code{\link{marketing}}, \code{\link{insurance}}, \code{\link{cereal}}, \code{\link{housePrice}}, \code{\link{house}} }
+\seealso{ \code{\link[liver]{adult}}, \code{\link[liver]{risk}}, \code{\link[liver]{churn}}, \code{\link[liver]{churnTel}}, \code{\link[liver]{bank}}, \code{\link[liver]{marketing}}, \code{\link[liver]{insurance}}, \code{\link[liver]{cereal}}, \code{\link[liver]{housePrice}}, \code{\link[liver]{house}} }
 
 \examples{
 data( advertising )

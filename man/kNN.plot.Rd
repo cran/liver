@@ -11,7 +11,7 @@ kNN.plot( formula, train, test, k.max = 10, transform = FALSE, base = "error",
 }
 
 \arguments{
-    \item{formula}{ a \link{formula}, with a response but no interaction terms. For the case of data frame, it is taken as the model frame (see \code{\link{model.frame})}. }
+    \item{formula}{ a \link[stats]{formula}, with a response but no interaction terms. For the case of data frame, it is taken as the model frame (see \code{\link[stats]{model.frame})}. }
   \item{train}{ data frame or matrix of train set cases. }  
   \item{test}{ data frame or matrix of test set cases. }  
   \item{k.max}{ the maximum number of number of neighbours to consider, must be at least two. }  
@@ -38,7 +38,7 @@ kNN.plot( formula, train, test, k.max = 10, transform = FALSE, base = "error",
 
 \author{ Reza Mohammadi \email{a.mohammadi@uva.nl} and Kevin Burke \email{kevin.burke@ul.ie} }
 
-\seealso{ \code{\link{kNN}}, \code{\link{transform}} }
+\seealso{ \code{\link[liver]{kNN}}, \code{\link[liver]{transform}} }
 
 \examples{
 data( risk )

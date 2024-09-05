@@ -20,7 +20,7 @@ transform( x, method = c( "minmax", "zscore" ), columns = NULL, na.rm = FALSE )
 
 \author{ Reza Mohammadi \email{a.mohammadi@uva.nl} and Kevin Burke \email{kevin.burke@ul.ie} }
 
-\seealso{ \code{\link{zscore}}, \code{\link{minmax}} }
+\seealso{ \code{\link[liver]{zscore}}, \code{\link[liver]{minmax}} }
 
 \examples{
 x = c( 2.3, -1.4, 0, 3.45 )

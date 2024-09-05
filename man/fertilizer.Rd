@@ -4,12 +4,12 @@
 \title{ Fertilizer data set }
 
 \description{ 
-The fertilizer dataset contains \eqn{4} features and \eqn{96} records. Results from an experiment to compare yields of a crop obtained under three different fertilizers. The target feature is \emph{yield}.
+the fertilizer dataset contains \eqn{4} features and \eqn{96} records. Results from an experiment to compare yields of a crop obtained under three different fertilizers. the target feature is \emph{yield}.
 }
 
 \usage{ data( fertilizer ) }
 
-\seealso{ \code{\link{adult}}, \code{\link{risk}}, \code{\link{churn}}, \code{\link{churnTel}}, \code{\link{bank}}, \code{\link{advertising}}, \code{\link{marketing}}, \code{\link{insurance}}, \code{\link{cereal}}, \code{\link{housePrice}}, \code{\link{house}} }
+\seealso{ \code{\link[liver]{adult}}, \code{\link[liver]{risk}}, \code{\link[liver]{churn}}, \code{\link[liver]{churnTel}}, \code{\link[liver]{bank}}, \code{\link[liver]{advertising}}, \code{\link[liver]{marketing}}, \code{\link[liver]{insurance}}, \code{\link[liver]{cereal}}, \code{\link[liver]{housePrice}}, \code{\link[liver]{house}} }
 
 \examples{
 data( fertilizer )

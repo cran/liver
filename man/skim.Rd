@@ -14,7 +14,7 @@
 \arguments{
   \item{data}{ a data frame or matrix.}
   \item{hist}{ Logical: TRUE (default) to report the histogram of each variable.}
-  \item{...}{ columns to select for skimming. The default is to skim all columns.}
+  \item{...}{ columns to select for skimming. the default is to skim all columns.}
 }
 
 \author{ Reza Mohammadi \email{a.mohammadi@uva.nl} and Kevin Burke \email{kevin.burke@ul.ie} }

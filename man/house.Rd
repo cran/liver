@@ -4,14 +4,14 @@
 \title{ house data set }
 
 \description{ 
-The house dataset contains \eqn{6} features and \eqn{414} records. The target feature is \emph{unit.price} and the remaining 5 variables are predictors.
+the house dataset contains \eqn{6} features and \eqn{414} records. the target feature is \emph{unit.price} and the remaining 5 variables are predictors.
 }
 
 \usage{ data( house ) }
 
 \format{ 
 
-The \code{house} dataset, as a data frame, contains \eqn{414} rows and \eqn{6} columns (variables/features). The \eqn{6} variables are:
+the \code{house} dataset, as a data frame, contains \eqn{414} rows and \eqn{6} columns (variables/features). the \eqn{6} variables are:
  \itemize{
 \item \code{house.age}: house age (numeric, in year).
 \item \code{distance.to.MRT}: distance to the nearest MRT station (numeric).
@@ -28,7 +28,7 @@ A detailed description of the dataset can be found:
 \url{https://www.kaggle.com/quantbruce/real-estate-price-prediction}
 }
 
-\seealso{ \code{\link{adult}}, \code{\link{risk}}, \code{\link{churn}}, \code{\link{churnTel}}, \code{\link{bank}}, \code{\link{advertising}}, \code{\link{marketing}}, \code{\link{insurance}}, \code{\link{cereal}}, \code{\link{housePrice}} }
+\seealso{ \code{\link[liver]{adult}}, \code{\link[liver]{risk}}, \code{\link[liver]{churn}}, \code{\link[liver]{churnTel}}, \code{\link[liver]{bank}}, \code{\link[liver]{advertising}}, \code{\link[liver]{marketing}}, \code{\link[liver]{insurance}}, \code{\link[liver]{cereal}}, \code{\link[liver]{housePrice}} }
 
 \examples{
 data( house )

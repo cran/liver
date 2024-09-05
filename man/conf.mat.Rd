@@ -26,7 +26,7 @@ conf.mat( pred, actual, cutoff = NULL, reference = NULL,
 
 \author{ Reza Mohammadi \email{a.mohammadi@uva.nl} and Kevin Burke \email{kevin.burke@ul.ie} }
 
-\seealso{ \code{\link{conf.mat.plot}}, \code{\link{accuracy}} }
+\seealso{ \code{\link[liver]{conf.mat.plot}}, \code{\link[liver]{accuracy}} }
 
 \examples{
 pred   = c( "no", "yes", "yes", "no", "no", "yes", "no", "no" )

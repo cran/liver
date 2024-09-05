@@ -4,14 +4,14 @@
 \title{ insurance data set }
 
 \description{ 
-The insurance dataset contains \eqn{7} features and \eqn{1338} records. The target feature is \emph{charge} and the remaining 6 variables are predictors.
+the insurance dataset contains \eqn{7} features and \eqn{1338} records. the target feature is \emph{charge} and the remaining 6 variables are predictors.
 }
 
 \usage{ data( insurance ) }
 
 \format{ 
 
-The \code{insurance} dataset, as a data frame, contains \eqn{1338} rows (customers) and \eqn{7} columns (variables/features). The \eqn{7} variables are:
+the \code{insurance} dataset, as a data frame, contains \eqn{1338} rows (customers) and \eqn{7} columns (variables/features). the \eqn{7} variables are:
  \itemize{
 
 \item \code{age}: age of primary beneficiary.
@@ -33,7 +33,7 @@ A detailed description of the dataset can be found:
 Brett Lantz (2019). Machine Learning with R: Expert techniques for predictive modeling. \emph{Packt Publishing Ltd}.
 }
 
-\seealso{ \code{\link{adult}}, \code{\link{risk}}, \code{\link{churn}}, \code{\link{churnTel}}, \code{\link{bank}}, \code{\link{advertising}}, \code{\link{marketing}}, \code{\link{cereal}}, \code{\link{housePrice}}, \code{\link{house}} }
+\seealso{ \code{\link[liver]{adult}}, \code{\link[liver]{risk}}, \code{\link[liver]{churn}}, \code{\link[liver]{churnTel}}, \code{\link[liver]{bank}}, \code{\link[liver]{advertising}}, \code{\link[liver]{marketing}}, \code{\link[liver]{cereal}}, \code{\link[liver]{housePrice}}, \code{\link[liver]{house}} }
 
 \examples{
 data( insurance )

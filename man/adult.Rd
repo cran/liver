@@ -4,14 +4,14 @@
 \title{ adult data set }
 
 \description{ 
-The adult dataset was collected from the US Census Bureau and the primary task is to predict whether a given adult makes more than $50K a year based attributes such as education, hours of work per week, etc. The target feature is \emph{income}, a factor with levels "<=50K" and ">50K", and the remaining 14 variables are predictors.
+the adult dataset was collected from the US Census Bureau and the primary task is to predict whether a given adult makes more than $50K a year based attributes such as education, hours of work per week, etc. the target feature is \emph{income}, a factor with levels "<=50K" and ">50K", and the remaining 14 variables are predictors.
 }
 
 \usage{ data( adult ) }
 
 \format{ 
 
-The \code{adult} dataset, as a data frame, contains \eqn{48598} rows and \eqn{15} columns (variables/features). The \eqn{15} variables are:
+the \code{adult} dataset, as a data frame, contains \eqn{48598} rows and \eqn{15} columns (variables/features). the \eqn{15} variables are:
  \itemize{
 
 \item \code{age}: age in years.
@@ -46,7 +46,7 @@ A detailed description of the dataset can be found in the UCI documentation at:
 Kohavi, R. (1996). Scaling up the accuracy of naive-bayes classifiers: A decision-tree hybrid. \emph{Kdd}.
 }
 
-\seealso{ \code{\link{risk}}, \code{\link{churn}}, \code{\link{churnTel}}, \code{\link{bank}}, \code{\link{advertising}}, \code{\link{marketing}}, \code{\link{insurance}}, \code{\link{cereal}}, \code{\link{housePrice}}, \code{\link{house}} }
+\seealso{ \code{\link[liver]{risk}}, \code{\link[liver]{churn}}, \code{\link[liver]{churnTel}}, \code{\link[liver]{bank}}, \code{\link[liver]{advertising}}, \code{\link[liver]{marketing}}, \code{\link[liver]{insurance}}, \code{\link[liver]{cereal}}, \code{\link[liver]{housePrice}}, \code{\link[liver]{house}} }
 
 \examples{
 data( adult )

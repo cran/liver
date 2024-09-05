@@ -4,14 +4,14 @@
 \title{ Risk data set }
 
 \description{ 
-The \emph{risk} dataset containing 6 features and 246 records. The target feature is \emph{risk}, a factor with levels "good risk" and "bad risk" along with 5 predictors. 
+the \emph{risk} dataset containing 6 features and 246 records. the target feature is \emph{risk}, a factor with levels "good risk" and "bad risk" along with 5 predictors. 
 }
 
 \usage{ data( risk ) }
 
 \format{ 
 
-The \code{risk} dataset, as a data frame, contains \eqn{246} rows (customers) and \eqn{6} columns (variables/features). The \eqn{6} variables are:
+the \code{risk} dataset, as a data frame, contains \eqn{246} rows (customers) and \eqn{6} columns (variables/features). the \eqn{6} variables are:
  \itemize{
 
 \item \code{age}: age in years.
@@ -23,7 +23,7 @@ The \code{risk} dataset, as a data frame, contains \eqn{246} rows (customers) an
   }
 }
 
-\seealso{ \code{\link{adult}}, \code{\link{churn}}, \code{\link{churnTel}}, \code{\link{bank}}, \code{\link{advertising}}, \code{\link{marketing}}, \code{\link{insurance}}, \code{\link{cereal}}, \code{\link{housePrice}}, \code{\link{house}} }
+\seealso{ \code{\link[liver]{adult}}, \code{\link[liver]{churn}}, \code{\link[liver]{churnTel}}, \code{\link[liver]{bank}}, \code{\link[liver]{advertising}}, \code{\link[liver]{marketing}}, \code{\link[liver]{insurance}}, \code{\link[liver]{cereal}}, \code{\link[liver]{housePrice}}, \code{\link[liver]{house}} }
 
 \examples{
 data( risk )

@@ -16,11 +16,11 @@ accuracy( pred, actual, cutoff = NULL, reference = NULL )
     \item{reference}{a factor of classes to be used as the true results. }
 . }
 
-\value{ The computed average classification accuracy (numeric value). }
+\value{ the computed average classification accuracy (numeric value). }
 
 \author{ Reza Mohammadi \email{a.mohammadi@uva.nl} and Kevin Burke \email{kevin.burke@ul.ie} }
 
-\seealso{ \code{\link{conf.mat}}, \code{\link{mse}}, \code{\link{mae}} }
+\seealso{ \code{\link[liver]{conf.mat}}, \code{\link[liver]{mse}}, \code{\link[liver]{mae}} }
 
 \examples{
 pred   = c( "no", "yes", "yes", "no", "no", "yes", "no", "no" )

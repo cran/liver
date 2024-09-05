@@ -29,7 +29,7 @@ formula = churn ~ account.length + voice.plan + voice.messages + intl.plan + int
 
 predict_knn = kNN( formula, train = train_set, test = test_set, k = 8 )
 
-## ---- fig.align = 'center', fig.height = 3, fig.width = 3---------------------
+## ----fig.align = 'center', fig.height = 3, fig.width = 3----------------------
 conf.mat( predict_knn, actual_test )
 
 conf.mat.plot( predict_knn, actual_test )
@@ -50,7 +50,7 @@ prob_knn = kNN( formula, train = train_set, test = test_set, k = 8, type = "prob
 
 prob_knn_trans = kNN( formula, train = train_set, test = test_set, transform = "minmax", k = 8, type = "prob" )[ , 1 ]
 
-## ---- message = F, fig.align = "center"---------------------------------------
+## ----message = F, fig.align = "center"----------------------------------------
 roc_knn = roc( actual_test, prob_knn )
 roc_knn_trans = roc( actual_test, prob_knn_trans )
 

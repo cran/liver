@@ -4,14 +4,14 @@
 \title{ Cereal data set }
 
 \description{ 
-This dataset contains nutrition information for \eqn{77} breakfast cereals and includes \eqn{16} variables. The "\code{rating}" column is our target as a rating of the cereals (Possibly from Consumer Reports?).   
+This dataset contains nutrition information for \eqn{77} breakfast cereals and includes \eqn{16} variables. the "\code{rating}" column is our target as a rating of the cereals (Possibly from Consumer Reports?).   
 }
 
 \usage{ data( cereal ) }
 
 \format{ 
 
-The \code{cereal} dataset, as a data frame, contains \eqn{77} rows (breakfast cereals) and \eqn{16} columns (variables/features). The \eqn{16} variables are:
+the \code{cereal} dataset, as a data frame, contains \eqn{77} rows (breakfast cereals) and \eqn{16} columns (variables/features). the \eqn{16} variables are:
  \itemize{
 \item \code{name}: Name of cereal.
 \item \code{manuf}: Manufacturer of cereal:
@@ -42,12 +42,12 @@ The \code{cereal} dataset, as a data frame, contains \eqn{77} rows (breakfast ce
 }
 
 \details{
-The original source can be found:
+the original source can be found:
 \url{https://perso.telecom-paristech.fr/eagan/class/igr204/datasets}
 }
 
 
-\seealso{ \code{\link{adult}}, \code{\link{risk}}, \code{\link{churn}}, \code{\link{churnTel}}, \code{\link{bank}}, \code{\link{advertising}}, \code{\link{marketing}}, \code{\link{insurance}}, \code{\link{housePrice}}, \code{\link{house}} }
+\seealso{ \code{\link[liver]{adult}}, \code{\link[liver]{risk}}, \code{\link[liver]{churn}}, \code{\link[liver]{churnTel}}, \code{\link[liver]{bank}}, \code{\link[liver]{advertising}}, \code{\link[liver]{marketing}}, \code{\link[liver]{insurance}}, \code{\link[liver]{housePrice}}, \code{\link[liver]{house}} }
 
 \examples{
 data( cereal )
