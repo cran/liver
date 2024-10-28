@@ -7,7 +7,7 @@
 the adult dataset was collected from the US Census Bureau and the primary task is to predict whether a given adult makes more than $50K a year based attributes such as education, hours of work per week, etc. the target feature is \emph{income}, a factor with levels "<=50K" and ">50K", and the remaining 14 variables are predictors.
 }
 
-\usage{ data( adult ) }
+\usage{ data(adult) }
 
 \format{ 
 
@@ -49,9 +49,9 @@ Kohavi, R. (1996). Scaling up the accuracy of naive-bayes classifiers: A decisio
 \seealso{ \code{\link[liver]{risk}}, \code{\link[liver]{churn}}, \code{\link[liver]{churnTel}}, \code{\link[liver]{bank}}, \code{\link[liver]{advertising}}, \code{\link[liver]{marketing}}, \code{\link[liver]{insurance}}, \code{\link[liver]{cereal}}, \code{\link[liver]{housePrice}}, \code{\link[liver]{house}} }
 
 \examples{
-data( adult )
+data(adult)
 
-str( adult )
+str(adult)
 }
 
 \keyword{ datasets }

@@ -6,7 +6,7 @@
 	Computes mean squared error. 
 }
 \usage{
-mse( pred, actual, weight = 1, na.rm = FALSE )
+mse(pred, actual, weight = 1, na.rm = FALSE)
 }
 
 \arguments{
@@ -23,10 +23,10 @@ mse( pred, actual, weight = 1, na.rm = FALSE )
 \seealso{ \code{\link[liver]{mae}} }
 
 \examples{
-pred   = c( 2.3, -1.4, 0, 3.45 )
-actual = c( 2.1, -0.9, 0, 2.99 )
+pred   = c(2.3, -1.4, 0, 3.45)
+actual = c(2.1, -0.9, 0, 2.99)
   
-mse( pred, actual )
+mse(pred, actual)
    
 }
 

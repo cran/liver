@@ -7,6 +7,10 @@
 
 ## **liver** NEWS
 
+### **liver** Version 1.17
+
+* Function `partition()` is updated.
+
 ### **liver** Version 1.15
 
 * Data sets `redWines` and `whiteWines` are added.

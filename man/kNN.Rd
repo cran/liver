@@ -8,8 +8,8 @@
 }
 
 \usage{
-kNN( formula, train, test, k = 1, transform = FALSE, type = "class", l = 0, 
-     use.all = TRUE, na.rm = FALSE )
+kNN(formula, train, test, k = 1, transform = FALSE, type = "class", l = 0, 
+    use.all = TRUE, na.rm = FALSE)
 }
 
 \arguments{
@@ -52,12 +52,12 @@ When \code{type = "prob"}, a matrix of confidence values is returned
 \seealso{ \code{\link[liver]{kNN}}, \code{\link[liver]{transform}} }
 
 \examples{
-data( risk )
+data(risk)
 
-train = risk[ 1:100, ]
-test  = risk[   101, ]
+train = risk[1:100, ]
+test  = risk[  101, ]
 
-kNN( risk ~ income + age, train = train, test = test )
+kNN(risk ~ income + age, train = train, test = test)
 }
 
 \keyword{models}

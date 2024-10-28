@@ -8,7 +8,7 @@
 }
 
 \usage{
-find.na( x )
+find.na(x)
 }
 
 \arguments{
@@ -20,9 +20,9 @@ find.na( x )
 \author{ Reza Mohammadi \email{a.mohammadi@uva.nl} and Kevin Burke \email{kevin.burke@ul.ie} }
 
 \examples{
-x = c( 2.3, NA, -1.4, 0, 3.45 )
+x = c(2.3, NA, -1.4, 0, 3.45)
 
-find.na( x )
+find.na(x)
 }
 
 \keyword{data preprocessing}

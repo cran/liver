@@ -7,7 +7,7 @@
 the insurance dataset contains \eqn{7} features and \eqn{1338} records. the target feature is \emph{charge} and the remaining 6 variables are predictors.
 }
 
-\usage{ data( insurance ) }
+\usage{ data(insurance) }
 
 \format{ 
 
@@ -26,6 +26,7 @@ the \code{insurance} dataset, as a data frame, contains \eqn{1338} rows (custome
 
 \details{
 A detailed description of the dataset can be found:
+
 \url{https://www.kaggle.com/mirichoi0218/insurance}
 }
 
@@ -36,9 +37,9 @@ Brett Lantz (2019). Machine Learning with R: Expert techniques for predictive mo
 \seealso{ \code{\link[liver]{adult}}, \code{\link[liver]{risk}}, \code{\link[liver]{churn}}, \code{\link[liver]{churnTel}}, \code{\link[liver]{bank}}, \code{\link[liver]{advertising}}, \code{\link[liver]{marketing}}, \code{\link[liver]{cereal}}, \code{\link[liver]{housePrice}}, \code{\link[liver]{house}} }
 
 \examples{
-data( insurance )
+data(insurance)
 
-str( insurance )
+str(insurance)
 }
 
 \keyword{ datasets }

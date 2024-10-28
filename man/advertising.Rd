@@ -7,7 +7,7 @@
 the dataset is from an anonymous organisation's social media ad campaign. the advertising dataset contains \eqn{11} features and \eqn{1143} records. 
 }
 
-\usage{ data( advertising ) }
+\usage{ data(advertising) }
 
 \format{ 
 the \code{advertising} dataset, as a data frame, contains \eqn{1143} rows and \eqn{11} columns (variables/features). the \eqn{11} variables are:
@@ -36,9 +36,9 @@ A detailed description of the dataset can be found:
 \seealso{ \code{\link[liver]{adult}}, \code{\link[liver]{risk}}, \code{\link[liver]{churn}}, \code{\link[liver]{churnTel}}, \code{\link[liver]{bank}}, \code{\link[liver]{marketing}}, \code{\link[liver]{insurance}}, \code{\link[liver]{cereal}}, \code{\link[liver]{housePrice}}, \code{\link[liver]{house}} }
 
 \examples{
-data( advertising )
+data(advertising)
 
-str( advertising )
+str(advertising)
 }
 
 \keyword{ datasets }

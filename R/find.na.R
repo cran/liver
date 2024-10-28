@@ -12,17 +12,17 @@
 #     Find missing values (NA)
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
 
-find.na = function( x ) 
+find.na = function(x) 
 {
-    if( !is.vector( x ) & !is.matrix( x ) & !is.data.frame( x ) ) 
-        stop( " x must be a vector, matrix, or dataframe" )
+    if(!is.vector(x) & !is.matrix(x) & !is.data.frame(x)) 
+        stop(" x must be a vector, matrix, or dataframe")
     
-    ind = which( is.na( x ), arr.ind = TRUE )
+    ind = which(is.na(x), arr.ind = TRUE)
     
-    if( length( ind ) == 0 ) 
-        print( " No missing values (NA) in the dataset." )
+    if(length(ind) == 0) 
+        print(" No missing values (NA) in the dataset.")
     else
-        return( ind )
+        return(ind)
 }
    
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |

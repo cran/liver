@@ -8,7 +8,7 @@
 }
 
 \usage{
-skewness( x, na.rm = FALSE )
+skewness(x, na.rm = FALSE)
 }
 
 \arguments{
@@ -21,9 +21,9 @@ skewness( x, na.rm = FALSE )
 \author{ Reza Mohammadi \email{a.mohammadi@uva.nl} and Kevin Burke \email{kevin.burke@ul.ie} }
 
 \examples{
-x = c( 2.3, -1.4, 0, 3.45 )
+x = c(2.3, -1.4, 0, 3.45)
 
-skewness( x )
+skewness(x)
 }
 
 \keyword{data preprocessing}

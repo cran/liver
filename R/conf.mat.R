@@ -12,40 +12,47 @@
 #     Create a Confusion Matrix
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
 
-conf.mat = function( pred, actual, cutoff = NULL, reference = NULL, 
-                     proportion = FALSE, dnn = c( "Predict", "Actual" ), ... )
+conf.mat = function(pred, actual, cutoff = NULL, reference = NULL, 
+                    proportion = FALSE, dnn = c("Predict", "Actual"), ...)
 {
-    if( length( pred ) != length( actual ) )
-        stop( "prod & actual must have the same length" )
+    if(length(pred) != length(actual))
+        stop("prod & actual must have the same length")
     
-    if( !is.null( cutoff ) )
+    if(!is.null(cutoff))
     {
-        if( ( cutoff < 0 ) || ( cutoff > 1 ) ) stop( " The value of 'cutoff' must be between 0 and 1." )
+        if((cutoff < 0) || (cutoff > 1)) 
+			stop(" The value of 'cutoff' must be between 0 and 1.")
         
-        levels = base::levels( as.factor( actual ) )
-        if( length( levels )  < 2 ) stop( " 'actual' must have more than two levels." )
-        if( length( levels ) != 2 ) stop( " For the case 'cutoff != NULL', 'actual' must have two levels." )
+        levels = base::levels(as.factor(actual))
         
-        if( levels[ 1 ] == 0 ) levels = c( levels[ 2 ], levels[ 1 ] ) 
+        if(length(levels)  < 2) 
+			stop(" 'actual' must have more than two levels.")
+			
+        if(length(levels) != 2) 
+			stop(" For the case 'cutoff != NULL', 'actual' must have two levels.")
         
-        if( !is.null( reference ) )
-            if( which( levels == reference ) == 2 ) levels = c( levels[ 2 ], levels[ 1 ] ) 
+        if(levels[1] == 0) 
+			levels = c(levels[2], levels[1]) 
+        
+        if(!is.null(reference))
+            if(which(levels == reference) == 2) 
+				levels = c(levels[2], levels[1]) 
 
-        if( is.null( reference ) )
-            cat( paste( c( "Setting levels: reference = \"", levels[ 1 ], "\", case = \"", levels[ 2 ],"\"  \n" ), collapse = "" ) ) 
+        if(is.null(reference))
+            cat(paste(c("Setting levels: reference = \"", levels[1], "\", case = \"", levels[2],"\"  \n"), collapse = "")) 
         
-        pred = ifelse( pred >= cutoff, levels[ 1 ], levels[ 2 ] )
+        pred = ifelse(pred >= cutoff, levels[1], levels[2])
         
-        pred   = factor( pred  , levels = levels )
-        actual = factor( actual, levels = levels )
+        pred   = factor(pred  , levels = levels)
+        actual = factor(actual, levels = levels)
     }
     
-    conf_mat = table( pred, actual, dnn = dnn, ... )
+    conf_mat = table(pred, actual, dnn = dnn, ...)
     
-    if( proportion == TRUE )
-        conf_mat = round( conf_mat / sum( conf_mat ), 3 )
+    if(proportion == TRUE)
+        conf_mat = round(conf_mat / sum(conf_mat), 3)
     
-    return( conf_mat )
+    return(conf_mat)
 }
 
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |

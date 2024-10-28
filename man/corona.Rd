@@ -7,7 +7,7 @@
 COVID-19 Coronavirus data - daily (up to 14 December 2020).   
 }
 
-\usage{ data( corona ) }
+\usage{ data(corona) }
 
 \format{ 
 the \code{corona} dataset, as a data frame, contains \eqn{61900} rows and \eqn{12} columns (variables/features). 
@@ -22,9 +22,9 @@ This dataset can be downloaded from the UCI machine learning repository:
 \seealso{ \code{\link[liver]{churn}}, \code{\link[liver]{adult}}, \code{\link[liver]{risk}}, \code{\link[liver]{churnTel}}, \code{\link[liver]{bank}}, \code{\link[liver]{advertising}}, \code{\link[liver]{marketing}}, \code{\link[liver]{insurance}}, \code{\link[liver]{cereal}}, \code{\link[liver]{housePrice}}, \code{\link[liver]{house}} }
 
 \examples{
-data( corona )
+data(corona)
 
-str( corona )
+str(corona)
 }
 
 \keyword{ datasets }

@@ -6,7 +6,7 @@
 	Performs variable transformation such as Z-score and min-max normalization. 
 }
 \usage{
-transform( x, method = c( "minmax", "zscore" ), columns = NULL, na.rm = FALSE )
+transform(x, method = c("minmax", "zscore"), columns = NULL, na.rm = FALSE)
 }
 
 \arguments{
@@ -23,11 +23,11 @@ transform( x, method = c( "minmax", "zscore" ), columns = NULL, na.rm = FALSE )
 \seealso{ \code{\link[liver]{zscore}}, \code{\link[liver]{minmax}} }
 
 \examples{
-x = c( 2.3, -1.4, 0, 3.45 )
+x = c(2.3, -1.4, 0, 3.45)
 
-transform( x, method = "minmax" )
+transform(x, method = "minmax")
 
-transform( x, method = "zscore" )
+transform(x, method = "zscore")
 
 }
 

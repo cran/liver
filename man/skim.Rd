@@ -8,7 +8,7 @@
 }
 
 \usage{
-  skim( data, hist = TRUE, ... )
+  skim(data, hist = TRUE, ...)
 }
 
 \arguments{
@@ -22,9 +22,9 @@
 \seealso{ \code{\link[=summary]{summary()}} }
 
 \examples{
-data( risk )
+data(risk)
 
-skim( risk )
+skim(risk)
 }
 
 \keyword{models}

@@ -6,7 +6,7 @@
 	Computes average classification accuracy. 
 }
 \usage{
-accuracy( pred, actual, cutoff = NULL, reference = NULL )
+accuracy(pred, actual, cutoff = NULL, reference = NULL)
 }
 
 \arguments{
@@ -14,7 +14,7 @@ accuracy( pred, actual, cutoff = NULL, reference = NULL )
     \item{actual}{a numerical vector of actual values. }
     \item{cutoff}{cutoff value for the case that \code{pred} is vector of probabilites. }  
     \item{reference}{a factor of classes to be used as the true results. }
-. }
+}
 
 \value{ the computed average classification accuracy (numeric value). }
 
@@ -23,10 +23,10 @@ accuracy( pred, actual, cutoff = NULL, reference = NULL )
 \seealso{ \code{\link[liver]{conf.mat}}, \code{\link[liver]{mse}}, \code{\link[liver]{mae}} }
 
 \examples{
-pred   = c( "no", "yes", "yes", "no", "no", "yes", "no", "no" )
-actual = c( "yes", "no", "yes", "no", "no", "no", "yes", "yes" )
+pred   = c("no", "yes", "yes", "no", "no", "yes", "no", "no")
+actual = c("yes", "no", "yes", "no", "no", "no", "yes", "yes")
 
-accuracy( pred, actual )
+accuracy(pred, actual)
 }
 
 \keyword{parameter learning}

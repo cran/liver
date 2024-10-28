@@ -7,7 +7,7 @@
 This dataset contains nutrition information for \eqn{77} breakfast cereals and includes \eqn{16} variables. the "\code{rating}" column is our target as a rating of the cereals (Possibly from Consumer Reports?).   
 }
 
-\usage{ data( cereal ) }
+\usage{ data(cereal) }
 
 \format{ 
 
@@ -50,9 +50,9 @@ the original source can be found:
 \seealso{ \code{\link[liver]{adult}}, \code{\link[liver]{risk}}, \code{\link[liver]{churn}}, \code{\link[liver]{churnTel}}, \code{\link[liver]{bank}}, \code{\link[liver]{advertising}}, \code{\link[liver]{marketing}}, \code{\link[liver]{insurance}}, \code{\link[liver]{housePrice}}, \code{\link[liver]{house}} }
 
 \examples{
-data( cereal )
+data(cereal)
 
-str( cereal )
+str(cereal)
 }
 
 \keyword{ datasets }

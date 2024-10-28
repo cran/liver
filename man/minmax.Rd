@@ -6,7 +6,7 @@
 	Performs Min-Max normalization of numerical variables. 
 }
 \usage{
-minmax( x, columns = NULL, na.rm = FALSE )
+minmax(x, columns = NULL, na.rm = FALSE)
 }
 
 \arguments{
@@ -22,9 +22,9 @@ minmax( x, columns = NULL, na.rm = FALSE )
 \seealso{ \code{\link[liver]{transform}}, \code{\link[liver]{zscore}} }
 
 \examples{
-x = c( 2.3, -1.4, 0, 3.45 )
+x = c(2.3, -1.4, 0, 3.45)
 
-minmax( x )
+minmax(x)
 }
 
 \keyword{data preprocessing}

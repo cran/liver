@@ -12,55 +12,65 @@
 #     Z-score normalization
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
 
-zscore = function( x, columns = NULL, na.rm = FALSE ) 
+zscore = function(x, columns = NULL, na.rm = FALSE) 
 {
-    #    if( !methods::is( x )[ 1 ] %in% c( "integer", "numeric" ) ) stop( "Categorical variable not support" )
+    #    if(!methods::is(x)[1] %in% c("integer", "numeric")) stop("Categorical variable not support")
     
-    if( !is.vector( x ) & !is.matrix( x ) & !is.data.frame( x ) ) stop( " x must be a vector, matrix, or dataframe" )
+    if(!is.vector(x) & !is.matrix(x) & !is.data.frame(x)) 
+		stop(" x must be a vector, matrix, or dataframe")
     
-    if( any( is.na( x ) ) & ( na.rm == FALSE ) ) na.rm = TRUE
+    if(any(is.na(x)) & (na.rm == FALSE)) 
+		na.rm = TRUE
     
-    if( is.vector( x ) ){
-        z = ( x - mean( x, na.rm = na.rm ) ) / stats::sd( x, na.rm = na.rm )
-    }
+    if(is.vector(x))
+        z = (x - mean(x, na.rm = na.rm)) / stats::sd(x, na.rm = na.rm)
     
-    if( is.null( columns ) )
+    if(is.null(columns))
     {
         data_frame = FALSE
-        if( is.data.frame( x ) ){
+        if(is.data.frame(x))
+        {
             data_frame = TRUE
-            x = data.matrix( x )
+            x = data.matrix(x)
         }
         
-        if( is.matrix( x ) ){
-            if( nrow( x ) == 1 ) stop( " x, for the case of matrix, must have more than 1 row." )
+        if(is.matrix(x))
+        {
+            if(nrow(x) == 1) stop(" x, for the case of matrix, must have more than 1 row.")
             
-            z = t( ( t( x ) - apply( x, 2, mean, na.rm = na.rm ) ) / apply( x, 2, stats::sd, na.rm = na.rm ) )
+            z = t((t(x) - apply(x, 2, mean, na.rm = na.rm)) / apply(x, 2, stats::sd, na.rm = na.rm))
             
-            z[ is.na( z ) ] = 0
+            z[is.na(z)] = 0
         }
         
-        if( data_frame == TRUE ) z = as.data.frame( z )
+        if(data_frame == TRUE) 
+			z = as.data.frame(z)
+			
     }else{
+		
         z = x
-        if( is.numeric( columns ) ){
-            for( i in columns ){
-                x_i = as.integer( x[ , i ] )
+        if(is.numeric(columns))
+        {
+            for(i in columns)
+            {
+                x_i = as.integer(x[, i])
                 
-                z[ , i ] = ( x_i - mean( x_i, na.rm = na.rm ) ) / stats::sd( x_i, na.rm = na.rm )
+                z[, i] = (x_i - mean(x_i, na.rm = na.rm)) / stats::sd(x_i, na.rm = na.rm)
             }
         }
         
-        if( is.character( columns ) ){
-            for( i in columns ){
-                x_i = as.integer( x[ i ] )
+        if(is.character(columns))
+        {
+            for(i in columns)
+            {
+                x_i = as.integer(x[i])
                 
-                z[ i ] = ( x_i - mean( x_i, na.rm = na.rm ) ) / stats::sd( x_i, na.rm = na.rm )
+                z[i] = (x_i - mean(x_i, na.rm = na.rm)) / stats::sd(x_i, na.rm = na.rm)
             }
         }
     }
     
-    return( z )
+    return(z)
 }
 
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |

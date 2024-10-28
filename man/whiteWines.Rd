@@ -9,7 +9,7 @@ the whiteWines datasets are related to white variants of the Portuguese "Vinho V
 the dataset can be viewed as classification or regression tasks. the classes are ordered and not balanced (e.g. there are many more normal wines than excellent or poor ones). Outlier detection algorithms could be used to detect the few excellent or poor wines. Also, we are not sure if all input variables are relevant. So it could be interesting to test feature selection methods.
 }
 
-\usage{ data( whiteWines ) }
+\usage{ data(whiteWines) }
 
 \format{ 
 
@@ -49,9 +49,9 @@ Cortez, P., Cerdeira, A., Almeida, F., Matos, T., and Reis, J. (2009). Modeling 
 \seealso{ \code{\link[liver]{redWines}}, \code{\link[liver]{adult}}, \code{\link[liver]{risk}}, \code{\link[liver]{churn}}, \code{\link[liver]{churnTel}}, \code{\link[liver]{bank}}, \code{\link[liver]{advertising}}, \code{\link[liver]{marketing}}, \code{\link[liver]{insurance}}, \code{\link[liver]{cereal}}, \code{\link[liver]{housePrice}}, \code{\link[liver]{house}} }
 
 \examples{
-data( whiteWines )
+data(whiteWines)
 
-str( whiteWines )
+str(whiteWines)
 }
 
 \keyword{ datasets }

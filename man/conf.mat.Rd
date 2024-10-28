@@ -5,8 +5,8 @@
 \description{ Create a Confusion Matrix. }
 
 \usage{
-conf.mat( pred, actual, cutoff = NULL, reference = NULL, 
-          proportion = FALSE, dnn = c( "Predict", "Actual" ), ... )
+conf.mat(pred, actual, cutoff = NULL, reference = NULL, 
+         proportion = FALSE, dnn = c("Predict", "Actual"), ...)
 }
 
 \arguments{
@@ -29,11 +29,11 @@ conf.mat( pred, actual, cutoff = NULL, reference = NULL,
 \seealso{ \code{\link[liver]{conf.mat.plot}}, \code{\link[liver]{accuracy}} }
 
 \examples{
-pred   = c( "no", "yes", "yes", "no", "no", "yes", "no", "no" )
-actual = c( "yes", "no", "yes", "no", "no", "no", "yes", "yes" )
+pred   = c("no", "yes", "yes", "no", "no", "yes", "no", "no")
+actual = c("yes", "no", "yes", "no", "no", "no", "yes", "yes")
 
-conf.mat( pred, actual )
-conf.mat( pred, actual, proportion = TRUE )
+conf.mat(pred, actual)
+conf.mat(pred, actual, proportion = TRUE)
 }
 
 \keyword{parameter learning}

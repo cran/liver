@@ -12,13 +12,12 @@
 #     Compute average classification accuracy
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
 
-accuracy = function( pred, actual, cutoff = NULL, reference = NULL )
+accuracy = function(pred, actual, cutoff = NULL, reference = NULL)
 {
-    conf_mat = liver::conf.mat( pred = pred, actual = actual, cutoff = cutoff, reference = reference )
+    conf_mat = liver::conf.mat(pred = pred, actual = actual, cutoff = cutoff, reference = reference)
     
-    accuracy_value = sum( diag( conf_mat ) ) / sum( conf_mat )
+    accuracy_value = sum(diag(conf_mat)) / sum(conf_mat)
     
-    return( accuracy_value )    
 }
    
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |

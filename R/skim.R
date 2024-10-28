@@ -12,12 +12,12 @@
 #     Skim a data frame to get useful summary statistics
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
 
-skim = function( data, hist = TRUE, ... )
+skim = function(data, hist = TRUE, ...)
 {
-    if( hist == TRUE ) 
-        skimr::skim( data = data, ... )
+    if(hist == TRUE) 
+        skimr::skim(data = data, ...)
     else
-        skimr::skim_without_charts( data = data, ... )
+        skimr::skim_without_charts(data = data, ...)
 }
 
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |

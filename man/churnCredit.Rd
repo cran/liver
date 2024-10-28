@@ -9,7 +9,7 @@
 Customer \emph{churn} occurs when customers stop doing business with a company, also known as customer attrition. the data set contains \eqn{10127} rows (customers) and \eqn{21} columns (features). the "churn" column is our target which indicate whether customer churned (left the company) or not.   
 }
 
-\usage{ data( churnCredit ) }
+\usage{ data(churnCredit) }
 
 \format{ 
 the \code{churnCredit} dataset, as a data frame, contains \eqn{10127} rows (customers) and \eqn{21} columns (variables/features). the \eqn{21} variables are:
@@ -40,15 +40,16 @@ the \code{churnCredit} dataset, as a data frame, contains \eqn{10127} rows (cust
 
 \details{
 For more information related to the dataset see: 
+
 \url{https://www.kaggle.com/sakshigoyal7/credit-card-customers}
 }
 
 \seealso{ \code{\link[liver]{adult}}, \code{\link[liver]{risk}}, \code{\link[liver]{churn}}, \code{\link[liver]{churnTel}}, \code{\link[liver]{bank}}, \code{\link[liver]{advertising}}, \code{\link[liver]{marketing}}, \code{\link[liver]{insurance}}, \code{\link[liver]{cereal}}, \code{\link[liver]{housePrice}}, \code{\link[liver]{house}} }
 
 \examples{
-data( churnCredit )
+data(churnCredit)
 
-str( churnCredit )
+str(churnCredit)
 }
 
 \keyword{ datasets }

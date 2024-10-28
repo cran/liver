@@ -9,7 +9,7 @@
 the data is related to direct marketing campaigns of a Portuguese banking institution. the marketing campaigns were based on phone calls. Often, more than one contact to the same client was required, in order to access if the product (bank term deposit) would be (or not) subscribed. the classification goal is to predict if the client will subscribe a term deposit (variable deposit).
 }
 
-\usage{ data( bank ) }
+\usage{ data(bank) }
 
 \format{ 
 
@@ -62,9 +62,9 @@ Moro, S., Laureano, R. and Cortez, P. (2011) Using Data Mining for Bank Direct M
 \seealso{ \code{\link[liver]{adult}}, \code{\link[liver]{risk}}, \code{\link[liver]{churn}}, \code{\link[liver]{churnTel}}, \code{\link[liver]{advertising}}, \code{\link[liver]{marketing}}, \code{\link[liver]{insurance}}, \code{\link[liver]{cereal}}, \code{\link[liver]{housePrice}}, \code{\link[liver]{house}} }
 
 \examples{
-data( bank )
+data(bank)
 
-str( bank )
+str(bank)
 }
 
 \keyword{ datasets }

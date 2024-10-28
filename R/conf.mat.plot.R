@@ -12,14 +12,14 @@
 #     Plot a Confusion Matrix
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
 
-conf.mat.plot = function( pred, actual, cutoff = NULL, reference = NULL, 
-                          conf.level = 0, margin = 1, 
-                          color = c( "#ff83a8", "#83ff9b" ), ... )
+conf.mat.plot = function(pred, actual, cutoff = NULL, reference = NULL, 
+                         conf.level = 0, margin = 1, 
+                         color = c("#ff83a8", "#83ff9b"), ...)
 {
-    conf_mat = liver::conf.mat( pred = pred, actual = actual, cutoff = cutoff, reference = reference )
+    conf_mat = liver::conf.mat(pred = pred, actual = actual, cutoff = cutoff, reference = reference)
     
-    graphics::fourfoldplot( conf_mat, conf.level = conf.level, 
-                            margin = margin, color = color, ... )
+    graphics::fourfoldplot(conf_mat, conf.level = conf.level, 
+                            margin = margin, color = color, ...)
 }   
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
 

@@ -6,7 +6,7 @@
 	Performs Z-score normalization to transform numerical variables. 
 }
 \usage{
-zscore( x, columns = NULL, na.rm = FALSE )
+zscore(x, columns = NULL, na.rm = FALSE)
 }
 
 \arguments{
@@ -22,9 +22,9 @@ zscore( x, columns = NULL, na.rm = FALSE )
 \seealso{ \code{\link[liver]{transform}}, \code{\link[liver]{minmax}} }
 
 \examples{
-x = c( 2.3, -1.4, 0, 3.45 )
+x = c(2.3, -1.4, 0, 3.45)
 
-zscore( x )
+zscore(x)
 }
 
 \keyword{data preprocessing}

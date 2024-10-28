@@ -9,7 +9,7 @@
 Customer \emph{churn} occurs when customers stop doing business with a company, also known as customer attrition. the data set contains \eqn{7043} rows (customers) and \eqn{21} columns (features). the "Churn" column is our target which indicate whether customer churned (left the company) or not.   
 }
 
-\usage{ data( churnTel ) }
+\usage{ data(churnTel) }
 
 \format{ 
 the \code{churnTel} dataset, as a data frame, contains \eqn{7043} rows (customers) and \eqn{21} columns (variables/features). the \eqn{21} variables are:
@@ -40,15 +40,16 @@ the \code{churnTel} dataset, as a data frame, contains \eqn{7043} rows (customer
 
 \details{
 For more information related to the dataset see:
+
 \url{https://www.kaggle.com/blastchar/telco-customer-churn}
 }
 
 \seealso{ \code{\link[liver]{adult}}, \code{\link[liver]{risk}}, \code{\link[liver]{churn}}, \code{\link[liver]{bank}}, \code{\link[liver]{advertising}}, \code{\link[liver]{marketing}}, \code{\link[liver]{insurance}}, \code{\link[liver]{cereal}}, \code{\link[liver]{housePrice}}, \code{\link[liver]{house}} }
 
 \examples{
-data( churnTel )
+data(churnTel)
 
-str( churnTel )
+str(churnTel)
 }
 
 \keyword{ datasets }

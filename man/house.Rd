@@ -7,7 +7,7 @@
 the house dataset contains \eqn{6} features and \eqn{414} records. the target feature is \emph{unit.price} and the remaining 5 variables are predictors.
 }
 
-\usage{ data( house ) }
+\usage{ data(house) }
 
 \format{ 
 
@@ -31,9 +31,9 @@ A detailed description of the dataset can be found:
 \seealso{ \code{\link[liver]{adult}}, \code{\link[liver]{risk}}, \code{\link[liver]{churn}}, \code{\link[liver]{churnTel}}, \code{\link[liver]{bank}}, \code{\link[liver]{advertising}}, \code{\link[liver]{marketing}}, \code{\link[liver]{insurance}}, \code{\link[liver]{cereal}}, \code{\link[liver]{housePrice}} }
 
 \examples{
-data( house )
+data(house)
 
-str( house )
+str(house)
 }
 
 \keyword{ datasets }

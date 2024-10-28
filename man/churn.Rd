@@ -7,7 +7,7 @@
 This dataset comes from IBM Sample Data Sets. Customer \emph{churn} occurs when customers stop doing business with a company, also known as customer attrition. the data set contains \eqn{5000} rows (customers) and \eqn{20} columns (features). the "Churn" column is our target which indicate whether customer churned (left the company) or not.   
 }
 
-\usage{ data( churn ) }
+\usage{ data(churn) }
 
 \format{ 
 
@@ -45,9 +45,9 @@ Larose, D. T. and Larose, C. D. (2014). Discovering knowledge in data: an introd
 \seealso{ \code{\link[liver]{adult}}, \code{\link[liver]{risk}}, \code{\link[liver]{churnTel}}, \code{\link[liver]{bank}}, \code{\link[liver]{advertising}}, \code{\link[liver]{marketing}}, \code{\link[liver]{insurance}}, \code{\link[liver]{cereal}}, \code{\link[liver]{housePrice}}, \code{\link[liver]{house}} }
 
 \examples{
-data( churn )
+data(churn)
 
-str( churn )
+str(churn)
 }
 
 \keyword{ datasets }

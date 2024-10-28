@@ -5,8 +5,8 @@
 \description{ Plot a Confusion Matrix. }
 
 \usage{
-conf.mat.plot( pred, actual, cutoff = NULL, reference = NULL, conf.level = 0, 
-               margin = 1, color = c( "#ff83a8", "#83ff9b" ), ... )
+conf.mat.plot(pred, actual, cutoff = NULL, reference = NULL, conf.level = 0, 
+              margin = 1, color = c("#ff83a8", "#83ff9b"), ...)
 }
 
 \arguments{
@@ -25,10 +25,10 @@ conf.mat.plot( pred, actual, cutoff = NULL, reference = NULL, conf.level = 0,
 \seealso{ \code{\link[liver]{conf.mat}} }
 
 \examples{
-pred   = c( "no", "yes", "yes", "no", "no", "yes", "no", "no" )
-actual = c( "yes", "no", "yes", "no", "no", "no", "yes", "yes" )
+pred   = c("no", "yes", "yes", "no", "no", "yes", "no", "no")
+actual = c("yes", "no", "yes", "no", "no", "no", "yes", "yes")
 
-conf.mat.plot( pred, actual )
+conf.mat.plot(pred, actual)
 }
 
 \keyword{parameter learning}

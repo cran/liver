@@ -6,8 +6,8 @@
 Visualizing the Optimal Number of k for k-Nearest Neighbour Classification\code{kNN} based on accuracy or Mean Square Error (MSE). 
 }
 \usage{
-kNN.plot( formula, train, test, k.max = 10, transform = FALSE, base = "error", 
-          report = FALSE, set.seed = NULL, ... )
+kNN.plot(formula, train, test, k.max = 10, transform = FALSE, base = "error", 
+         report = FALSE, set.seed = NULL, ...)
 }
 
 \arguments{
@@ -41,13 +41,13 @@ kNN.plot( formula, train, test, k.max = 10, transform = FALSE, base = "error",
 \seealso{ \code{\link[liver]{kNN}}, \code{\link[liver]{transform}} }
 
 \examples{
-data( risk )
+data(risk)
 
-train = risk[   1:150, ]
-test  = risk[ 151:246, ]
+train = risk[  1:150, ]
+test  = risk[151:246, ]
 
-kNN.plot( risk ~ income + age, train = train, test = test )
-kNN.plot( risk ~ income + age, train = train, test = test, base = "accuracy" )
+kNN.plot(risk ~ income + age, train = train, test = test)
+kNN.plot(risk ~ income + age, train = train, test = test, base = "accuracy")
 }
 
 \keyword{models}
