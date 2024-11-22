@@ -4,11 +4,11 @@
 \title{	k-Nearest Neighbour Classification }
 
 \description{
-\code{kNN} is used to perform k-nearest neighbour classification for test set using training set. For each row of the test set, the \code{k} nearest (based on Euclidean distance) training set vectors are found. then, the classification is done by majority vote (ties broken at random). This function provides a formula interface to the \code{\link[class:knn]{class::knn()}} function of \code{R} package \code{class}. In addition, it allows normalization of the given data using the \code{\link[liver]{transform}} function.
+\code{kNN} is used to perform k-nearest neighbour classification for test set using training set. For each row of the test set, the \code{k} nearest (based on Euclidean distance) training set vectors are found. then, the classification is done by majority vote (ties broken at random). This function provides a formula interface to the \code{\link[class:knn]{class::knn()}} function of \code{R} package \code{class}. In addition, it allows normalization of the given data using the \code{\link[liver]{scaler}} function.
 }
 
 \usage{
-kNN(formula, train, test, k = 1, transform = FALSE, type = "class", l = 0, 
+kNN(formula, train, test, k = 1, scaler = FALSE, type = "class", l = 0, 
     use.all = TRUE, na.rm = FALSE)
 }
 
@@ -18,7 +18,7 @@ kNN(formula, train, test, k = 1, transform = FALSE, type = "class", l = 0,
   \item{test}{ data frame or matrix of test set cases. }  
   \item{k}{ number of neighbours considered. }  
 
-  \item{transform}{a character with options \code{FALSE} (default), \code{"minmax"}, and \code{"zscore"}. 
+  \item{scaler}{a character with options \code{FALSE} (default), \code{"minmax"}, and \code{"zscore"}. 
   Option \code{"minmax"} means no transformation. This option allows the users to use normalized version of the train and test sets for the kNN aglorithm. 
   }  
 
@@ -49,7 +49,7 @@ When \code{type = "prob"}, a matrix of confidence values is returned
 
 \author{ Reza Mohammadi \email{a.mohammadi@uva.nl} and Kevin Burke \email{kevin.burke@ul.ie} }
 
-\seealso{ \code{\link[liver]{kNN}}, \code{\link[liver]{transform}} }
+\seealso{ \code{\link[liver]{kNN}}, \code{\link[liver]{scaler}} }
 
 \examples{
 data(risk)

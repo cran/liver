@@ -6,20 +6,20 @@
 Visualizing the Optimal Number of k for k-Nearest Neighbour Classification\code{kNN} based on accuracy or Mean Square Error (MSE). 
 }
 \usage{
-kNN.plot(formula, train, test, k.max = 10, transform = FALSE, base = "error", 
-         report = FALSE, set.seed = NULL, ...)
+kNN.plot(formula, train, test, k.max = 10, scaler = FALSE, 
+         base = "accuracy", report = FALSE, set.seed = NULL, ...)
 }
 
 \arguments{
     \item{formula}{ a \link[stats]{formula}, with a response but no interaction terms. For the case of data frame, it is taken as the model frame (see \code{\link[stats]{model.frame})}. }
   \item{train}{ data frame or matrix of train set cases. }  
   \item{test}{ data frame or matrix of test set cases. }  
-  \item{k.max}{ the maximum number of number of neighbours to consider, must be at least two. }  
+  \item{k.max}{ the maximum number of neighbors to consider can either be a single value, with a minimum of 2, or a vector representing a range of values k.}  
 
-  \item{transform}{a character with options \code{FALSE} (default), \code{"minmax"}, and \code{"zscore"}. 
+  \item{scaler}{a character with options \code{FALSE} (default), \code{"minmax"}, and \code{"zscore"}. 
   Option \code{"minmax"} means no transformation. This option allows the users to use normalized version of the train and test sets for the kNN aglorithm. 
   }  
-  \item{base}{ base measurement: \code{error} (default), \code{accuracy}, or \code{MSE} for Mean Square Error.  }  
+  \item{base}{ base measurement: \code{accuracy} (default), \code{error}, or \code{MSE} for Mean Square Error.  }  
   
   \item{report}{a character with options \code{FALSE} (default) and \code{TRUE}. 
   Option \code{TRUE} reports the values of the \code{base} measurement. 
@@ -38,16 +38,18 @@ kNN.plot(formula, train, test, k.max = 10, transform = FALSE, base = "error",
 
 \author{ Reza Mohammadi \email{a.mohammadi@uva.nl} and Kevin Burke \email{kevin.burke@ul.ie} }
 
-\seealso{ \code{\link[liver]{kNN}}, \code{\link[liver]{transform}} }
+\seealso{ \code{\link[liver]{kNN}}, \code{\link[liver]{scaler}} }
 
 \examples{
 data(risk)
 
-train = risk[  1:150, ]
-test  = risk[151:246, ]
+partition_risk <- partition(data = risk, ratio = c(0.6, 0.4))
+
+train = partition_risk$part1
+test  = partition_risk$part1
 
 kNN.plot(risk ~ income + age, train = train, test = test)
-kNN.plot(risk ~ income + age, train = train, test = test, base = "accuracy")
+kNN.plot(risk ~ income + age, train = train, test = test, base = "error")
 }
 
 \keyword{models}

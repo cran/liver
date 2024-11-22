@@ -1,12 +1,12 @@
-\name{transform}
-\alias{transform}
+\name{scaler}
+\alias{scaler}
 
-\title{	Z-score normalization }
+\title{	Feature scaling }
 \description{
-	Performs variable transformation such as Z-score and min-max normalization. 
+	Performs feature scaling such as Z-score and min-max scaling. 
 }
 \usage{
-transform(x, method = c("minmax", "zscore"), columns = NULL, na.rm = FALSE)
+scaler(x, method = c("minmax", "zscore"), columns = NULL, na.rm = FALSE)
 }
 
 \arguments{
@@ -25,9 +25,9 @@ transform(x, method = c("minmax", "zscore"), columns = NULL, na.rm = FALSE)
 \examples{
 x = c(2.3, -1.4, 0, 3.45)
 
-transform(x, method = "minmax")
+scaler(x, method = "minmax")
 
-transform(x, method = "zscore")
+scaler(x, method = "zscore")
 
 }
 

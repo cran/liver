@@ -1,9 +1,9 @@
 \name{minmax}
 \alias{minmax}
 
-\title{	Min-Max normalization }
+\title{	Min-Max scaling of numerical variables }
 \description{
-	Performs Min-Max normalization of numerical variables. 
+	Performs Min-Max tranformation for numerical variables. 
 }
 \usage{
 minmax(x, columns = NULL, na.rm = FALSE)
@@ -19,7 +19,7 @@ minmax(x, columns = NULL, na.rm = FALSE)
 
 \author{ Reza Mohammadi \email{a.mohammadi@uva.nl} and Kevin Burke \email{kevin.burke@ul.ie} }
 
-\seealso{ \code{\link[liver]{transform}}, \code{\link[liver]{zscore}} }
+\seealso{ \code{\link[liver]{scaler}}, \code{\link[liver]{zscore}} }
 
 \examples{
 x = c(2.3, -1.4, 0, 3.45)

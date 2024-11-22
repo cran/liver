@@ -1,7 +1,7 @@
 export( mse,
         mae,
         accuracy,
-        transform,
+        scaler,
       	minmax,
         zscore,
         partition,

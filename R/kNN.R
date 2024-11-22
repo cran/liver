@@ -12,7 +12,7 @@
 #     k-Nearest Neighbour Classification using formula interface
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
 
-kNN = function(formula, train, test, k = 1, transform = FALSE, type = "class", 
+kNN = function(formula, train, test, k = 1, scaler = FALSE, type = "class", 
                l = 0, use.all = TRUE, na.rm = FALSE) 
 {
     if(any(is.na(train))) 
@@ -38,21 +38,21 @@ kNN = function(formula, train, test, k = 1, transform = FALSE, type = "class",
     train = stats::model.matrix(model_train, model_frame_train)[, -1]
     test  = stats::model.matrix(model_train_no_res, test)[, -1]
     
-    if(transform == TRUE) 
-		transform = "minmax"
+    if(scaler == TRUE) 
+		scaler = "minmax"
     
-    if(transform != FALSE)
+    if(scaler != FALSE)
     {
         if(!is.vector(train))
         {
             data_all = rbind(train, test)
-            data_all = liver::transform(data_all, method = transform, na.rm = na.rm)
+            data_all = liver::scaler(data_all, method = scaler, na.rm = na.rm)
             
             train = data_all[   1:nrow(train)  ,]
             test  = data_all[-(1:nrow(train)),]
         }else{
             data_all = c(train, test)
-            data_all = liver::transform(data_all, method = transform, na.rm = na.rm)
+            data_all = liver::scaler(data_all, method = scaler, na.rm = na.rm)
             
             train = data_all[   1:length(train)  ]
             test  = data_all[-(1:length(train))]

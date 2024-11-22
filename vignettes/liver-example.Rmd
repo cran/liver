@@ -14,15 +14,13 @@ output:
 ---
 
 ```{r include = FALSE}
-knitr::opts_chunk $ set( collapse = TRUE, comment = " ", fig.width = 7, fig.height = 7, fig.align = "center" )
+knitr::opts_chunk$set(collapse = TRUE, comment = " ", fig.width = 7, fig.height = 7, fig.align = "center")
 ```
 
 ```{r include = FALSE}
-library( liver )
-
-library( pROC )    
-
-library( ggplot2 )  
+library(liver)
+library(ggplot2)  
+library(pROC)    
 ```
 
 The `liver` package contains a collection of helper functions that make various techniques from data science more user-friendly for non-experts. 
@@ -30,21 +28,21 @@ The `liver` package contains a collection of helper functions that make various 
 Here is an example to show how to use the functionality of the package by using the *churn* dataset which is available in the package.
 
 ```{r}
-data( churn )       
+data(churn)       
 
-str( churn )
+str(churn)
 ```
 
-It shows that the 'churn' dataset as a `data.frame` has `r ncol( churn )` variables and `r nrow( churn )` observations. 
+It shows that the 'churn' dataset as a `data.frame` has `r ncol(churn)` variables and `r nrow(churn)` observations. 
 
 # Partitioning the dataset
 
 We partition the *churn* dataset randomly into two groups: train set (80%) and test set (20%). Here, we use the `partition` function from the *liver* package:
 
 ```{r}
-set.seed( 5 )
+set.seed(5)
 
-data_sets = partition( data = churn, prob = c( 0.8, 0.2 ) )
+data_sets = partition(data = churn, ratio = c(0.8, 0.2))
 
 train_set = data_sets $ part1
 test_set  = data_sets $ part2
@@ -54,7 +52,7 @@ actual_test  = test_set $ churn
 
 # Classification by kNN algorithm
 
-The *churn* dataset has `r ncol( churn ) - 1` predictors along with the target variable `churn`. Here we use the following predictors:
+The *churn* dataset has `r ncol(churn) - 1` predictors along with the target variable `churn`. Here we use the following predictors:
 
 `account.length`, `voice.plan`, `voice.messages`, `intl.plan`, `intl.mins`, `day.mins`, `eve.mins`, `night.mins`, and `customer.calls`.
 
@@ -64,60 +62,60 @@ First, based on the above predictors, find the k-nearest neighbor for the test s
 formula = churn ~ account.length + voice.plan + voice.messages + intl.plan + intl.mins + 
                   day.mins + eve.mins + night.mins + customer.calls
 
-predict_knn = kNN( formula, train = train_set, test = test_set, k = 8 )
+predict_knn = kNN(formula, train = train_set, test = test_set, k = 8)
 ```
 
 To report Confusion Matrix:
 
 ```{r, fig.align = 'center', fig.height = 3, fig.width = 3}
-conf.mat( predict_knn, actual_test )
+conf.mat(predict_knn, actual_test)
 
-conf.mat.plot( predict_knn, actual_test )
+conf.mat.plot(predict_knn, actual_test)
 ```
 
 To report Mean Squared Error (MSE):
 ```{r}
-mse( predict_knn, actual_test )
+mse(predict_knn, actual_test)
 ```
 
 # Classification by kNN algorithm with data transformation
 
-The predictors that we used in the previous part, do not have the same scale. For example, variable `day.mins` change between `r min( churn $ day.mins )` and `r max( churn $ day.mins )`, whereas variable `voice.plan` is binary. In this case, the values of variable `day.mins` will overwhelm the contribution of `voice.plan`. To avoid this situation we use normalization. So, we use min-max normalization and transfer the predictors as follows:
+The predictors that we used in the previous part, do not have the same scale. For example, variable `day.mins` change between `r min(churn $ day.mins)` and `r max(churn $ day.mins)`, whereas variable `voice.plan` is binary. In this case, the values of variable `day.mins` will overwhelm the contribution of `voice.plan`. To avoid this situation we use normalization. So, we use min-max normalization and transfer the predictors as follows:
 
 ```{r}
-predict_knn_trans = kNN( formula, train = train_set, test = test_set, k = 8, transform = "minmax" )
+predict_knn_trans = kNN(formula, train = train_set, test = test_set, k = 8, scaler = "minmax")
 ```
 
 To report Confusion Matrix:
 
 ```{r fig.show = "hold", fig.align = 'default', out.width = "46%"}
-conf.mat.plot( predict_knn_trans, actual_test )
+conf.mat.plot(predict_knn_trans, actual_test)
 
-conf.mat.plot( predict_knn, actual_test )
+conf.mat.plot(predict_knn, actual_test)
 ```
 
 To report the ROC curve, we need the probability of our classification prediction. We can have it by using:
 
 ```{r}
-prob_knn = kNN( formula, train = train_set, test = test_set, k = 8, type = "prob" )[ , 1 ]
+prob_knn = kNN(formula, train = train_set, test = test_set, k = 8, type = "prob")[, 1]
 
-prob_knn_trans = kNN( formula, train = train_set, test = test_set, transform = "minmax", k = 8, type = "prob" )[ , 1 ]
+prob_knn_trans = kNN(formula, train = train_set, test = test_set, scaler = "minmax", k = 8, type = "prob")[, 1]
 ```
 
 To visualize the model performance between the raw data and the transformed data, we could report the ROC curve plot as well as AUC (Area Under the Curve) by using the `plot.roc` function from the **pROC** package:
 
 ```{r, message = F, fig.align = "center"}
-roc_knn = roc( actual_test, prob_knn )
-roc_knn_trans = roc( actual_test, prob_knn_trans )
+roc_knn = roc(actual_test, prob_knn)
+roc_knn_trans = roc(actual_test, prob_knn_trans)
 
-ggroc( list( roc_knn, roc_knn_trans ), size = 0.8 ) + 
-    theme_minimal() + ggtitle( "ROC plots with AUC") +
-  scale_color_manual( values = c( "red", "blue" ), 
-    labels = c( paste( "AUC=", round( auc( roc_knn ), 3 ), "; Raw data; " ),
-                paste( "AUC=", round( auc( roc_knn_trans ), 3 ), "; Transformed data" ) ) ) +
-  theme( legend.title = element_blank() ) +
-  theme( legend.position = c( .7, .3 ), text = element_text( size = 17 ) ) + 
-    geom_segment( aes( x = 1, xend = 0, y = 0, yend = 1 ), color = "grey", linetype = "dashed" )
+ggroc(list(roc_knn, roc_knn_trans), size = 0.8) + 
+    theme_minimal() + ggtitle("ROC plots with AUC") +
+  scale_color_manual(values = c("red", "blue"), 
+    labels = c(paste("AUC=", round(auc(roc_knn), 3), "; Raw data; "),
+                paste("AUC=", round(auc(roc_knn_trans), 3), "; Transformed data"))) +
+  theme(legend.title = element_blank()) +
+  theme(legend.position = c(.7, .3), text = element_text(size = 17)) + 
+    geom_segment(aes(x = 1, xend = 0, y = 0, yend = 1), color = "grey", linetype = "dashed")
 ```
 
 # Optimal value of k for the kNN algorithm
@@ -125,9 +123,9 @@ ggroc( list( roc_knn, roc_knn_trans ), size = 0.8 ) +
 To find out the optimal value of `k` based on *Error Rate*, for the different values of k from 1 to 30, we run the k-nearest neighbor for the test set and compute the *Error Rate* for these models, by running `kNN.plot()` command 
 
 ```{r fig.align = "center" }
-kNN.plot( formula, train = train_set, test = test_set, transform = "minmax", 
-          k.max = 30, set.seed = 3 )
+kNN.plot(formula, train = train_set, test = test_set, scaler = "minmax", 
+          k.max = 30, set.seed = 3)
 ```
 
-The plot shows that the minimum value of *Error Rate* is for the case that k is 13; the smaller values of *Error Rate* indicates better predictions.
+The plot shows that the minimum value of *Error Rate* is for the case that k is 11; the smaller values of *Error Rate* indicates better predictions.
 

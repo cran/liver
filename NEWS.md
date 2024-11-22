@@ -7,6 +7,14 @@
 
 ## **liver** NEWS
 
+### **liver** Version 1.18
+
+* Function `transform()` renamed to `scaler()`.  
+* In function `kNN()`, input object `tranform` is replaced to `scaler`.
+* In function `kNN.plot()`, input object `tranform` is replaced to `scaler`.
+* In function `kNN.plot()`, input object `base = error` is replaced to `base = accuracy`.
+* In function `partition()`, input object `prob` is replaced to `ratio`.
+
 ### **liver** Version 1.17
 
 * Function `partition()` is updated.

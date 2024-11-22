@@ -12,7 +12,7 @@
 #     Z-score normalization
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
 
-transform = function(x, method = c("minmax", "zscore"), columns = NULL, na.rm = FALSE) 
+scaler = function(x, method = c("minmax", "zscore"), columns = NULL, na.rm = FALSE) 
 {
     method = match.arg(method)
     
