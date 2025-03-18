@@ -22,12 +22,9 @@ kNN(formula, train, test, k = 1, scaler = FALSE, type = "class", l = 0,
   Option \code{"minmax"} means no transformation. This option allows the users to use normalized version of the train and test sets for the kNN aglorithm. 
   }  
 
-  \item{type}{either \code{"class"} (default) for the predicted class or
-    \code{"prob"} for model confidence values.}
+  \item{type}{either \code{"class"} (default) for the predicted class or \code{"prob"} for model confidence values.}
   
-  \item{l}{ minimum vote for definite decision, otherwise \code{doubt}. (More
-precisely, less than \code{k-l} dissenting votes are allowed, even if \code{k}
-is increased by ties.) } 
+  \item{l}{ minimum vote for definite decision, otherwise \code{doubt}. (More precisely, less than \code{k-l} dissenting votes are allowed, even if \code{k} is increased by ties.) } 
 
   \item{use.all}{ controls handling of ties. If true, all distances equal to the \code{k}th largest are included. If false, a random selection of distances equal to the \code{k}th is chosen to use exactly \code{k} neighbours.
  }  

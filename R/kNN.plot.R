@@ -13,8 +13,15 @@
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
 
 kNN.plot = function(formula, train, test, k.max = 10, scaler = FALSE, 
-                    base = "accuracy", report = FALSE, set.seed = NULL, ...) 
+                    base = "accuracy", reference = NULL, cutoff = NULL, 
+                    type = "class", report = FALSE, set.seed = NULL, ...) 
 {
+  if(any(is.na(train))) 
+    stop("train dataset has NA")
+  
+  if(any(is.na(test)))  
+    stop("test dataset has NA")
+  
   if(length(k.max) == 1)
     if(k.max < 2)
       stop("  k.max must be > 1")
@@ -44,20 +51,35 @@ kNN.plot = function(formula, train, test, k.max = 10, scaler = FALSE,
   
   if(scaler != FALSE)
   {
-    if(!is.vector(train))
+    na.rm = FALSE
+    if(scaler == "minmax")
     {
-      data_all = rbind(train, test)
-      data_all = liver::scaler(data_all, method = scaler)
-      
-      train = data_all[   1:nrow(train)  ,]
-      test  = data_all[-(1:nrow(train)),]
-    }else{
-      data_all = c(train, test)
-      data_all = liver::scaler(data_all, method = scaler)
-      
-      train = data_all[   1:length(train)  ]
-      test  = data_all[-(1:length(train))]
+      if(is.vector(train))
+      {
+        par1_train = min(train, na.rm = na.rm)
+        par2_train = max(train, na.rm = na.rm)
+      }else{
+        par1_train = apply(train, 2, min, na.rm = na.rm)
+        par2_train = apply(train, 2, max, na.rm = na.rm)
+      }
     }
+    
+    if(scaler == "zscore")
+    {
+      if(is.vector(train))
+      {
+        par1_train = mean(train, na.rm = na.rm)
+        par2_train = stats::sd(train, na.rm = na.rm)
+      }else{
+        par1_train = apply(train, 2, mean, na.rm = na.rm)
+        par2_train = apply(train, 2, stats::sd, na.rm = na.rm)
+      }
+    }
+    
+    col = "all"
+    
+    train = liver::scaler(train, scale = scaler, col = col, par1 = par1_train, par2 = par2_train, na.rm = na.rm)
+    test  = liver::scaler(test, scale = scaler, col = col, par1 = par1_train, par2 = par2_train, na.rm = na.rm)
   }
   
   if(is.null(dim(train))) 
@@ -73,11 +95,48 @@ kNN.plot = function(formula, train, test, k.max = 10, scaler = FALSE,
   
   base_list = vector(length = length(k_list))
   
+  # - - - -
+  if(is.factor(train_label))
+    levels = base::levels(train_label)
+  else
+    levels = base::levels(factor(train_label))
+  
+  if(length(levels) < 2) 
+    stop("'actual' must have at least two levels.")
+  
+  if(is.numeric(levels) && levels[1] != (length(levels) - 1)) 
+    levels = c(max(levels), levels[-max(levels)])
+  
+  if(!is.null(reference))
+  {
+    if(length(reference) != 1) 
+      stop(" 'reference' must have only one level.")
+    
+    if(!is.character(reference))
+      reference = as.character(reference)
+    
+    if(!reference %in% levels)
+      stop(" 'reference' must be one of the levels of 'actual'.")
+    
+    if(which(levels == reference) != 1) 
+      levels = c(levels[which(levels == reference)], levels[-which(levels == reference)]) 
+  }else{
+    if(length(levels) == 2)
+      cat(paste(c("Setting levels: reference = \"", levels[1], "\", case = \"", levels[2],"\"  \n"), collapse = ""))
+    else
+      cat(paste(c("Setting levels: reference = \"", levels[1],"\"  \n"), collapse = ""))
+  }
+  
+  reference = levels[1]
+  
+  prob = ifelse(type == "prob", TRUE, FALSE)
+  # - - - 
+  
   for(k in 1:length(k_list))
   {
-    knn_k = class::knn(train = train, test = test, cl = train_label, k = k_list[k], ...)
+    knn_k = class::knn(train = train, test = test, cl = train_label, k = k_list[k], prob = prob, ...)
     
-    base_list[k] = liver::accuracy(knn_k, test_label)
+    base_list[k] = liver::accuracy(knn_k, test_label, reference = reference, cutoff = cutoff)
   }
   
   if((base == "accuracy") | (base == "Accuracy"))
@@ -107,8 +166,8 @@ kNN.plot = function(formula, train, test, k.max = 10, scaler = FALSE,
   df_gg = data.frame(k_list = k_list, base_list = base_list)
   
   plot_knn = ggplot2::ggplot(df_gg, ggplot2::aes(x = k_list, y = base_list)) +
-    ggplot2::geom_line(color = "#a0a0a0") + 
-    ggplot2::geom_point(shape = 21, color = "#ff5085", fill = "#ff83a8", size = 2) + 
+    ggplot2::geom_line(color = "#ffd1de") + 
+    ggplot2::geom_point(shape = 21, color = "#b60009", fill = "#b60009", size = 2) + 
     ggplot2::theme_minimal() + 
     ggplot2::scale_x_continuous(breaks = k_list) +
     ggplot2::ggtitle(title) +
@@ -125,6 +184,6 @@ kNN.plot = function(formula, train, test, k.max = 10, scaler = FALSE,
   else
     return(list(base_list, plot_knn))
 }
-
+   
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
    

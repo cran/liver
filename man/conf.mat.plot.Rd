@@ -5,7 +5,7 @@
 \description{ Plot a Confusion Matrix. }
 
 \usage{
-conf.mat.plot(pred, actual, cutoff = NULL, reference = NULL, conf.level = 0, 
+conf.mat.plot(pred, actual, cutoff = 0.5, reference = NULL, conf.level = 0, 
               margin = 1, color = c("#ff83a8", "#83ff9b"), ...)
 }
 

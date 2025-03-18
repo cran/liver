@@ -3,11 +3,12 @@
 
 \title{ Visualizing the Optimal Number of k }
 \description{
-Visualizing the Optimal Number of k for k-Nearest Neighbour Classification\code{kNN} based on accuracy or Mean Square Error (MSE). 
+Visualizing the Optimal Number of k for k-Nearest Neighbour (\code{kNN}) algorithm based on accuracy or Mean Square Error (MSE). 
 }
 \usage{
 kNN.plot(formula, train, test, k.max = 10, scaler = FALSE, 
-         base = "accuracy", report = FALSE, set.seed = NULL, ...)
+         base = "accuracy", reference = NULL, cutoff = NULL, 
+         type = "class", report = FALSE, set.seed = NULL, ...)
 }
 
 \arguments{
@@ -20,7 +21,10 @@ kNN.plot(formula, train, test, k.max = 10, scaler = FALSE,
   Option \code{"minmax"} means no transformation. This option allows the users to use normalized version of the train and test sets for the kNN aglorithm. 
   }  
   \item{base}{ base measurement: \code{accuracy} (default), \code{error}, or \code{MSE} for Mean Square Error.  }  
-  
+  \item{reference}{a factor of classes to be used as the true results. }
+  \item{cutoff}{cutoff value for the case that the output of knn algorithm is vector of probabilites. }  
+  \item{type}{either \code{"class"} (default) for the predicted class or \code{"prob"} for model confidence values.}
+
   \item{report}{a character with options \code{FALSE} (default) and \code{TRUE}. 
   Option \code{TRUE} reports the values of the \code{base} measurement. 
   }  
@@ -45,8 +49,8 @@ data(risk)
 
 partition_risk <- partition(data = risk, ratio = c(0.6, 0.4))
 
-train = partition_risk$part1
-test  = partition_risk$part1
+train <- partition_risk$part1
+test  <- partition_risk$part1
 
 kNN.plot(risk ~ income + age, train = train, test = test)
 kNN.plot(risk ~ income + age, train = train, test = test, base = "error")

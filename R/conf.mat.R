@@ -12,40 +12,67 @@
 #     Create a Confusion Matrix
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
 
-conf.mat = function(pred, actual, cutoff = NULL, reference = NULL, 
+conf.mat = function(pred, actual, cutoff = 0.5, reference = NULL, 
                     proportion = FALSE, dnn = c("Predict", "Actual"), ...)
 {
     if(length(pred) != length(actual))
-        stop("prod & actual must have the same length")
+        stop("'pred' and 'actual' must have the same length.")
     
-    if(!is.null(cutoff))
+    if(!is.factor(actual)) 
+        actual = factor(actual)
+    
+    levels = base::levels(actual)
+    
+    if(length(levels) < 2) 
+        stop("'actual' must have at least two levels.")
+    
+    if(is.numeric(levels) && levels[1] != (length(levels) - 1)) 
+        levels = c(max(levels), levels[-max(levels)])
+    
+    if(!is.null(reference))
     {
-        if((cutoff < 0) || (cutoff > 1)) 
-			stop(" The value of 'cutoff' must be between 0 and 1.")
+        if(length(reference) != 1) 
+            stop(" 'reference' must have only one level.")
         
-        levels = base::levels(as.factor(actual))
+        if(!is.character(reference))
+            reference = as.character(reference)
         
-        if(length(levels)  < 2) 
-			stop(" 'actual' must have more than two levels.")
-			
-        if(length(levels) != 2) 
-			stop(" For the case 'cutoff != NULL', 'actual' must have two levels.")
+        if(!reference %in% levels)
+            stop(" 'reference' must be one of the levels of 'actual'.")
         
-        if(levels[1] == 0) 
-			levels = c(levels[2], levels[1]) 
-        
-        if(!is.null(reference))
-            if(which(levels == reference) == 2) 
-				levels = c(levels[2], levels[1]) 
-
-        if(is.null(reference))
-            cat(paste(c("Setting levels: reference = \"", levels[1], "\", case = \"", levels[2],"\"  \n"), collapse = "")) 
-        
-        pred = ifelse(pred >= cutoff, levels[1], levels[2])
-        
-        pred   = factor(pred  , levels = levels)
-        actual = factor(actual, levels = levels)
+        if(which(levels == reference) != 1) 
+            levels = c(levels[which(levels == reference)], levels[-which(levels == reference)]) 
+    }else{
+        if(length(levels) == 2)
+            cat(paste(c("Setting levels: reference = \"", levels[1], "\", case = \"", levels[2],"\"  \n"), collapse = ""))
+        else
+            cat(paste(c("Setting levels: reference = \"", levels[1],"\"  \n"), collapse = ""))
     }
+    
+    if(is.numeric(pred))
+    {
+        if(length(unique(pred)) != length(levels))
+        {
+            if((cutoff < 0) || (cutoff > 1)) 
+                stop(" The value of 'cutoff' must be between 0 and 1.")
+            
+            if(length(levels) > 2)
+            {
+                Others = levels[levels != levels[1]]
+                actual = forcats::fct_collapse(actual, "Others" = Others)
+                levels = c(levels[1], "Others")
+            }
+            
+            pred = ifelse(pred >= cutoff, levels[1], levels[2])
+        }else{
+            levels_pred = sort(unique(pred), decreasing = TRUE)
+            for(i in 1:length(levels_pred))
+                pred[pred == levels_pred[i]] = levels[i]
+        }
+    }
+    
+    pred   = factor(pred  , levels = levels)
+    actual = factor(actual, levels = levels)
     
     conf_mat = table(pred, actual, dnn = dnn, ...)
     
@@ -54,7 +81,7 @@ conf.mat = function(pred, actual, cutoff = NULL, reference = NULL,
     
     return(conf_mat)
 }
-
+  
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
 
 

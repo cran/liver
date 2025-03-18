@@ -7,25 +7,26 @@
 ![](https://cranlogs.r-pkg.org/badges/liver) 
 ![](https://cranlogs.r-pkg.org/badges/grand-total/liver) 
 
-The `R` package **liver** offers a suite of helper functions to simplify various data science techniques for non-experts. This package aims to enable individuals with only a minimal level of coding knowledge to become acquainted with these techniques in an accessible manner. Inspired by an ancient Persian idiom, we liken this process to "eating the liver of data science," suggesting a deep and intimate engagement with the field of data science. This package includes functions for tasks such as data partitioning for out-of-sample testing, calculating Mean Squared Error (MSE) to assess prediction accuracy, and data transformations (z-score and min-max). In addition to these helper functions, the 'liver' package also features several intriguing datasets valuable for multivariate analysis.
+The `R` package **liver** provides a suite of helper functions and a collection of datasets used in the book [Data Science Foundations and Machine Learning Using R](https://uncovering-data-science.netlify.app). Designed to make data science techniques accessible to individuals with minimal coding experience, it simplifies tasks such as data partitioning for out-of-sample testing and data transformations (z-score and min-max). Inspired by an ancient Persian idiom, the package likens this learning process to "eating the liver of data science," symbolizing deep and immersive engagement with the field. In addition to its helper functions, liver also includes a collection of datasets valuable for multivariate analysis.
 
 ## Installation
 
 To install the latest version of this package from [CRAN](https://cran.r-project.org/package=liver), do the following from the R console:
 
 ``` r
-install.packages( "liver" )
+install.packages("liver")
 ```
 
 ## Loading
 
 ``` r
-library( liver )
+library(liver)
 ```
 
 ## Example for Data Analysis
 
 To see how to use the functionality of the package for data analysis:
 
-[https://CRAN.R-project.org/package=liver/vignettes/liver-example.html](https://CRAN.R-project.org/package=liver/vignettes/liver-example.html)
+- For a simple example see [https://CRAN.R-project.org/package=liver/vignettes/liver-example.html][https://CRAN.R-project.org/package=liver/vignettes/liver-example.html]
 
+- For more examples and details, please refer to the book [Data Science Foundations and Machine Learning Using R](https://uncovering-data-science.netlify.app).

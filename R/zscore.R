@@ -12,65 +12,81 @@
 #     Z-score normalization
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
 
-zscore = function(x, columns = NULL, na.rm = FALSE) 
+zscore = function(x, col = "auto", mean = NULL, sd = NULL, 
+                  na.rm = FALSE) 
 {
-    #    if(!methods::is(x)[1] %in% c("integer", "numeric")) stop("Categorical variable not support")
+  #    if(!methods::is(x)[1] %in% c("integer", "numeric")) stop("Categorical variable not support")
+  
+  if(!is.vector(x) & !is.matrix(x) & !is.data.frame(x)) 
+    stop(" x must be a vector, matrix, or dataframe")
+  
+  # Handle NA removal flag internally
+  na_option <- na.rm
+  if(any(is.na(x)) & (na_option == FALSE)) 
+    na_option = TRUE
+  
+  x_orig = x
+  if(!is.vector(x))
+  {
+    if(length(col) == 1 && col == "auto")
+      col <- colnames(x)[which(sapply(x, function(x) is.numeric(x)))]
     
-    if(!is.vector(x) & !is.matrix(x) & !is.data.frame(x)) 
-		stop(" x must be a vector, matrix, or dataframe")
+    if(length(col) == 1 && col == "all") 
+      col <- colnames(x)
     
-    if(any(is.na(x)) & (na.rm == FALSE)) 
-		na.rm = TRUE
+    x = x[, col]
+  }
+  
+  if(is.vector(x))
+  {
+    mean_val <- if (is.null(mean)) mean(x, na.rm = na_option) else mean
+    sd_val   <- if (is.null(sd  )) sd(x,   na.rm = na_option) else sd
     
-    if(is.vector(x))
-        z = (x - mean(x, na.rm = na.rm)) / stats::sd(x, na.rm = na.rm)
+    if(sd_val == 0) 
+      stop("Standard deviation is zero, cannot perform z-score normalization")
     
-    if(is.null(columns))
+    z = (x - mean_val) / sd_val
+    
+  }else{
+    
+    is_data_frame = is.data.frame(x)
+    if(is_data_frame)
+      x = data.matrix(x)
+    
+    # Define mean and sd as vectors for each column
+    mean_val <- if (is.null(mean)) apply(x, 2, mean, na.rm = na_option) else mean
+    sd_val   <- if (is.null(sd  )) apply(x, 2, sd, na.rm = na_option  ) else sd
+    
+    if(length(mean_val) != length(sd_val)) 
+      stop("'mean' and 'sd' must have the same length")
+    
+    if(length(mean_val) == 1)
+      mean_val = rep(mean_val, ncol(x))
+    
+    if(length(sd_val) == 1)
+      sd_val = rep(sd_val, ncol(x))
+    
+    if(length(mean_val) != ncol(x) | length(sd_val) != ncol(x))
+      stop("'mean', 'sd', and 'col' must have the same length")
+    
+    z = t((t(x) - mean_val) / sd_val)
+    
+    z[is.na(z)] = 0
+    
+    if(is_data_frame)
     {
-        data_frame = FALSE
-        if(is.data.frame(x))
-        {
-            data_frame = TRUE
-            x = data.matrix(x)
-        }
-        
-        if(is.matrix(x))
-        {
-            if(nrow(x) == 1) stop(" x, for the case of matrix, must have more than 1 row.")
-            
-            z = t((t(x) - apply(x, 2, mean, na.rm = na.rm)) / apply(x, 2, stats::sd, na.rm = na.rm))
-            
-            z[is.na(z)] = 0
-        }
-        
-        if(data_frame == TRUE) 
-			z = as.data.frame(z)
-			
-    }else{
-		
-        z = x
-        if(is.numeric(columns))
-        {
-            for(i in columns)
-            {
-                x_i = as.integer(x[, i])
-                
-                z[, i] = (x_i - mean(x_i, na.rm = na.rm)) / stats::sd(x_i, na.rm = na.rm)
-            }
-        }
-        
-        if(is.character(columns))
-        {
-            for(i in columns)
-            {
-                x_i = as.integer(x[i])
-                
-                z[i] = (x_i - mean(x_i, na.rm = na.rm)) / stats::sd(x_i, na.rm = na.rm)
-            }
-        }
+      z = as.data.frame(z)
+      colnames(z) = colnames(x)
     }
-    
-    return(z)
+  }
+  
+  if(!is.vector(x_orig))
+  {
+    x_orig[, col] = z
+    z = x_orig
+  }
+  
+  return(z)
 }
 
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |

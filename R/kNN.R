@@ -15,81 +15,95 @@
 kNN = function(formula, train, test, k = 1, scaler = FALSE, type = "class", 
                l = 0, use.all = TRUE, na.rm = FALSE) 
 {
-    if(any(is.na(train))) 
-		stop("train dataset has NA")
-		
-    if(any(is.na(test)))  
-		stop("test dataset has NA")
-
-    if(length(class(train)) > 1) 
-		class(train) = "data.frame"
-		
-    if(length(class(test)) > 1) 
-		class(test)  = "data.frame"
-
-    formula = stats::as.formula(formula)
-    
-    model_frame_train  = stats::model.frame(formula, data = train)
-    model_train        = attr(model_frame_train, "terms")
-    model_train_no_res = stats::delete.response(model_train)
-    
-    train_label = stats::model.response(model_frame_train)
-    
-    train = stats::model.matrix(model_train, model_frame_train)[, -1]
-    test  = stats::model.matrix(model_train_no_res, test)[, -1]
-    
-    if(scaler == TRUE) 
-		scaler = "minmax"
-    
-    if(scaler != FALSE)
+  if(any(is.na(train))) 
+    stop("train dataset has NA")
+  
+  if(any(is.na(test)))  
+    stop("test dataset has NA")
+  
+  if(length(class(train)) > 1) 
+    class(train) = "data.frame"
+  
+  if(length(class(test)) > 1) 
+    class(test)  = "data.frame"
+  
+  formula = stats::as.formula(formula)
+  
+  model_frame_train  = stats::model.frame(formula, data = train)
+  model_train        = attr(model_frame_train, "terms")
+  model_train_no_res = stats::delete.response(model_train)
+  
+  train_label = stats::model.response(model_frame_train)
+  
+  train = stats::model.matrix(model_train, model_frame_train)[, -1]
+  test  = stats::model.matrix(model_train_no_res, test)[, -1]
+  
+  if(scaler == TRUE) 
+    scaler = "minmax"
+  
+  if(scaler != FALSE)
+  {
+    if(scaler == "minmax")
     {
-        if(!is.vector(train))
-        {
-            data_all = rbind(train, test)
-            data_all = liver::scaler(data_all, method = scaler, na.rm = na.rm)
-            
-            train = data_all[   1:nrow(train)  ,]
-            test  = data_all[-(1:nrow(train)),]
-        }else{
-            data_all = c(train, test)
-            data_all = liver::scaler(data_all, method = scaler, na.rm = na.rm)
-            
-            train = data_all[   1:length(train)  ]
-            test  = data_all[-(1:length(train))]
-        }
+      if(is.vector(train))
+      {
+        par1_train = min(train, na.rm = na.rm)
+        par2_train = max(train, na.rm = na.rm)
+      }else{
+        par1_train = apply(train, 2, min, na.rm = na.rm)
+        par2_train = apply(train, 2, max, na.rm = na.rm)
+      }
     }
     
-    prob = ifelse(type == "prob", TRUE, FALSE)
-    
-    output_knn = class::knn(train = train, test = test, cl = train_label, k = k, 
-                            l = l, prob = prob, use.all = use.all)
-    
-    if(prob == TRUE)
+    if(scaler == "zscore")
     {
-        levels_train = levels(output_knn)
-        levels_size  = length(levels_train)
-        
-        row_size = ifelse(!is.vector(test), nrow(test), 1)
-        
-        prob_all = matrix(ncol = levels_size, nrow = row_size, 
-                           dimnames = list(rownames(test), levels_train))
-        
-        prob_knn = attr(output_knn, "prob")
-        
-        for(i in 1:levels_size)
-        {
-            ind_i = which(output_knn == levels_train[i])
-            
-            prob_all[ind_i,  i] = prob_knn[ind_i]
-            prob_all[ind_i, -i] = (1 - prob_knn[ind_i]) / (levels_size - 1)
-        }
-        
-        output_knn = prob_all
+      if(is.vector(train))
+      {
+        par1_train = mean(train, na.rm = na.rm)
+        par2_train = stats::sd(train, na.rm = na.rm)
+      }else{
+        par1_train = apply(train, 2, mean, na.rm = na.rm)
+        par2_train = apply(train, 2, stats::sd, na.rm = na.rm)
+      }
     }
     
-    return(output_knn)
+    col = "all"
+    
+    train = liver::scaler(train, scale = scaler, col = col, par1 = par1_train, par2 = par2_train, na.rm = na.rm)
+    test  = liver::scaler(test,  scale = scaler, col = col, par1 = par1_train, par2 = par2_train, na.rm = na.rm)
+  }
+  
+  prob = ifelse(type == "prob", TRUE, FALSE)
+  
+  output_knn = class::knn(train = train, test = test, cl = train_label, k = k, 
+                          l = l, prob = prob, use.all = use.all)
+  
+  if(prob == TRUE)
+  {
+    levels_train = levels(output_knn)
+    levels_size  = length(levels_train)
+    
+    row_size = ifelse(!is.vector(test), nrow(test), 1)
+    
+    prob_all = matrix(ncol = levels_size, nrow = row_size, 
+                      dimnames = list(rownames(test), levels_train))
+    
+    prob_knn = attr(output_knn, "prob")
+    
+    for(i in 1:levels_size)
+    {
+      ind_i = which(output_knn == levels_train[i])
+      
+      prob_all[ind_i,  i] = prob_knn[ind_i]
+      prob_all[ind_i, -i] = (1 - prob_knn[ind_i]) / (levels_size - 1)
+    }
+    
+    output_knn = prob_all
+  }
+  
+  return(output_knn)
 }
-   
+  
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
 
 

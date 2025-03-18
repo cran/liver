@@ -5,7 +5,7 @@
 \description{ Create a Confusion Matrix. }
 
 \usage{
-conf.mat(pred, actual, cutoff = NULL, reference = NULL, 
+conf.mat(pred, actual, cutoff = 0.5, reference = NULL, 
          proportion = FALSE, dnn = c("Predict", "Actual"), ...)
 }
 

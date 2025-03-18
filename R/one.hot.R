@@ -9,16 +9,45 @@
 #                                                                              |
 #     Maintainer: Reza Mohammadi <a.mohammadi@uva.nl>                          |
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
-#     Compute average classification accuracy
+#     one hot coding
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
 
-accuracy = function(pred, actual, cutoff = NULL, reference = NULL)
-{
-    conf_mat = liver::conf.mat(pred = pred, actual = actual, cutoff = cutoff, reference = reference)
-    
-    accuracy_value = sum(diag(conf_mat)) / sum(conf_mat)
+one.hot = function(data, cols = "auto", sparsifyNAs = FALSE, naCols = FALSE, 
+                   dropCols = TRUE, dropUnusedLevels = FALSE)
+{ 
+  if(!is.vector(data) & !is.data.frame(data) & !data.table::is.data.table(data))
+    stop(" data must be a vector, data.frame, or data.table")
+  
+  class_data = class(data)
+  
+  if(is.vector(data))
+    data = data.frame(data)
+  
+  if(is.data.frame(data))
+    data = data.table::as.data.table(data)
+  
+  ind_chr = which(sapply(data, function(x) is.character(x)))
+  for(i in ind_chr)
+    data[[i]] = factor(data[[i]], levels = unique(data[[i]]))
+  
+  if(cols[1] == "auto") 
+    cols <- colnames(data)[which(sapply(data, function(x) is.factor(x) & !is.ordered(x)))]
+  
+  output = mltools::one_hot(dt = data, cols = cols, sparsifyNAs = sparsifyNAs, naCols = naCols, 
+                            dropCols = dropCols, dropUnusedLevels = dropUnusedLevels)
+  
+  if(class_data == "data.frame")
+    output = as.data.frame(output)
+  
+  return(output)
 }
-   
+
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+
+
+
+
+
+
 
 

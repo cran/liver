@@ -6,13 +6,16 @@
 	Performs feature scaling such as Z-score and min-max scaling. 
 }
 \usage{
-scaler(x, method = c("minmax", "zscore"), columns = NULL, na.rm = FALSE)
+scaler(x, scale = c("minmax", "zscore"), col = "auto", 
+       par1 = NULL, par2 = NULL, na.rm = FALSE)
 }
 
 \arguments{
     \item{x}{a numerical \code{vector}, a \code{matrix} or a \code{data.frame}. }
-    \item{method}{ a method to transfer \code{x}. }
-    \item{columns}{ which columns are going to tranfer for the cases that \code{x} is a \code{matrix} or a \code{data.frame}. Defaults to all columns. }
+    \item{scale}{ a transfer for \code{x}. }
+    \item{col}{ a character vector of column names or indices. If \code{"auto"}, all numeric columns will be transformed. If \code{"all"}, all columns will be transformed. }
+    \item{par1}{ a numerical value or vector that for the case \code{scale = "minmax"} indicating the maximum value(s) and for the case \code{scale = "zscore"} indicating the mean value(s). }
+    \item{par2}{ a numerical value or vector that for the case \code{scale = "minmax"} indicating the maximum value(s) and for the case \code{scale = "zscore"} indicating the sd value(s). }
     \item{na.rm}{a logical value indicating whether NA values in \code{x} should be stripped before the computation proceeds. }
 }
 
@@ -25,10 +28,9 @@ scaler(x, method = c("minmax", "zscore"), columns = NULL, na.rm = FALSE)
 \examples{
 x = c(2.3, -1.4, 0, 3.45)
 
-scaler(x, method = "minmax")
+scaler(x, scale = "minmax")
 
-scaler(x, method = "zscore")
-
+scaler(x, scale = "zscore")
 }
 
 \keyword{data preprocessing}

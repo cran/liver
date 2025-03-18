@@ -12,74 +12,83 @@
 #     Min-Max normalization
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
 
-minmax = function(x, columns = NULL, na.rm = FALSE) 
+minmax = function(x, col = "auto", min = NULL, max = NULL, 
+                  na.rm = FALSE) 
 {
-    #    if(!methods::is(x)[1] %in% c("integer", "numeric")) stop("Categorical variable not support")
+  #    if(!methods::is(x)[1] %in% c("integer", "numeric")) stop("Categorical variable not support")
+  
+  if(!is.vector(x) & !is.matrix(x) & !is.data.frame(x)) 
+    stop(" x must be a vector, matrix, or dataframe")
+  
+  # Handle NA removal flag internally
+  na_option <- na.rm
+  if(any(is.na(x)) & (na_option == FALSE)) 
+    na_option = TRUE
+  
+  x_orig = x
+  if(!is.vector(x))
+  {
+    if(length(col) == 1 && col == "auto")
+      col <- colnames(x)[which(sapply(x, function(x) is.numeric(x)))]
     
-    if(!is.vector(x) & !is.matrix(x) & !is.data.frame(x)) 
-        stop(" x must be a vector, matrix, or dataframe")
+    if(length(col) == 1 && col == "all") 
+      col <- colnames(x)
     
-    if(any(is.na(x)) & (na.rm == FALSE)) 
-		na.rm = TRUE
+    x = x[, col]
+  }
+  
+  if(is.vector(x))
+  {
+    min_val <- if (is.null(min)) min(x, na.rm = na_option) else min
+    max_val <- if (is.null(max)) max(x, na.rm = na_option) else max
     
-    if(is.vector(x))
-        x_mm = (x - min(x, na.rm = na.rm)) / (max(x, na.rm = na.rm) - min(x, na.rm = na.rm))
+    if(min_val >= max_val)
+      stop("The 'min' value must be less than the 'max' value")
     
-    if(is.null(columns))
+    x_mm = (x - min_val) / (max_val - min_val)
+    
+  }else{
+    
+    is_data_frame = is.data.frame(x)
+    if(is_data_frame)
+      x = data.matrix(x)
+    
+    # Define min and max as vectors for each column
+    min_val <- if (is.null(min)) apply(x, 2, min, na.rm = na_option) else min
+    max_val <- if (is.null(max)) apply(x, 2, max, na.rm = na_option) else max
+    
+    if(length(min_val) != length(max_val)) 
+      stop("'min' and 'max' must have the same length")
+    
+    if(length(min_val) == 1)
+      min_val = rep(min_val, ncol(x))
+    
+    if(length(max_val) == 1)
+      max_val = rep(max_val, ncol(x))
+    
+    if(length(min_val) != ncol(x) | length(max_val) != ncol(x))
+      stop("'min', 'max', and 'col' must have the same length")
+    
+    x_mm = t((t(x) - min_val) / (max_val - min_val))
+    
+    x_mm[is.na(x_mm)] = x[is.na(x_mm)]
+    
+    if(is_data_frame)
     {
-        data_frame = FALSE
-        if(is.data.frame(x))
-        {
-            data_frame = TRUE
-            x = data.matrix(x)
-        }
-        
-        if(is.matrix(x))
-        {
-            if(nrow(x) == 1) 
-				stop(" x, for the case of matrix, must have more than 1 row.")
-            
-            x_mm = t((t(x) - apply(x, 2, min, na.rm = na.rm)) / (apply(x, 2, max, na.rm = na.rm) - apply(x, 2, min, na.rm = na.rm)))
-            
-            x_mm[is.na(x_mm)] = x[is.na(x_mm)]
-            
-            x_mm[x_mm > 1] = 1
-            x_mm[x_mm < 0] = 0
-        }
-        
-        if(data_frame == TRUE) 
-			x_mm = as.data.frame(x_mm)
-			
-    }else{
-		
-        x_mm = x
-        if(is.numeric(columns))
-        {
-            for(i in columns)
-            {
-                x_i = as.integer(x[, i])
-                min_i = min(x_i, na.rm = na.rm)
-                max_i = max(x_i, na.rm = na.rm)
-                
-                x_mm[, i] = (x_i - min_i) / (max_i - min_i)
-            }
-        }
-        
-        if(is.character(columns))
-        {
-            for(i in columns)
-            {
-                x_i = as.integer(x[i])
-                min_i = min(x_i, na.rm = na.rm)
-                max_i = max(x_i, na.rm = na.rm)
-                
-                x_mm[i] = (x_i - min_i) / (max_i - min_i)
-            }
-        }
+      x_mm = as.data.frame(x_mm)
+      colnames(x_mm) = colnames(x)
     }
-    
-    return(x_mm)
+  }
+  
+  if(!is.vector(x_orig))
+  {
+    x_orig[, col] = x_mm
+    x_mm = x_orig
+  }
+  
+  return(x_mm)
 }
+   
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
 
 

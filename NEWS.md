@@ -7,6 +7,22 @@
 
 ## **liver** NEWS
 
+### **liver** Version 1.19
+
+* Function `one.hot()` is added.
+
+* Function `zscore()` is updated.
+* Function `minmax()` is updated.
+* Function `scaler()` is updated.
+
+* Function `kNN()` is updated.
+* Function `kNN.plot()` is updated.
+
+* Function `conf.mat()` is updated.
+* Function `conf.mat.plot()` is updated.
+
+* Link to the book is added to the package.
+
 ### **liver** Version 1.18
 
 * Function `transform()` renamed to `scaler()`.  

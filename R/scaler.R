@@ -12,19 +12,20 @@
 #     Z-score normalization
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
 
-scaler = function(x, method = c("minmax", "zscore"), columns = NULL, na.rm = FALSE) 
+scaler <- function(x, scale = c("minmax", "zscore"), col = "auto", 
+                   par1 = NULL, par2 = NULL, na.rm = FALSE)
 {
-    method = match.arg(method)
+    scale <- match.arg(scale)
     
-    if(method == "minmax") 
-		x_trans = liver::minmax(x = x, columns = columns, na.rm = na.rm)
-		
-    if(method == "zscore") 
-		x_trans = liver::zscore(x = x, columns = columns, na.rm = na.rm)
+    if(scale == "minmax") {
+        scaled_data <- liver::minmax(x = x, col = col, min = par1, max = par2, na.rm = na.rm)
+    } else if (scale == "zscore") {
+        scaled_data <- liver::zscore(x = x, col = col, mean = par1, sd = par2, na.rm = na.rm)
+    }
     
-    return(x_trans)
+    return(scaled_data)
 }
-
+  
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
 
 

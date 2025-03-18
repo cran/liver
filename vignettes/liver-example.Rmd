@@ -23,9 +23,7 @@ library(ggplot2)
 library(pROC)    
 ```
 
-The `liver` package contains a collection of helper functions that make various techniques from data science more user-friendly for non-experts. 
-
-Here is an example to show how to use the functionality of the package by using the *churn* dataset which is available in the package.
+Provides a suite of helper functions and a collection of datasets used in the book [Data Science Foundations and Machine Learning Using R](https://uncovering-data-science.netlify.app). It is designed to make data science techniques accessible to individuals with minimal coding experience. Here is an example to show how to use the functionality of the package by using the *churn* dataset which is available in the package. For more examples and details, please refer to the book [Data Science Foundations and Machine Learning Using R](https://uncovering-data-science.netlify.app).
 
 ```{r}
 data(churn)       
