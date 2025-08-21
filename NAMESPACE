@@ -12,6 +12,9 @@ export( mse,
         kNN.plot,
         conf.mat,
         conf.mat.plot,
-        skim
+        skim,
+        t_conf,
+        z.conf,
+        prop.conf
       )
 

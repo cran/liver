@@ -1,17 +1,17 @@
 \name{churn}
 \alias{churn}
 \docType{data}
-\title{ Churn data set }
+\title{Churn data set}
 
 \description{ 
 This dataset comes from IBM Sample Data Sets. Customer \emph{churn} occurs when customers stop doing business with a company, also known as customer attrition. the data set contains \eqn{5000} rows (customers) and \eqn{20} columns (features). the "Churn" column is our target which indicate whether customer churned (left the company) or not.   
 }
 
-\usage{ data(churn) }
+\usage{data(churn)}
 
 \format{ 
 
-the \code{churn} dataset, as a data frame, contains \eqn{5000} rows (customers) and \eqn{20} columns (variables/features). the \eqn{20} variables are:
+A data frame with \eqn{5000} rows (customers) and \eqn{20} columns (variables/features). the \eqn{20} variables are:
  \itemize{
 
 \item \code{state}: Categorical, for the \eqn{51} states and the District of Columbia.
@@ -50,4 +50,4 @@ data(churn)
 str(churn)
 }
 
-\keyword{ datasets }
+\keyword{datasets}

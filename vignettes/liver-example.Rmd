@@ -23,7 +23,7 @@ library(ggplot2)
 library(pROC)    
 ```
 
-Provides a suite of helper functions and a collection of datasets used in the book [Data Science Foundations and Machine Learning Using R](https://uncovering-data-science.netlify.app). It is designed to make data science techniques accessible to individuals with minimal coding experience. Here is an example to show how to use the functionality of the package by using the *churn* dataset which is available in the package. For more examples and details, please refer to the book [Data Science Foundations and Machine Learning Using R](https://uncovering-data-science.netlify.app).
+Provides a suite of helper functions and a collection of datasets used in the book [Data Science Foundations and Machine Learning with R: From Data to Decisions](https://book-data-science-r.netlify.app). It is designed to make data science techniques accessible to individuals with minimal coding experience. Here is an example to show how to use the functionality of the package by using the *churn* dataset which is available in the package. For more examples and details, please refer to the book [Data Science Foundations and Machine Learning with R: From Data to Decisions](https://book-data-science-r.netlify.app).
 
 ```{r}
 data(churn)       
@@ -95,9 +95,9 @@ conf.mat.plot(predict_knn, actual_test)
 To report the ROC curve, we need the probability of our classification prediction. We can have it by using:
 
 ```{r}
-prob_knn = kNN(formula, train = train_set, test = test_set, k = 8, type = "prob")[, 1]
+prob_knn = kNN(formula, train = train_set, test = test_set, k = 8, type = "prob")[ , 1 ]
 
-prob_knn_trans = kNN(formula, train = train_set, test = test_set, scaler = "minmax", k = 8, type = "prob")[, 1]
+prob_knn_trans = kNN(formula, train = train_set, test = test_set, scaler = "minmax", k = 8, type = "prob")[ , 1 ]
 ```
 
 To visualize the model performance between the raw data and the transformed data, we could report the ROC curve plot as well as AUC (Area Under the Curve) by using the `plot.roc` function from the **pROC** package:

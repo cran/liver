@@ -44,9 +44,9 @@ conf.mat.plot(predict_knn_trans, actual_test)
 conf.mat.plot(predict_knn, actual_test)
 
 ## -----------------------------------------------------------------------------
-prob_knn = kNN(formula, train = train_set, test = test_set, k = 8, type = "prob")[, 1]
+prob_knn = kNN(formula, train = train_set, test = test_set, k = 8, type = "prob")[ , 1 ]
 
-prob_knn_trans = kNN(formula, train = train_set, test = test_set, scaler = "minmax", k = 8, type = "prob")[, 1]
+prob_knn_trans = kNN(formula, train = train_set, test = test_set, scaler = "minmax", k = 8, type = "prob")[ , 1 ]
 
 ## ----message = F, fig.align = "center"----------------------------------------
 roc_knn = roc(actual_test, prob_knn)

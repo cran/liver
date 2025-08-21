@@ -3,10 +3,11 @@
 
 \docType{package}
 
-\title{ liver: "Eating the Liver of Data Science" }
+\title{ liver: Foundations Toolkit and Datasets for Data Science }
 
 \description{
-The \pkg{liver} package provides a suite of helper functions and a collection of datasets used in the book \href{https://uncovering-data-science.netlify.app}{Data Science Foundations and Machine Learning Using R}. Designed to make data science techniques accessible to individuals with minimal coding experience, it simplifies tasks such as data partitioning for out-of-sample testing and data transformations (z-score and min-max). Inspired by an ancient Persian idiom, the package likens this learning process to "eating the liver of data science," symbolizing deep and immersive engagement with the field. In addition to its helper functions, liver also includes a collection of datasets valuable for multivariate analysis.
+
+The \pkg{liver} package provides a collection of helper functions and illustrative datasets to support learning and teaching of data science with R. The package is designed as a companion to the book \href{https://uncovering-data-science.netlify.app}{Data Science Foundations and Machine Learning Using R}, making key data science techniques accessible to individuals with minimal coding experience. Functions include tools for data partitioning, performance evaluation, and data transformations (e.g., z-score and min-max scaling). The included datasets are curated to highlight practical applications in data exploration, modeling, and multivariate analysis. An early inspiration for the package came from an ancient Persian idiom about "eating the liver," symbolizing deep and immersive engagement with knowledge.
 }
 
 \author{ 

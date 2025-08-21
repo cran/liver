@@ -7,6 +7,16 @@
 
 ## **liver** NEWS
 
+### **liver** Version 1.20
+
+* Data set `caravan` is added.
+
+* Function `t_conf()` is added.
+* Function `z.conf()` is added.
+* Function `prop.conf()` is added.
+
+* Title and description of the package are updated.
+
 ### **liver** Version 1.19
 
 * Function `one.hot()` is added.
