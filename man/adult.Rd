@@ -33,13 +33,11 @@ the \code{adult} dataset, as a data frame, contains \eqn{48598} rows and \eqn{15
 }
 
 \details{
-This dataset can be downloaded from the UCI machine learning repository:
+For more information related to the dataset see the UCI Machine Learning Repository: 
 
-\url{http://www.cs.toronto.edu/~delve/data/adult/desc.html}
+\verb{http://www.cs.toronto.edu/~delve/data/adult/desc.html} 
 
-A detailed description of the dataset can be found in the UCI documentation at: 
-
-\url{http://www.cs.toronto.edu/~delve/data/adult/adultDetail.html}
+\verb{http://www.cs.toronto.edu/~delve/data/adult/adultDetail.html}
 }
 
 \references{

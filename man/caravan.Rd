@@ -11,7 +11,7 @@ The contains \eqn{5822} customer records from an insurance company, each describ
 
 \format{A data frame with \eqn{5822} observations (rows) and \eqn{86} features (columns).}
   
-\source{The data was supplied by Sentient Machine Research (\url{https://www.smr.nl}).}
+\source{The data was supplied by Sentient Machine Research: \verb{https://www.smr.nl}}
 
 \references{
 P. van der Putten and M. van Someren (eds) . CoIL Challenge 2000: The Insurance Company Case.  Published by Sentient Machine Research, Amsterdam. Also a Leiden Institute of Advanced Computer Science Technical Report 2000-09. June 22, 2000. \url{http://www.liacs.nl/~putten/library/cc2000}.

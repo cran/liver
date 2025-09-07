@@ -37,9 +37,9 @@ Output variable (based on sensory data)
 }
 
 \details{
-This dataset can be downloaded from the UCI machine learning repository:
+For more information related to the dataset see the UCI Machine Learning Repository:
 
-\url{https://archive.ics.uci.edu/dataset/186/wine+quality}
+\verb{https://archive.ics.uci.edu/dataset/186/wine+quality}
 }
 
 \references{

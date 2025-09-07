@@ -27,6 +27,6 @@ library(liver)
 
 To see how to use the functionality of the package for data analysis:
 
-- For a simple example see [https://CRAN.R-project.org/package=liver/vignettes/liver-example.html][https://CRAN.R-project.org/package=liver/vignettes/liver-example.html]
+- For a simple example see [https://CRAN.R-project.org/package=liver/vignettes/liver-example.html](https://CRAN.R-project.org/package=liver/vignettes/liver-example.html).
 
 - For more examples and details, please refer to the book [Data Science Foundations and Machine Learning with R: From Data to Decisions](https://book-data-science-r.netlify.app).

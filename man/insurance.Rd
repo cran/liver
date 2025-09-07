@@ -25,9 +25,9 @@ the \code{insurance} dataset, as a data frame, contains \eqn{1338} rows (custome
 }
 
 \details{
-A detailed description of the dataset can be found:
+For more information related to the dataset see:
 
-\url{https://www.kaggle.com/mirichoi0218/insurance}
+\verb{https://www.kaggle.com/mirichoi0218/insurance}
 }
 
 \references{

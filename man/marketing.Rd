@@ -25,9 +25,9 @@ the \code{marketing} dataset, as a data frame, contains \eqn{40} rows and \eqn{8
 }
 
 \details{
-A detailed description of the dataset can be found:
+For more information related to the dataset see:
 
-\url{https://github.com/chrisBow/marketing-regression-part-one}
+\verb{https://github.com/chrisBow/marketing-regression-part-one}
 }
 
 \seealso{ \code{\link[liver]{adult}}, \code{\link[liver]{risk}}, \code{\link[liver]{churn}}, \code{\link[liver]{churnTel}}, \code{\link[liver]{bank}}, \code{\link[liver]{advertising}}, \code{\link[liver]{insurance}}, \code{\link[liver]{cereal}}, \code{\link[liver]{housePrice}}, \code{\link[liver]{house}} }

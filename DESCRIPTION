@@ -1,6 +1,6 @@
 Package: liver
 Title: Foundations Toolkit and Datasets for Data Science
-Version: 1.20
+Version: 1.21
 Authors@R: 
     c(person(given = "Reza",
              family = "Mohammadi",
@@ -13,8 +13,8 @@ Authors@R:
              email = "kevin.burke@ul.ie"
              )
       )
-Description: Provides a collection of helper functions and illustrative datasets to support learning and teaching of data science with R. The package is designed as a companion to the book <https://book-data-science-r.netlify.app/>, making key data science techniques accessible to individuals with minimal coding experience. Functions include tools for data partitioning, performance evaluation, and data transformations (e.g., z-score and min-max scaling). The included datasets are curated to highlight practical applications in data exploration, modeling, and multivariate analysis. An early inspiration for the package came from an ancient Persian idiom about "eating the liver," symbolizing deep and immersive engagement with knowledge.
-URL: https://book-data-science-r.netlify.app/
+Description: Provides a collection of helper functions and illustrative datasets to support learning and teaching of data science with R. The package is designed as a companion to the book <https://book-data-science-r.netlify.app>, making key data science techniques accessible to individuals with minimal coding experience. Functions include tools for data partitioning, performance evaluation, and data transformations (e.g., z-score and min-max scaling). The included datasets are curated to highlight practical applications in data exploration, modeling, and multivariate analysis. An early inspiration for the package came from an ancient Persian idiom about "eating the liver," symbolizing deep and immersive engagement with knowledge.
+URL: https://book-data-science-r.netlify.app
 Depends: R (>= 3.5.0)
 Imports: class, ggplot2
 Suggests: pROC, skimr, knitr, rmarkdown, data.table, mltools, forcats
@@ -26,5 +26,5 @@ Author: Reza Mohammadi [aut, cre] (ORCID:
   Kevin Burke [aut]
 Maintainer: Reza Mohammadi <a.mohammadi@uva.nl>
 NeedsCompilation: no
-Packaged: 2025-08-21 20:46:51 UTC; a.mohammadiuva.nl
-Date/Publication: 2025-08-21 21:02:07 UTC
+Packaged: 2025-09-07 11:47:03 UTC; a.mohammadiuva.nl
+Date/Publication: 2025-09-07 22:00:39 UTC

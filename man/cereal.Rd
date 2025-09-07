@@ -41,11 +41,11 @@ the \code{cereal} dataset, as a data frame, contains \eqn{77} rows (breakfast ce
   }
 }
 
-\details{
-the original source can be found:
-\url{https://perso.telecom-paristech.fr/eagan/class/igr204/datasets}
-}
+\source{
+The original source can be found:
 
+\verb{https://perso.telecom-paristech.fr/eagan/class/igr204/datasets}
+}
 
 \seealso{ \code{\link[liver]{adult}}, \code{\link[liver]{risk}}, \code{\link[liver]{churn}}, \code{\link[liver]{churnTel}}, \code{\link[liver]{bank}}, \code{\link[liver]{advertising}}, \code{\link[liver]{marketing}}, \code{\link[liver]{insurance}}, \code{\link[liver]{housePrice}}, \code{\link[liver]{house}} }
 

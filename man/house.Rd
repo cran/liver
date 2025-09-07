@@ -23,9 +23,9 @@ the \code{house} dataset, as a data frame, contains \eqn{414} rows and \eqn{6} c
 }
 
 \details{
-A detailed description of the dataset can be found:
+For more information related to the dataset see:
 
-\url{https://www.kaggle.com/quantbruce/real-estate-price-prediction}
+\verb{https://www.kaggle.com/quantbruce/real-estate-price-prediction}
 }
 
 \seealso{ \code{\link[liver]{adult}}, \code{\link[liver]{risk}}, \code{\link[liver]{churn}}, \code{\link[liver]{churnTel}}, \code{\link[liver]{bank}}, \code{\link[liver]{advertising}}, \code{\link[liver]{marketing}}, \code{\link[liver]{insurance}}, \code{\link[liver]{cereal}}, \code{\link[liver]{housePrice}} }

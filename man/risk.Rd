@@ -23,6 +23,10 @@ the \code{risk} dataset, as a data frame, contains \eqn{246} rows (customers) an
   }
 }
 
+\references{
+Larose, D. T. and Larose, C. D. (2014). Discovering knowledge in data: an introduction to data mining. \emph{John Wiley & Sons}.
+}
+
 \seealso{ \code{\link[liver]{adult}}, \code{\link[liver]{churn}}, \code{\link[liver]{churnTel}}, \code{\link[liver]{bank}}, \code{\link[liver]{advertising}}, \code{\link[liver]{marketing}}, \code{\link[liver]{insurance}}, \code{\link[liver]{cereal}}, \code{\link[liver]{housePrice}}, \code{\link[liver]{house}} }
 
 \examples{

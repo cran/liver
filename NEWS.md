@@ -10,27 +10,21 @@
 ### **liver** Version 1.20
 
 * Data set `caravan` is added.
-
-* Function `t_conf()` is added.
 * Function `z.conf()` is added.
 * Function `prop.conf()` is added.
-
+* Function `t_conf()` is added.
 * Title and description of the package are updated.
 
 ### **liver** Version 1.19
 
 * Function `one.hot()` is added.
-
 * Function `zscore()` is updated.
 * Function `minmax()` is updated.
 * Function `scaler()` is updated.
-
 * Function `kNN()` is updated.
 * Function `kNN.plot()` is updated.
-
 * Function `conf.mat()` is updated.
 * Function `conf.mat.plot()` is updated.
-
 * Link to the book is added to the package.
 
 ### **liver** Version 1.18
@@ -53,7 +47,6 @@
 
 * Function `skim()` is added to the package.
 * In function `kNN.plot()`, option `report` is added.
-
 * Data set `churnCredit` is added.
 
 ### **liver** Version 1.10
@@ -72,7 +65,6 @@
 ### **liver** Version 1.7
 
 * Function `accuracy()` is added to the package.
-
 * Option `base` is added to function `kNN.plot()`.
 * Option `reference` is added to function `conf.mat.plot()`.
 * Option `reference` is added to function `conf.mat()`.
@@ -95,7 +87,6 @@
 ### **liver** Version 1.4
 
 * Data set `fertilizer` is added.
-
 * Data set `churn` is updated.
 * Data set `churnTel` is updated.
 * Data set `adult` is updated.
