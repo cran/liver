@@ -33,11 +33,9 @@ the \code{adult} dataset, as a data frame, contains \eqn{48598} rows and \eqn{15
 }
 
 \details{
-For more information related to the dataset see the UCI Machine Learning Repository: 
-
-\verb{http://www.cs.toronto.edu/~delve/data/adult/desc.html} 
-
-\verb{http://www.cs.toronto.edu/~delve/data/adult/adultDetail.html}
+For more information related to the dataset see the UCI Machine Learning Repository:  \cr
+\url{http://www.cs.toronto.edu/~delve/data/adult/desc.html}  \cr
+\url{http://www.cs.toronto.edu/~delve/data/adult/adultDetail.html}
 }
 
 \references{
@@ -48,7 +46,6 @@ Kohavi, R. (1996). Scaling up the accuracy of naive-bayes classifiers: A decisio
 
 \examples{
 data(adult)
-
 str(adult)
 }
 

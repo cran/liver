@@ -13,7 +13,6 @@ the fertilizer dataset contains \eqn{4} features and \eqn{96} records. Results f
 
 \examples{
 data(fertilizer)
-
 str(fertilizer)
 }
 

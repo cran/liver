@@ -39,16 +39,14 @@ the \code{churnCredit} dataset, as a data frame, contains \eqn{10127} rows (cust
 }
 
 \details{
-For more information related to the dataset see: 
-
-\verb{https://www.kaggle.com/sakshigoyal7/credit-card-customers}
+For more information related to the dataset see:  \cr
+\url{https://www.kaggle.com/sakshigoyal7/credit-card-customers}
 }
 
 \seealso{ \code{\link[liver]{adult}}, \code{\link[liver]{risk}}, \code{\link[liver]{churn}}, \code{\link[liver]{churnTel}}, \code{\link[liver]{bank}}, \code{\link[liver]{advertising}}, \code{\link[liver]{marketing}}, \code{\link[liver]{insurance}}, \code{\link[liver]{cereal}}, \code{\link[liver]{housePrice}}, \code{\link[liver]{house}} }
 
 \examples{
 data(churnCredit)
-
 str(churnCredit)
 }
 

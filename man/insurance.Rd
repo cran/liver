@@ -25,9 +25,8 @@ the \code{insurance} dataset, as a data frame, contains \eqn{1338} rows (custome
 }
 
 \details{
-For more information related to the dataset see:
-
-\verb{https://www.kaggle.com/mirichoi0218/insurance}
+For more information related to the dataset see: \cr
+\url{https://www.kaggle.com/mirichoi0218/insurance}
 }
 
 \references{
@@ -38,7 +37,6 @@ Brett Lantz (2019). Machine Learning with R: Expert techniques for predictive mo
 
 \examples{
 data(insurance)
-
 str(insurance)
 }
 

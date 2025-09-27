@@ -33,11 +33,8 @@ kNN.plot(formula, train, test, k.max = 10, scaler = FALSE,
 }
 
 \references{
-  Ripley, B. D. (1996)
-  \emph{Pattern Recognition and Neural Networks.} Cambridge.
-
-  Venables, W. N. and Ripley, B. D. (2002)
-  \emph{Modern Applied Statistics with S.} Fourth edition.  Springer.
+  Ripley, B. D. (1996) \emph{Pattern Recognition and Neural Networks.} Cambridge. \cr
+  Venables, W. N. and Ripley, B. D. (2002) \emph{Modern Applied Statistics with S.} Fourth edition.  Springer.
 }
 
 \author{ Reza Mohammadi \email{a.mohammadi@uva.nl} and Kevin Burke \email{kevin.burke@ul.ie} }

@@ -14,9 +14,8 @@ the \code{corona} dataset, as a data frame, contains \eqn{61900} rows and \eqn{1
 }
 
 \source{
-The original source can be found:
-
-\verb{https://data.europa.eu/euodp/en/data/dataset/covid-19-coronavirus-data}
+The original source can be found: \cr
+\url{https://data.europa.eu/euodp/en/data/dataset/covid-19-coronavirus-data}
 }
 
 
@@ -24,7 +23,6 @@ The original source can be found:
 
 \examples{
 data(corona)
-
 str(corona)
 }
 

@@ -39,8 +39,7 @@ When \code{type = "prob"}, a matrix of confidence values is returned
  }
 
 \references{
-  Ripley, B. D. (1996) \emph{Pattern Recognition and Neural Networks.} Cambridge.
-
+  Ripley, B. D. (1996) \emph{Pattern Recognition and Neural Networks.} Cambridge.  \cr
   Venables, W. N. and Ripley, B. D. (2002) \emph{Modern Applied Statistics with S.} Fourth edition. Springer.
 }
 

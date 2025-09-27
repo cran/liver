@@ -28,16 +28,14 @@ the \code{advertising} dataset, as a data frame, contains \eqn{1143} rows and \e
 }
 
 \details{
-For more information related to the dataset see:
-
-\verb{https://www.kaggle.com/loveall/clicks-conversion-tracking}
+For more information related to the dataset see: \cr
+\url{https://www.kaggle.com/loveall/clicks-conversion-tracking}
 }
 
 \seealso{ \code{\link[liver]{adult}}, \code{\link[liver]{risk}}, \code{\link[liver]{churn}}, \code{\link[liver]{churnTel}}, \code{\link[liver]{bank}}, \code{\link[liver]{marketing}}, \code{\link[liver]{insurance}}, \code{\link[liver]{cereal}}, \code{\link[liver]{housePrice}}, \code{\link[liver]{house}} }
 
 \examples{
 data(advertising)
-
 str(advertising)
 }
 

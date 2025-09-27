@@ -7,6 +7,10 @@
 
 ## **liver** NEWS
 
+### **liver** Version 1.22
+
+* Data set `drug` is added.
+
 ### **liver** Version 1.20
 
 * Data set `caravan` is added.

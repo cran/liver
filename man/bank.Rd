@@ -50,9 +50,8 @@ Target variable:
 }
 
 \details{
-For more information related to the dataset see:
-
-\verb{http://archive.ics.uci.edu/ml/datasets/Bank+Marketing}
+For more information related to the dataset see:  \cr
+\url{http://archive.ics.uci.edu/ml/datasets/Bank+Marketing}
 }
 
 \references{
@@ -63,7 +62,6 @@ Moro, S., Laureano, R. and Cortez, P. (2011) Using Data Mining for Bank Direct M
 
 \examples{
 data(bank)
-
 str(bank)
 }
 

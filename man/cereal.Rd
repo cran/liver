@@ -14,16 +14,7 @@ This dataset contains nutrition information for \eqn{77} breakfast cereals and i
 the \code{cereal} dataset, as a data frame, contains \eqn{77} rows (breakfast cereals) and \eqn{16} columns (variables/features). the \eqn{16} variables are:
  \itemize{
 \item \code{name}: Name of cereal.
-\item \code{manuf}: Manufacturer of cereal:
-    \itemize{
-        \item \code{A}: American Home Food Products;
-        \item \code{G}: General Mills;
-        \item \code{K}: Kelloggs;
-        \item \code{N}: Nabisco;
-        \item \code{P}: Post;
-        \item \code{Q}: Quaker Oats;
-        \item \code{R}: Ralston Purina;
-    }
+\item \code{manuf}: Manufacturer of cereal, coded into seven categories: "A" for American Home Food Products, "G" for General Mills, "K" for Kelloggs, "N" for Nabisco, "P" for Post, "Q" for Quaker Oats, and "R" for Ralston Purina. 
 \item \code{type}: cold or hot.
 \item \code{calories}: calories per serving.
 \item \code{protein}: grams of protein.
@@ -42,16 +33,14 @@ the \code{cereal} dataset, as a data frame, contains \eqn{77} rows (breakfast ce
 }
 
 \source{
-The original source can be found:
-
-\verb{https://perso.telecom-paristech.fr/eagan/class/igr204/datasets}
+The original source can be found:  \cr
+\url{https://perso.telecom-paristech.fr/eagan/class/igr204/datasets}
 }
 
 \seealso{ \code{\link[liver]{adult}}, \code{\link[liver]{risk}}, \code{\link[liver]{churn}}, \code{\link[liver]{churnTel}}, \code{\link[liver]{bank}}, \code{\link[liver]{advertising}}, \code{\link[liver]{marketing}}, \code{\link[liver]{insurance}}, \code{\link[liver]{housePrice}}, \code{\link[liver]{house}} }
 
 \examples{
 data(cereal)
-
 str(cereal)
 }
 

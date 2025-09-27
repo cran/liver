@@ -37,9 +37,8 @@ Output variable (based on sensory data)
 }
 
 \details{
-For more information related to the dataset see the UCI Machine Learning Repository:
-
-\verb{https://archive.ics.uci.edu/dataset/186/wine+quality}
+For more information related to the dataset see the UCI Machine Learning Repository: \cr
+\url{https://archive.ics.uci.edu/dataset/186/wine+quality}
 }
 
 \references{
@@ -50,7 +49,6 @@ Cortez, P., Cerdeira, A., Almeida, F., Matos, T., and Reis, J. (2009). Modeling 
 
 \examples{
 data(whiteWines)
-
 str(whiteWines)
 }
 

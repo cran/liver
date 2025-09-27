@@ -39,16 +39,14 @@ the \code{churnTel} dataset, as a data frame, contains \eqn{7043} rows (customer
 }
 
 \details{
-For more information related to the dataset see:
-
-\verb{https://www.kaggle.com/blastchar/telco-customer-churn}
+For more information related to the dataset see:  \cr
+\url{https://www.kaggle.com/blastchar/telco-customer-churn}
 }
 
 \seealso{ \code{\link[liver]{adult}}, \code{\link[liver]{risk}}, \code{\link[liver]{churn}}, \code{\link[liver]{bank}}, \code{\link[liver]{advertising}}, \code{\link[liver]{marketing}}, \code{\link[liver]{insurance}}, \code{\link[liver]{cereal}}, \code{\link[liver]{housePrice}}, \code{\link[liver]{house}} }
 
 \examples{
 data(churnTel)
-
 str(churnTel)
 }
 

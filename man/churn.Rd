@@ -4,7 +4,7 @@
 \title{Churn data set}
 
 \description{ 
-This dataset comes from IBM Sample Data Sets. Customer \emph{churn} occurs when customers stop doing business with a company, also known as customer attrition. the data set contains \eqn{5000} rows (customers) and \eqn{20} columns (features). the "Churn" column is our target which indicate whether customer churned (left the company) or not.   
+This dataset originates from the MLC++ machine learning software and is used for modeling customer churn. Customer \emph{churn}, also known as customer attrition, refers to the event in which customers stop doing business with a company. The dataset contains \eqn{5000} rows (customers) and \eqn{20} columns (features). The "Churn" column serves as the target variable, indicating whether a customer has churned (left the company) or not.
 }
 
 \usage{data(churn)}
@@ -38,24 +38,24 @@ A data frame with \eqn{5000} rows (customers) and \eqn{20} columns (variables/fe
 }
 
 \details{
-For more information related to the dataset see:
+For more information related to the dataset see  \cr
+- OpenML: \url{https://www.openml.org/search?type=data&sort=runs&id=40701&status=active}  \cr
+- data.world: \url{https://data.world/earino/churn}
+}
 
-OpenML: \verb{https://www.openml.org/search?type=data&sort=runs&id=40701&status=active}
-
- data.world: \verb{https://data.world/earino/churn}
+\source{
+This dataset is originally from http://www.sgi.com/tech/mlc
 }
 
 \references{
+Saha, S., Saha, C., Haque, M. M., Alam, M. G. R., and Talukder, A. (2024). ChurnNet: Deep learning enhanced customer churn prediction in telecommunication industry. \emph{IEEE access}, 12, 4471-4484.  \cr
 Umayaparvathi, V., and Iyakutti, K. (2016). A survey on customer churn prediction in telecom industry: Datasets, methods and metrics. \emph{International Research Journal of Engineering and Technology (IRJET)}, 3(04), 1065-1070
-
-Saha, S., Saha, C., Haque, M. M., Alam, M. G. R., and Talukder, A. (2024). ChurnNet: Deep learning enhanced customer churn prediction in telecommunication industry. \emph{IEEE access}, 12, 4471-4484.
 }
 
 \seealso{ \code{\link[liver]{adult}}, \code{\link[liver]{risk}}, \code{\link[liver]{churnTel}}, \code{\link[liver]{bank}}, \code{\link[liver]{advertising}}, \code{\link[liver]{marketing}}, \code{\link[liver]{insurance}}, \code{\link[liver]{cereal}}, \code{\link[liver]{housePrice}}, \code{\link[liver]{house}} }
 
 \examples{
 data(churn)
-
 str(churn)
 }
 

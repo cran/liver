@@ -31,7 +31,6 @@ Larose, D. T. and Larose, C. D. (2014). Discovering knowledge in data: an introd
 
 \examples{
 data(risk)
-
 str(risk)
 }
 
