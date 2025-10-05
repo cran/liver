@@ -1,6 +1,6 @@
 Package: liver
 Title: Foundations Toolkit and Datasets for Data Science
-Version: 1.22
+Version: 1.23
 Authors@R: 
     c(person(given = "Reza",
              family = "Mohammadi",
@@ -26,5 +26,5 @@ Author: Reza Mohammadi [aut, cre] (ORCID:
   Kevin Burke [aut]
 Maintainer: Reza Mohammadi <a.mohammadi@uva.nl>
 NeedsCompilation: no
-Packaged: 2025-09-26 12:02:59 UTC; a.mohammadiuva.nl
-Date/Publication: 2025-09-27 02:20:02 UTC
+Packaged: 2025-10-04 12:59:19 UTC; a.mohammadiuva.nl
+Date/Publication: 2025-10-05 05:10:02 UTC

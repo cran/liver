@@ -7,6 +7,12 @@
 
 ## **liver** NEWS
 
+### **liver** Version 1.23
+
+* Function `conf.mat()` is updated.
+* Function `conf.mat.plot()` is updated.
+* Function `kNN.plot()` is updated.
+
 ### **liver** Version 1.22
 
 * Data set `drug` is added.

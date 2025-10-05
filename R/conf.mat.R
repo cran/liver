@@ -1,5 +1,5 @@
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
-#     Copyright (C) 2020 - 2021  Reza Mohammadi & Kevin Burke                  |
+#     Copyright (C) 2020 - Reza Mohammadi & Kevin Burke                        |
 #                                                                              |
 #     This file is part of 'liver' package.                                    |
 #                                                                              |
@@ -13,7 +13,7 @@
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
 
 conf.mat = function(pred, actual, cutoff = 0.5, reference = NULL, 
-                    proportion = FALSE, dnn = c("Predict", "Actual"), ...)
+                    proportion = FALSE, dnn = c("Actual", "Predict"), ...)
 {
     if(length(pred) != length(actual))
         stop("'pred' and 'actual' must have the same length.")
@@ -74,7 +74,7 @@ conf.mat = function(pred, actual, cutoff = 0.5, reference = NULL,
     pred   = factor(pred  , levels = levels)
     actual = factor(actual, levels = levels)
     
-    conf_mat = table(pred, actual, dnn = dnn, ...)
+    conf_mat = table(actual, pred, dnn = dnn, ...)
     
     if(proportion == TRUE)
         conf_mat = round(conf_mat / sum(conf_mat), 3)

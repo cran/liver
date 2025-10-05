@@ -1,5 +1,5 @@
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
-#     Copyright (C) 2020 - 2021  Reza Mohammadi & Kevin Burke                  |
+#     Copyright (C) 2020 -   Reza Mohammadi & Kevin Burke                      |
 #                                                                              |
 #     This file is part of 'liver' package.                                    |
 #                                                                              |
@@ -13,15 +13,15 @@
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
 
 conf.mat.plot = function(pred, actual, cutoff = 0.5, reference = NULL, 
-                         conf.level = 0, margin = 1, 
-                         color = c("#ff83a8", "#83ff9b"), ...)
+                         conf.level = 0, margin = c(1, 2), 
+                         color = c("#F4A582", "#A6D854"), ...)
 {
-    conf_mat = liver::conf.mat(pred = pred, actual = actual, cutoff = cutoff, reference = reference)
-    
-    graphics::fourfoldplot(conf_mat, conf.level = conf.level, 
-                            margin = margin, color = color, ...)
-}   
+  conf_mat = liver::conf.mat(pred = pred, actual = actual, cutoff = cutoff, reference = reference)
   
+  graphics::fourfoldplot(conf_mat, conf.level = conf.level, 
+                         margin = margin, color = color, ...)
+}   
+
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
 
 

@@ -166,8 +166,8 @@ kNN.plot = function(formula, train, test, k.max = 10, scaler = FALSE,
   df_gg = data.frame(k_list = k_list, base_list = base_list)
   
   plot_knn = ggplot2::ggplot(df_gg, ggplot2::aes(x = k_list, y = base_list)) +
-    ggplot2::geom_line(color = "#ffd1de") + 
-    ggplot2::geom_point(shape = 21, color = "#b60009", fill = "#b60009", size = 2) + 
+    ggplot2::geom_line(color = "#9ECAE1") + 
+    ggplot2::geom_point(shape = 21, color = "#08519C", fill = "#08519C", size = 2) + 
     ggplot2::theme_minimal() + 
     ggplot2::scale_x_continuous(breaks = k_list) +
     ggplot2::ggtitle(title) +

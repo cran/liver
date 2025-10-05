@@ -38,14 +38,14 @@ It shows that the 'churn' dataset as a `data.frame` has `r ncol(churn)` variable
 We partition the *churn* dataset randomly into two groups: train set (80%) and test set (20%). Here, we use the `partition` function from the *liver* package:
 
 ```{r}
-set.seed(5)
+set.seed(42)
 
 data_sets = partition(data = churn, ratio = c(0.8, 0.2))
 
-train_set = data_sets $ part1
-test_set  = data_sets $ part2
+train_set = data_sets$part1
+test_set  = data_sets$part2
 
-actual_test  = test_set $ churn
+test_labels  = test_set$churn
 ```
 
 # Classification by kNN algorithm
@@ -60,51 +60,51 @@ First, based on the above predictors, find the k-nearest neighbor for the test s
 formula = churn ~ account.length + voice.plan + voice.messages + intl.plan + intl.mins + 
                   day.mins + eve.mins + night.mins + customer.calls
 
-predict_knn = kNN(formula, train = train_set, test = test_set, k = 8)
+predict_knn = kNN(formula, train = train_set, test = test_set, k = 6)
 ```
 
 To report Confusion Matrix:
 
 ```{r, fig.align = 'center', fig.height = 3, fig.width = 3}
-conf.mat(predict_knn, actual_test)
+conf.mat(predict_knn, test_labels)
 
-conf.mat.plot(predict_knn, actual_test)
+conf.mat.plot(predict_knn, test_labels)
 ```
 
 To report Mean Squared Error (MSE):
 ```{r}
-mse(predict_knn, actual_test)
+mse(predict_knn, test_labels)
 ```
 
 # Classification by kNN algorithm with data transformation
 
-The predictors that we used in the previous part, do not have the same scale. For example, variable `day.mins` change between `r min(churn $ day.mins)` and `r max(churn $ day.mins)`, whereas variable `voice.plan` is binary. In this case, the values of variable `day.mins` will overwhelm the contribution of `voice.plan`. To avoid this situation we use normalization. So, we use min-max normalization and transfer the predictors as follows:
+The predictors that we used in the previous part, do not have the same scale. For example, variable `day.mins` change between `r min(churn$day.mins)` and `r max(churn$day.mins)`, whereas variable `voice.plan` is binary. In this case, the values of variable `day.mins` will overwhelm the contribution of `voice.plan`. To avoid this situation we use normalization. So, we use min-max normalization and transfer the predictors as follows:
 
 ```{r}
-predict_knn_trans = kNN(formula, train = train_set, test = test_set, k = 8, scaler = "minmax")
+predict_knn_trans = kNN(formula, train = train_set, test = test_set, k = 6, scaler = "minmax")
 ```
 
 To report Confusion Matrix:
 
 ```{r fig.show = "hold", fig.align = 'default', out.width = "46%"}
-conf.mat.plot(predict_knn_trans, actual_test)
+conf.mat.plot(predict_knn_trans, test_labels)
 
-conf.mat.plot(predict_knn, actual_test)
+conf.mat.plot(predict_knn, test_labels)
 ```
 
 To report the ROC curve, we need the probability of our classification prediction. We can have it by using:
 
 ```{r}
-prob_knn = kNN(formula, train = train_set, test = test_set, k = 8, type = "prob")[ , 1 ]
+prob_knn = kNN(formula, train = train_set, test = test_set, k = 6, type = "prob")[, 1]
 
-prob_knn_trans = kNN(formula, train = train_set, test = test_set, scaler = "minmax", k = 8, type = "prob")[ , 1 ]
+prob_knn_trans = kNN(formula, train = train_set, test = test_set, scaler = "minmax", k = 6, type = "prob")[, 1]
 ```
 
 To visualize the model performance between the raw data and the transformed data, we could report the ROC curve plot as well as AUC (Area Under the Curve) by using the `plot.roc` function from the **pROC** package:
 
 ```{r, message = F, fig.align = "center"}
-roc_knn = roc(actual_test, prob_knn)
-roc_knn_trans = roc(actual_test, prob_knn_trans)
+roc_knn = roc(test_labels, prob_knn)
+roc_knn_trans = roc(test_labels, prob_knn_trans)
 
 ggroc(list(roc_knn, roc_knn_trans), size = 0.8) + 
     theme_minimal() + ggtitle("ROC plots with AUC") +
@@ -118,12 +118,12 @@ ggroc(list(roc_knn, roc_knn_trans), size = 0.8) +
 
 # Optimal value of k for the kNN algorithm
 
-To find out the optimal value of `k` based on *Error Rate*, for the different values of k from 1 to 30, we run the k-nearest neighbor for the test set and compute the *Error Rate* for these models, by running `kNN.plot()` command 
+To find out the optimal value of `k` based on *Accuracy*, for the different values of k from 1 to 30, we run the k-nearest neighbor for the test set and compute the *Accuracy* for these models, by running `kNN.plot()` command 
 
 ```{r fig.align = "center" }
 kNN.plot(formula, train = train_set, test = test_set, scaler = "minmax", 
           k.max = 30, set.seed = 3)
 ```
 
-The plot shows that the minimum value of *Error Rate* is for the case that k is 11; the smaller values of *Error Rate* indicates better predictions.
+The plot shows that the maximum value of *Accuracy* is for the case that k is 6; the higher values of *Accuracy* indicates better predictions.
 

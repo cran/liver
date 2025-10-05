@@ -6,7 +6,7 @@
 
 \usage{
 conf.mat(pred, actual, cutoff = 0.5, reference = NULL, 
-         proportion = FALSE, dnn = c("Predict", "Actual"), ...)
+         proportion = FALSE, dnn = c("Actual", "Predict"), ...)
 }
 
 \arguments{

@@ -1,12 +1,12 @@
-3bcb4185ceb482a229c50d9aa4de01f3 *DESCRIPTION
+d4a87112db561576e22a9c802e52aa64 *DESCRIPTION
 d4adac816b5344e70a573b46e0d2c9da *NAMESPACE
-513b4fbc46ae5b827d85c9c7bd9720aa *NEWS.md
+3bb390edded49e4c4291bf591772c22f *NEWS.md
 d0b052829c531f06da8fc4e348b22685 *R/accuracy.R
-f9d16274cbbea93de0f0590cf772b876 *R/conf.mat.R
-1038eb3cc6770e528efbc74a0f93aa2b *R/conf.mat.plot.R
+eda65906db65e1e8bb127628758b3897 *R/conf.mat.R
+6ba872e9f4249701275faca7f08f8bba *R/conf.mat.plot.R
 f7a9e651210da2b5b5914635699b850b *R/find.na.R
 ea9e9ad7e25aff06353dc7661070a15e *R/kNN.R
-570eba5129d721a2123144217a0b64e5 *R/kNN.plot.R
+77e9cbcee422c5c3f72c6e3bab17f2c6 *R/kNN.plot.R
 592cb2fca826b33f66d491a3790736a4 *R/mae.R
 fc7adfc9f68edd53bddfb21a14d8c841 *R/minmax.R
 937586f2912f8351fc3f627425c84fcb *R/mse.R
@@ -40,9 +40,9 @@ f7c1b30ffc492b0f0cf29429c785a025 *data/marketing.RData
 5ce972a176823f28040a56f17a395301 *data/redWines.RData
 f8f6011ad670a0c5efa171b8569e069f *data/risk.RData
 aa55c6436008398d7ea6c961150071aa *data/whiteWines.RData
-7faa4f4b977473c7e6a4f232c7e347a2 *inst/doc/liver-example.R
-fee68e7dc97ba572762d45a44838dd51 *inst/doc/liver-example.Rmd
-1ed1173b1ddcb758545e9457266e3fd3 *inst/doc/liver-example.html
+3fcc7d6b093dfc41192dcbeeb5458014 *inst/doc/liver-example.R
+67242747e4dfaeaba24d7fae9f5f08a8 *inst/doc/liver-example.Rmd
+00774398685981fa32c009a7e3dafa06 *inst/doc/liver-example.html
 f6f9ebb95ea081d6a2bd2ea5fda768d6 *man/accuracy.Rd
 1931a08823e71ca922ace0002dbdbaac *man/adult.Rd
 48c8bc96b739e866a73153eb81941256 *man/advertising.Rd
@@ -52,8 +52,8 @@ c80269a6da2c081a4ae51ec13f2f8b14 *man/bank.Rd
 ecbe95e9dbb4e7ccf286ee4654dcc766 *man/churn.Rd
 f3f13db5872b71cfde7b3935f4f1a1c1 *man/churnCredit.Rd
 76bfaf00625bf4ae6511eb7713810f01 *man/churnTel.Rd
-2a03aafb910da52ca51a20a2b371ed71 *man/conf.mat.Rd
-967ee34e2bb6690f2e4a11c34deca56c *man/conf.mat.plot.Rd
+50bfcb6a940c925e479cbb59f401c80c *man/conf.mat.Rd
+8ae0cfc143b86336b667aa542cf69d53 *man/conf.mat.plot.Rd
 aab53b581beed23edb9a4b8268e4d75a *man/corona.Rd
 88a13cb44471694b0178b4403c66f73c *man/drug.Rd
 b74db37940972f572a10dd8c9019ca69 *man/fertilizer.Rd
@@ -81,4 +81,4 @@ ef5423ee876bbd5508c39bcc4d446fd1 *man/t_conf.Rd
 e1586be51cc6b665068c7b931d47165e *man/whiteWines.Rd
 30ff2f22d993d67e0c3c5a0218a49764 *man/z.conf.Rd
 6274295c57e6d65c431b7c0d7d5edcc4 *man/zscore.Rd
-fee68e7dc97ba572762d45a44838dd51 *vignettes/liver-example.Rmd
+67242747e4dfaeaba24d7fae9f5f08a8 *vignettes/liver-example.Rmd
