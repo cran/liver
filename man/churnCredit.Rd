@@ -6,7 +6,7 @@
 \title{ Churn dataset for Credit Card Customers }
 
 \description{ 
-Customer \emph{churn} occurs when customers stop doing business with a company, also known as customer attrition. the data set contains \eqn{10127} rows (customers) and \eqn{21} columns (features). the "churn" column is our target which indicate whether customer churned (left the company) or not.   
+The \emph{churnCredit} data set contains \eqn{10127} rows (customers) and \eqn{21} columns (features). The \emph{churn} column is our target which indicate whether customer churned (left the company) or not.   
 }
 
 \usage{ data(churnCredit) }

@@ -52,7 +52,7 @@ prob_knn_trans = kNN(formula, train = train_set, test = test_set, scaler = "minm
 roc_knn = roc(test_labels, prob_knn)
 roc_knn_trans = roc(test_labels, prob_knn_trans)
 
-ggroc(list(roc_knn, roc_knn_trans), size = 0.8) + 
+ggroc(list(roc_knn, roc_knn_trans), linewidth = 0.8) + 
     theme_minimal() + ggtitle("ROC plots with AUC") +
   scale_color_manual(values = c("red", "blue"), 
     labels = c(paste("AUC=", round(auc(roc_knn), 3), "; Raw data; "),

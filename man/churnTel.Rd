@@ -6,7 +6,7 @@
 \title{ churnTel dataset }
 
 \description{ 
-Customer \emph{churn} occurs when customers stop doing business with a company, also known as customer attrition. the data set contains \eqn{7043} rows (customers) and \eqn{21} columns (features). the "Churn" column is our target which indicate whether customer churned (left the company) or not.   
+The \emph{churnTel} data set contains \eqn{7043} rows (customers) and \eqn{21} columns (features). The \emph{churn} column is our target which indicate whether customer churned (left the company) or not.   
 }
 
 \usage{ data(churnTel) }

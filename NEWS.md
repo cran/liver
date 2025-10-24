@@ -7,6 +7,10 @@
 
 ## **liver** NEWS
 
+### **liver** Version 1.24
+
+* Data set `adult` is updated.
+
 ### **liver** Version 1.23
 
 * Function `conf.mat()` is updated.

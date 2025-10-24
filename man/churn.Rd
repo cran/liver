@@ -4,7 +4,7 @@
 \title{Churn data set}
 
 \description{ 
-This dataset originates from the MLC++ machine learning software and is used for modeling customer churn. Customer \emph{churn}, also known as customer attrition, refers to the event in which customers stop doing business with a company. The dataset contains \eqn{5000} rows (customers) and \eqn{20} columns (features). The "Churn" column serves as the target variable, indicating whether a customer has churned (left the company) or not.
+This dataset originates from the MLC++ machine learning software and is used for modeling customer churn. Customer \emph{churn}, also known as customer attrition, refers to the event in which customers stop doing business with a company. The dataset contains \eqn{5000} rows (customers) and \eqn{20} columns (features). The \emph{churn} column serves as the target variable, indicating whether a customer has churned (left the company) or not.
 }
 
 \usage{data(churn)}
