@@ -13,7 +13,7 @@
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
 
 one.hot = function(data, cols = "auto", sparsifyNAs = FALSE, naCols = FALSE, 
-                   dropCols = TRUE, dropUnusedLevels = FALSE)
+                   dropCols = FALSE, dropUnusedLevels = FALSE)
 { 
   if(!is.vector(data) & !is.data.frame(data) & !data.table::is.data.table(data))
     stop(" data must be a vector, data.frame, or data.table")

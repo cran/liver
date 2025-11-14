@@ -8,7 +8,7 @@
 }
 \usage{
 one.hot(data, cols = "auto", sparsifyNAs = FALSE, naCols = FALSE, 
-                   dropCols = TRUE, dropUnusedLevels = FALSE)
+                   dropCols = FALSE, dropUnusedLevels = FALSE)
 }
 
 \arguments{
@@ -16,7 +16,7 @@ one.hot(data, cols = "auto", sparsifyNAs = FALSE, naCols = FALSE,
     \item{cols}{a character vector of column names or indices to one-hot-encode. If \code{"auto"}, all unordered factor columns will be one-hot-encoded. }
     \item{sparsifyNAs}{a logical value indicating whether to converte NAs to 0s. }
     \item{naCols}{a logical value indicating whether to create a separate column for NAs. }
-    \item{dropCols}{a logical value indicating whether to drop the original columns which are one-hot-encoded. }
+    \item{dropCols}{a logical value indicating whether to drop the original columns which are one-hot-encoded.}
     \item{dropUnusedLevels}{a logical value indicating whether to drop unused factor levels. }
 }
 
@@ -28,8 +28,8 @@ one.hot(data, cols = "auto", sparsifyNAs = FALSE, naCols = FALSE,
 data(risk)
 str(risk)
 
-risk_oh <- one.hot(risk, cols = "auto")
-str(risk_oh)
+risk_one_hot <- one.hot(risk, cols = "auto")
+str(risk_one_hot)
 }
 
 \keyword{data preprocessing}

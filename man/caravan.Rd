@@ -12,14 +12,14 @@ The contains \eqn{5822} customer records from an insurance company, each describ
 \format{A data frame with \eqn{5822} observations (rows) and \eqn{86} features (columns).}
 
 \details{
-For more information related to the dataset see: \cr
-\url{http://www.liacs.nl/~putten/library/cc2000/data.html}
+For more information related to the dataset see  \cr
+\url{https://www.kaggle.com/datasets/uciml/caravan-insurance-challenge}
 }
 
 \source{The data was supplied by Sentient Machine Research: \url{https://www.smr.nl}}
 
 \references{
-P. van der Putten and M. van Someren (eds) . CoIL Challenge 2000: The Insurance Company Case.  Published by Sentient Machine Research, Amsterdam. Also a Leiden Institute of Advanced Computer Science Technical Report 2000-09. June 22, 2000. \url{http://www.liacs.nl/~putten/library/cc2000}.  \cr
+P. van der Putten and M. van Someren (eds) . CoIL Challenge 2000: The Insurance Company Case.  Published by Sentient Machine Research, Amsterdam. Also a Leiden Institute of Advanced Computer Science Technical Report 2000-09. June 22, 2000.  \cr
 James, G., Witten, D., Hastie, T., and Tibshirani, R. (2013). An Introduction to Statistical Learning with applications in R, \url{https://www.statlearning.com}, \emph{Springer-Verlag}.
 }
   

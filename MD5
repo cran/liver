@@ -1,6 +1,6 @@
-b9a31f3b2ce66ed71998326f89a01412 *DESCRIPTION
+67921db6d84c1a12fe4f70954559df88 *DESCRIPTION
 d4adac816b5344e70a573b46e0d2c9da *NAMESPACE
-62b05488ad302bffbf69d45840ac82ff *NEWS.md
+e064d892ac5be417ef9c0a7017592c00 *NEWS.md
 d0b052829c531f06da8fc4e348b22685 *R/accuracy.R
 eda65906db65e1e8bb127628758b3897 *R/conf.mat.R
 6ba872e9f4249701275faca7f08f8bba *R/conf.mat.plot.R
@@ -10,7 +10,7 @@ ea9e9ad7e25aff06353dc7661070a15e *R/kNN.R
 592cb2fca826b33f66d491a3790736a4 *R/mae.R
 fc7adfc9f68edd53bddfb21a14d8c841 *R/minmax.R
 937586f2912f8351fc3f627425c84fcb *R/mse.R
-e43dd6354a8e41fa426ba0e440372570 *R/one.hot.R
+44699767ac412799b8cb4792d9b42146 *R/one.hot.R
 69aa2b5c74a91768baf8f6d44c27a4c0 *R/partition.R
 57dfa15586972fd10af2dfe6c9498d2a *R/prop.conf.R
 6b8822180fc571a2693c375fd7ee5ff1 *R/scaler.R
@@ -27,7 +27,7 @@ bc6cea4341e2c2085fec4740c915b2d6 *data/bank.RData
 1d9ae7d2e31cb5d77c2256048ab3709e *data/caravan.RData
 ca9d96da18cbf2c993502697e77c9b43 *data/cereal.RData
 9a768c32995166f68b06e2c7379af316 *data/churn.RData
-0e8606ff2383a0e8b6857abc6bc5443d *data/churnCredit.RData
+228d5946c3e1368221bf5e88e8692e97 *data/churnCredit.RData
 eddfb13e6376e9288dc98bc42c25ccc6 *data/churnTel.RData
 9f07dc532da5167b02a640dff8e6813e *data/corona.RData
 e1607dc50883cea6533fe0c270b3de83 *data/datalist
@@ -47,17 +47,17 @@ f6f9ebb95ea081d6a2bd2ea5fda768d6 *man/accuracy.Rd
 1931a08823e71ca922ace0002dbdbaac *man/adult.Rd
 48c8bc96b739e866a73153eb81941256 *man/advertising.Rd
 c80269a6da2c081a4ae51ec13f2f8b14 *man/bank.Rd
-23da54e1ca87bdd43205fdbf5228faf1 *man/caravan.Rd
+adf6737b3b764289bac85fc2131fa51a *man/caravan.Rd
 1ab68e011cb60e174552360d0ed21da2 *man/cereal.Rd
 9c17056d4332def21777091947c1b23d *man/churn.Rd
-9a3f8f7b91ba6c8e50f6674315a23f86 *man/churnCredit.Rd
+6afdddf8fa131cebc53fdb66fd3d438e *man/churnCredit.Rd
 5e27cf21229fef6fbdc9c34b4a2665bf *man/churnTel.Rd
 50bfcb6a940c925e479cbb59f401c80c *man/conf.mat.Rd
 8ae0cfc143b86336b667aa542cf69d53 *man/conf.mat.plot.Rd
 aab53b581beed23edb9a4b8268e4d75a *man/corona.Rd
 88a13cb44471694b0178b4403c66f73c *man/drug.Rd
 b74db37940972f572a10dd8c9019ca69 *man/fertilizer.Rd
-12b8b18688609bb40daa50586215c2d5 *man/figures/logo.png
+14e6997bb65977c3971e79f672dbc962 *man/figures/logo.png
 d3bd1d3d34d0882cea3f441b87c347a7 *man/find.na.Rd
 f88caf802aa61e40ea825b7d63d9f0b8 *man/house.Rd
 573f2812704521e77348f0666cfa4594 *man/housePrice.Rd
@@ -69,7 +69,7 @@ afb75a328efa6c79f8b5cd09233b86fa *man/liver-package.Rd
 a117071724e89f5d6e3c5a91de219e75 *man/marketing.Rd
 b16c46f8a7f115089d8d997abfaf6c3b *man/minmax.Rd
 b0a55f730d06ac64d47cb6254c8cfa16 *man/mse.Rd
-19487b51a14f79ee5032312931f46ed2 *man/one.hot.Rd
+0e8eebcce99fe2785d546284f52aa34a *man/one.hot.Rd
 048ce0086c8224cee05c397e7832159a *man/partition.Rd
 0274346646a645015fe1813e0c6e91b9 *man/prop.conf.Rd
 f20e7c0d3c2a045d01562a242cbf6f35 *man/redWines.Rd

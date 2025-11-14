@@ -7,6 +7,11 @@
 
 ## **liver** NEWS
 
+### **liver** Version 1.25
+
+* Function `one.hot()`, option `dropCols` is updated.
+* Data set `churnCredit` is updated.
+
 ### **liver** Version 1.24
 
 * Data set `adult` is updated.

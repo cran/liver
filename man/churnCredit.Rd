@@ -14,12 +14,12 @@ The \emph{churnCredit} data set contains \eqn{10127} rows (customers) and \eqn{2
 \format{ 
 the \code{churnCredit} dataset, as a data frame, contains \eqn{10127} rows (customers) and \eqn{21} columns (variables/features). the \eqn{21} variables are:
  \itemize{
-\item \code{customer.ID}: Customer ID.
+\item \code{customer.ID}: Unique identifier for the customer holding the account.
 \item \code{gender}: Whether the customer is a male or a female.
-\item \code{age}: Customer's Age in Years.
-\item \code{educaton}: Educational Qualification of the account holder (example: high school, college graduate, etc.)
-\item \code{marital.status}: Married, Single, Divorced, Unknown
-\item \code{income}: Annual Income (in Dollar). Category of the account holder (< $40K, $40K - 60K, $60K - $80K, $80K-$120K, > $120K).
+\item \code{age}: Customer's age in years.
+\item \code{educaton}: Educational qualification of the account holder - high-school, college (refers to a college student), graduate, uneducated, post-graduate, doctorate, unknown.
+\item \code{marital.status}: Marital status of the account holder - married, single, divorced, unknown.
+\item \code{income}: Annual income category of the account holder (in Dollar) in categries - < $40K, $40K - 60K, $60K - $80K, $80K-$120K, > $120K).
 \item \code{dependent.counts}: Number of dependent counts.
 \item \code{card.category}: Type of Card (Blue, Silver, Gold, Platinum).
 \item \code{months.on.book}: Period of relationship with bank.
@@ -43,10 +43,15 @@ For more information related to the dataset see:  \cr
 \url{https://www.kaggle.com/sakshigoyal7/credit-card-customers}
 }
 
+\source{
+This dataset is originally from https://leaps.analyttica.com/home
+}
+
 \seealso{ \code{\link[liver]{adult}}, \code{\link[liver]{risk}}, \code{\link[liver]{churn}}, \code{\link[liver]{churnTel}}, \code{\link[liver]{bank}}, \code{\link[liver]{advertising}}, \code{\link[liver]{marketing}}, \code{\link[liver]{insurance}}, \code{\link[liver]{cereal}}, \code{\link[liver]{housePrice}}, \code{\link[liver]{house}} }
 
 \examples{
 data(churnCredit)
+
 str(churnCredit)
 }
 
