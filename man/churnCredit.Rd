@@ -14,27 +14,27 @@ The \emph{churnCredit} data set contains \eqn{10127} rows (customers) and \eqn{2
 \format{ 
 the \code{churnCredit} dataset, as a data frame, contains \eqn{10127} rows (customers) and \eqn{21} columns (variables/features). the \eqn{21} variables are:
  \itemize{
-\item \code{customer.ID}: Unique identifier for the customer holding the account.
-\item \code{gender}: Whether the customer is a male or a female.
-\item \code{age}: Customer's age in years.
-\item \code{educaton}: Educational qualification of the account holder - high-school, college (refers to a college student), graduate, uneducated, post-graduate, doctorate, unknown.
-\item \code{marital.status}: Marital status of the account holder - married, single, divorced, unknown.
-\item \code{income}: Annual income category of the account holder (in Dollar) in categries - < $40K, $40K - 60K, $60K - $80K, $80K-$120K, > $120K).
-\item \code{dependent.counts}: Number of dependent counts.
-\item \code{card.category}: Type of Card (Blue, Silver, Gold, Platinum).
-\item \code{months.on.book}: Period of relationship with bank.
-\item \code{relationship.count}: Total number of products held by the customer.
-\item \code{months.inactive}: Number of months inactive in the last 12 months.
-\item \code{contacts.count.12}: Number of Contacts in the last 12 months.
-\item \code{credit.limit}: Credit Limit on the Credit Card.
-\item \code{revolving.balance}: Total Revolving Balance on the Credit Card.
-\item \code{open.to.buy}: Open to Buy Credit Line (Average of last 12 months).
-\item \code{transaction.amount.Q4.Q1}: Change in Transaction Amount (Q4 over Q1).
-\item \code{transaction.amount.12}: Total Transaction Amount (Last 12 months).
-\item \code{transaction.count}: Total Transaction Count (Last 12 months).
-\item \code{transaction.change}: Change in Transaction Count (Q4 over Q1).
-\item \code{utilization.ratio}: Average Card Utilization Ratio.
-\item \code{churn}: Whether the customer churned or not (yes or no).
+\item \code{customer.ID}: Unique identifier for each account holder.
+\item \code{age}: Age of the customer, in years.
+\item \code{gender}: Gender of the account holder.
+\item \code{education}: Educational qualification (high-school, college, graduate, uneducated, post-graduate, doctorate, unknown).
+\item \code{marital}: Marital status (married, single, divorced, unknown).
+\item \code{income}: Annual income bracket (less than $40K, $40K-$60K, $60K-$80K, $80K-$120K, over $120K, unknown).
+\item \code{card.category}: Credit card type (blue, silver, gold, platinum).
+\item \code{dependent.count}: Number of dependents.
+\item \code{months.on.book}: Tenure with the bank, in months.
+\item \code{relationship.count}: Total number of products held by the customer (1-6).
+\item \code{months.inactive}: Number of inactive months in the past 12 months.
+\item \code{contacts.count.12}: Number of customer service contacts in the past 12 months.
+\item \code{credit.limit}: Total credit card limit.
+\item \code{revolving.balance}: Current revolving balance on the credit card.
+\item \code{available.credit}: Available credit line, representing the unused portion of the credit limit. Calculated as \code{credit.limit - revolving.balance}.
+\item \code{transaction.amount.12}: Total transaction amount in the past 12 months.
+\item \code{transaction.count.12}: Total number of transactions in the past 12 months.
+\item \code{ratio.amount.Q4.Q1}: Ratio of total transaction amount in the fourth quarter to that in the first quarter.
+\item \code{ratio.count.Q4.Q1}: Ratio of total transaction count in the fourth quarter to that in the first quarter.
+\item \code{utilization.ratio}: Average credit utilization ratio, defined as \code{revolving.balance / credit.limit}.
+\item \code{churn}: Indicator of whether the account was closed (\code{yes}) or remained active (\code{no}).
   }
 }
 
@@ -47,7 +47,28 @@ For more information related to the dataset see:  \cr
 This dataset is originally from https://leaps.analyttica.com/home
 }
 
-\seealso{ \code{\link[liver]{adult}}, \code{\link[liver]{risk}}, \code{\link[liver]{churn}}, \code{\link[liver]{churnTel}}, \code{\link[liver]{bank}}, \code{\link[liver]{advertising}}, \code{\link[liver]{marketing}}, \code{\link[liver]{insurance}}, \code{\link[liver]{cereal}}, \code{\link[liver]{housePrice}}, \code{\link[liver]{house}} }
+\references{
+Reza Mohammadi (2025). Data Science Foundations and Machine Learning with R: From Data to Decisions. \url{https://book-data-science-r.netlify.app}.
+}
+
+\seealso{ \code{\link[liver]{bank}}, 
+          \code{\link[liver]{churn}}, 
+          \code{\link[liver]{churnTel}}, 
+          \code{\link[liver]{adult}}, 
+          \code{\link[liver]{risk}}, 
+          \code{\link[liver]{cereal}}, 
+          \code{\link[liver]{advertising}}, 
+          \code{\link[liver]{marketing}}, 
+          \code{\link[liver]{drug}}, 
+          \code{\link[liver]{house}}, 
+          \code{\link[liver]{housePrice}}, 
+          \code{\link[liver]{redWines}}, 
+          \code{\link[liver]{whiteWines}}, 
+          \code{\link[liver]{insurance}}, 
+          \code{\link[liver]{caravan}}, 
+          \code{\link[liver]{fertilizer}}, 
+          \code{\link[liver]{corona}}
+          }
 
 \examples{
 data(churnCredit)

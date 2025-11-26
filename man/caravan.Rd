@@ -21,11 +21,28 @@ For more information related to the dataset see  \cr
 \references{
 P. van der Putten and M. van Someren (eds) . CoIL Challenge 2000: The Insurance Company Case.  Published by Sentient Machine Research, Amsterdam. Also a Leiden Institute of Advanced Computer Science Technical Report 2000-09. June 22, 2000.  \cr
 James, G., Witten, D., Hastie, T., and Tibshirani, R. (2013). An Introduction to Statistical Learning with applications in R, \url{https://www.statlearning.com}, \emph{Springer-Verlag}.
+
+Reza Mohammadi (2025). Data Science Foundations and Machine Learning with R: From Data to Decisions. \url{https://book-data-science-r.netlify.app}.
 }
   
-\seealso{
-\code{\link[liver]{adult}}, \code{\link[liver]{risk}}, \code{\link[liver]{churn}}, \code{\link[liver]{churnTel}}, \code{\link[liver]{bank}}, \code{\link[liver]{advertising}}, \code{\link[liver]{marketing}}, \code{\link[liver]{insurance}}, \code{\link[liver]{cereal}}, \code{\link[liver]{housePrice}}, \code{\link[liver]{house}}
-}
+\seealso{ \code{\link[liver]{bank}}, 
+          \code{\link[liver]{churn}}, 
+          \code{\link[liver]{churnCredit}}, 
+          \code{\link[liver]{churnTel}}, 
+          \code{\link[liver]{adult}}, 
+          \code{\link[liver]{risk}}, 
+          \code{\link[liver]{cereal}}, 
+          \code{\link[liver]{advertising}}, 
+          \code{\link[liver]{marketing}}, 
+          \code{\link[liver]{drug}}, 
+          \code{\link[liver]{house}}, 
+          \code{\link[liver]{housePrice}}, 
+          \code{\link[liver]{redWines}}, 
+          \code{\link[liver]{whiteWines}}, 
+          \code{\link[liver]{insurance}}, 
+          \code{\link[liver]{fertilizer}}, 
+          \code{\link[liver]{corona}}
+          }
 
 \examples{
 data(caravan)

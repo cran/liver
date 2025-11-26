@@ -39,7 +39,7 @@ A data frame with \eqn{5000} rows (customers) and \eqn{20} columns (variables/fe
 
 \details{
 For more information related to the dataset see  \cr
-- OpenML: \url{https://www.openml.org/search?type=data&sort=runs&id=40701&status=active}  \cr
+- OpenML: \url{https://openml.org/search?type=data&sort=runs&id=40701&status=active}  \cr
 - data.world: \url{https://data.world/earino/churn}
 }
 
@@ -50,9 +50,28 @@ This dataset is originally from http://www.sgi.com/tech/mlc
 \references{
 Saha, S., Saha, C., Haque, M. M., Alam, M. G. R., and Talukder, A. (2024). ChurnNet: Deep learning enhanced customer churn prediction in telecommunication industry. \emph{IEEE access}, 12, 4471-4484.  \cr
 Umayaparvathi, V., and Iyakutti, K. (2016). A survey on customer churn prediction in telecom industry: Datasets, methods and metrics. \emph{International Research Journal of Engineering and Technology (IRJET)}, 3(04), 1065-1070
+
+Reza Mohammadi (2025). Data Science Foundations and Machine Learning with R: From Data to Decisions. \url{https://book-data-science-r.netlify.app}.
 }
 
-\seealso{ \code{\link[liver]{adult}}, \code{\link[liver]{risk}}, \code{\link[liver]{churnTel}}, \code{\link[liver]{bank}}, \code{\link[liver]{advertising}}, \code{\link[liver]{marketing}}, \code{\link[liver]{insurance}}, \code{\link[liver]{cereal}}, \code{\link[liver]{housePrice}}, \code{\link[liver]{house}} }
+\seealso{ \code{\link[liver]{bank}}, 
+          \code{\link[liver]{churnCredit}}, 
+          \code{\link[liver]{churnTel}}, 
+          \code{\link[liver]{adult}}, 
+          \code{\link[liver]{risk}}, 
+          \code{\link[liver]{cereal}}, 
+          \code{\link[liver]{advertising}}, 
+          \code{\link[liver]{marketing}}, 
+          \code{\link[liver]{drug}}, 
+          \code{\link[liver]{house}}, 
+          \code{\link[liver]{housePrice}}, 
+          \code{\link[liver]{redWines}}, 
+          \code{\link[liver]{whiteWines}}, 
+          \code{\link[liver]{insurance}}, 
+          \code{\link[liver]{caravan}}, 
+          \code{\link[liver]{fertilizer}}, 
+          \code{\link[liver]{corona}}
+          }
 
 \examples{
 data(churn)

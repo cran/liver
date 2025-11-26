@@ -38,11 +38,35 @@ For more information related to the dataset see the UCI Machine Learning Reposit
 \url{http://www.cs.toronto.edu/~delve/data/adult/adultDetail.html}
 }
 
-\references{
-Kohavi, R. (1996). Scaling up the accuracy of naive-bayes classifiers: A decision-tree hybrid. \emph{Kdd}.
+\source{
+This dataset comes from the UCI repository of machine learning databases: \cr
+\url{https://archive.ics.uci.edu}
 }
 
-\seealso{ \code{\link[liver]{risk}}, \code{\link[liver]{churn}}, \code{\link[liver]{churnTel}}, \code{\link[liver]{bank}}, \code{\link[liver]{advertising}}, \code{\link[liver]{marketing}}, \code{\link[liver]{insurance}}, \code{\link[liver]{cereal}}, \code{\link[liver]{housePrice}}, \code{\link[liver]{house}} }
+\references{
+Kohavi, R. (1996). Scaling up the accuracy of naive-bayes classifiers: A decision-tree hybrid. \emph{Kdd}.
+
+Reza Mohammadi (2025). Data Science Foundations and Machine Learning with R: From Data to Decisions. \url{https://book-data-science-r.netlify.app}.
+}
+
+\seealso{ \code{\link[liver]{bank}}, 
+          \code{\link[liver]{churn}}, 
+          \code{\link[liver]{churnCredit}}, 
+          \code{\link[liver]{churnTel}}, 
+          \code{\link[liver]{risk}}, 
+          \code{\link[liver]{cereal}}, 
+          \code{\link[liver]{advertising}}, 
+          \code{\link[liver]{marketing}}, 
+          \code{\link[liver]{drug}}, 
+          \code{\link[liver]{house}}, 
+          \code{\link[liver]{housePrice}}, 
+          \code{\link[liver]{redWines}}, 
+          \code{\link[liver]{whiteWines}}, 
+          \code{\link[liver]{insurance}}, 
+          \code{\link[liver]{caravan}}, 
+          \code{\link[liver]{fertilizer}}, 
+          \code{\link[liver]{corona}}
+          }
 
 \examples{
 data(adult)

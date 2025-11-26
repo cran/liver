@@ -18,8 +18,24 @@ The original source can be found: \cr
 \url{https://data.europa.eu/euodp/en/data/dataset/covid-19-coronavirus-data}
 }
 
-
-\seealso{ \code{\link[liver]{churn}}, \code{\link[liver]{adult}}, \code{\link[liver]{risk}}, \code{\link[liver]{churnTel}}, \code{\link[liver]{bank}}, \code{\link[liver]{advertising}}, \code{\link[liver]{marketing}}, \code{\link[liver]{insurance}}, \code{\link[liver]{cereal}}, \code{\link[liver]{housePrice}}, \code{\link[liver]{house}} }
+\seealso{ \code{\link[liver]{bank}}, 
+          \code{\link[liver]{churn}}, 
+          \code{\link[liver]{churnCredit}}, 
+          \code{\link[liver]{churnTel}}, 
+          \code{\link[liver]{adult}}, 
+          \code{\link[liver]{risk}}, 
+          \code{\link[liver]{cereal}}, 
+          \code{\link[liver]{advertising}}, 
+          \code{\link[liver]{marketing}}, 
+          \code{\link[liver]{drug}}, 
+          \code{\link[liver]{house}}, 
+          \code{\link[liver]{housePrice}}, 
+          \code{\link[liver]{redWines}}, 
+          \code{\link[liver]{whiteWines}}, 
+          \code{\link[liver]{insurance}}, 
+          \code{\link[liver]{caravan}}, 
+          \code{\link[liver]{fertilizer}}
+          }
 
 \examples{
 data(corona)

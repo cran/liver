@@ -7,6 +7,10 @@
 
 ## **liver** NEWS
 
+### **liver** Version 1.26
+
+* Data set `gapminder` is added.
+
 ### **liver** Version 1.25
 
 * Function `one.hot()`, option `dropCols` is updated.

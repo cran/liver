@@ -29,7 +29,33 @@ For more information related to the dataset see: \cr
 \url{https://github.com/chrisBow/marketing-regression-part-one}
 }
 
-\seealso{ \code{\link[liver]{adult}}, \code{\link[liver]{risk}}, \code{\link[liver]{churn}}, \code{\link[liver]{churnTel}}, \code{\link[liver]{bank}}, \code{\link[liver]{advertising}}, \code{\link[liver]{insurance}}, \code{\link[liver]{cereal}}, \code{\link[liver]{housePrice}}, \code{\link[liver]{house}} }
+\source{
+This dataset comes from: \cr
+\url{https://github.com/chrisBow/marketing-regression-part-one}
+}
+
+\references{
+Reza Mohammadi (2025). Data Science Foundations and Machine Learning with R: From Data to Decisions. \url{https://book-data-science-r.netlify.app}.
+}
+
+\seealso{ \code{\link[liver]{bank}}, 
+          \code{\link[liver]{churn}}, 
+          \code{\link[liver]{churnCredit}}, 
+          \code{\link[liver]{churnTel}}, 
+          \code{\link[liver]{adult}}, 
+          \code{\link[liver]{risk}}, 
+          \code{\link[liver]{cereal}}, 
+          \code{\link[liver]{advertising}}, 
+          \code{\link[liver]{drug}}, 
+          \code{\link[liver]{house}}, 
+          \code{\link[liver]{housePrice}}, 
+          \code{\link[liver]{redWines}}, 
+          \code{\link[liver]{whiteWines}}, 
+          \code{\link[liver]{insurance}}, 
+          \code{\link[liver]{caravan}}, 
+          \code{\link[liver]{fertilizer}}, 
+          \code{\link[liver]{corona}}
+          }
 
 \examples{
 data(marketing)

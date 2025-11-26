@@ -4,7 +4,7 @@
 \title{ insurance data set }
 
 \description{ 
-the insurance dataset contains \eqn{7} features and \eqn{1338} records. the target feature is \emph{charge} and the remaining 6 variables are predictors.
+the insurance dataset contains \eqn{7} features and \eqn{1338} records. the target feature is \emph{charge} and the remaining 6 variables are predictors. This dataset is simulated on the basis of demographic statistics from the US Census Bureau.
 }
 
 \usage{ data(insurance) }
@@ -29,11 +29,35 @@ For more information related to the dataset see: \cr
 \url{https://www.kaggle.com/mirichoi0218/insurance}
 }
 
-\references{
-Brett Lantz (2019). Machine Learning with R: Expert techniques for predictive modeling. \emph{Packt Publishing Ltd}.
+\source{
+This dataset comes from: \cr
+\url{https://github.com/stedy/Machine-Learning-with-R-datasets}
 }
 
-\seealso{ \code{\link[liver]{adult}}, \code{\link[liver]{risk}}, \code{\link[liver]{churn}}, \code{\link[liver]{churnTel}}, \code{\link[liver]{bank}}, \code{\link[liver]{advertising}}, \code{\link[liver]{marketing}}, \code{\link[liver]{cereal}}, \code{\link[liver]{housePrice}}, \code{\link[liver]{house}} }
+\references{
+Brett Lantz (2019). Machine Learning with R: Expert techniques for predictive modeling. \emph{Packt Publishing Ltd}.
+
+Reza Mohammadi (2025). Data Science Foundations and Machine Learning with R: From Data to Decisions. \url{https://book-data-science-r.netlify.app}.
+}
+
+\seealso{ \code{\link[liver]{bank}}, 
+          \code{\link[liver]{churn}}, 
+          \code{\link[liver]{churnCredit}}, 
+          \code{\link[liver]{churnTel}}, 
+          \code{\link[liver]{adult}}, 
+          \code{\link[liver]{risk}}, 
+          \code{\link[liver]{cereal}}, 
+          \code{\link[liver]{advertising}}, 
+          \code{\link[liver]{marketing}}, 
+          \code{\link[liver]{drug}}, 
+          \code{\link[liver]{house}}, 
+          \code{\link[liver]{housePrice}}, 
+          \code{\link[liver]{redWines}}, 
+          \code{\link[liver]{whiteWines}}, 
+          \code{\link[liver]{caravan}}, 
+          \code{\link[liver]{fertilizer}}, 
+          \code{\link[liver]{corona}}
+          }
 
 \examples{
 data(insurance)
