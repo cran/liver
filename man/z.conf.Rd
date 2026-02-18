@@ -23,9 +23,9 @@ A vector with two values: lower and upper confidence limits for the mean of the 
 \author{ Reza Mohammadi \email{a.mohammadi@uva.nl} }
 
 \examples{
-data(churn)
+data(churn_mlc)
 
-z.conf(x = churn$customer.calls, conf = 0.9)
+z.conf(x = churn_mlc$customer_calls, conf = 0.9)
 }
 
 \keyword{parameter learning}

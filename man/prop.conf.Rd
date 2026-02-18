@@ -25,9 +25,9 @@ A vector with two values: lower and upper confidence limits for the proportion o
 \author{ Reza Mohammadi \email{a.mohammadi@uva.nl} }
 
 \examples{
-data(churn)
+data(churn_mlc)
 
-prop.conf(table(churn$churn), conf = 0.9)
+prop.conf(table(churn_mlc$churn), conf = 0.9)
 }
 
 \keyword{parameter learning}

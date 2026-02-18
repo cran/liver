@@ -32,9 +32,14 @@ the \code{cereal} dataset, as a data frame, contains \eqn{77} rows (breakfast ce
   }
 }
 
+\details{
+For more information related to the dataset see  \cr
+\url{https://www.openml.org/search?type=data&status=any&id=1095&sort=runs}  
+}
+
 \source{
-The original source can be found:  \cr
-\url{https://perso.telecom-paristech.fr/eagan/class/igr204/datasets}
+This dataset is originally from \cr
+\url{https://lib.stat.cmu.edu/DASL/Datafiles/Cereals.html}
 }
 
 \references{
@@ -42,18 +47,18 @@ Reza Mohammadi (2025). Data Science Foundations and Machine Learning with R: Fro
 }
 
 \seealso{ \code{\link[liver]{bank}}, 
+          \code{\link[liver]{churn_mlc}}, 
           \code{\link[liver]{churn}}, 
-          \code{\link[liver]{churnCredit}}, 
-          \code{\link[liver]{churnTel}}, 
+          \code{\link[liver]{churn_tel}}, 
           \code{\link[liver]{adult}}, 
           \code{\link[liver]{risk}}, 
           \code{\link[liver]{advertising}}, 
           \code{\link[liver]{marketing}}, 
           \code{\link[liver]{drug}}, 
           \code{\link[liver]{house}}, 
-          \code{\link[liver]{housePrice}}, 
-          \code{\link[liver]{redWines}}, 
-          \code{\link[liver]{whiteWines}}, 
+          \code{\link[liver]{house_price}}, 
+          \code{\link[liver]{red_wines}}, 
+          \code{\link[liver]{white_wines}}, 
           \code{\link[liver]{insurance}}, 
           \code{\link[liver]{caravan}}, 
           \code{\link[liver]{fertilizer}}, 

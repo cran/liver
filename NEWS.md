@@ -7,6 +7,24 @@
 
 ## **liver** NEWS
 
+### **liver** Version 1.27
+
+* Function `kNN.plot()` is updated.
+
+* Data set `churn` renamed to `churn_mlc`, and its feature names are updated.
+* Data set `churnCredit` renamed to `churn`, and its feature names are updated.
+* Data set `churnTel` renamed to `churn_tel`, and its feature names are updated.
+* Data set `redWines` renamed to `red_wines`, and its feature names are updated.
+* Data set `whiteWines` renamed to `white_wines`, and its feature names are updated.
+
+* Data set `housePrice` renamed to `house_price`.
+
+* Data set `adult` feature names are updated.
+* Data set `risk` feature names are updated.
+* Data set `marketing` feature names are updated.
+* Data set `house` feature names are updated.
+* Data set `advertising` feature names are updated.
+
 ### **liver** Version 1.26
 
 * Data set `gapminder` is added.

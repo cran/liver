@@ -6,15 +6,16 @@
 Visualizing the Optimal Number of k for k-Nearest Neighbour (\code{kNN}) algorithm based on accuracy or Mean Square Error (MSE). 
 }
 \usage{
-kNN.plot(formula, train, test, k.max = 10, scaler = FALSE, 
-         base = "accuracy", reference = NULL, cutoff = NULL, 
+kNN.plot(formula, train, test = NULL, ratio = c(0.7, 0.3), k.max = 10, 
+         scaler = FALSE, base = "accuracy", reference = NULL, cutoff = NULL, 
          type = "class", report = FALSE, set.seed = NULL, ...)
 }
 
 \arguments{
     \item{formula}{ a \link[stats]{formula}, with a response but no interaction terms. For the case of data frame, it is taken as the model frame (see \code{\link[stats]{model.frame})}. }
   \item{train}{ data frame or matrix of train set cases. }  
-  \item{test}{ data frame or matrix of test set cases. }  
+  \item{test}{Data frame or matrix containing the test set observations. If \code{NULL}, the \code{train} data are partitioned according to \code{ratio}.}
+  \item{ratio}{Numeric vector of length 1 or 2 specifying the proportions used by \code{partition()} to split the \code{train} data into training and validation sets.}
   \item{k.max}{ the maximum number of neighbors to consider can either be a single value, with a minimum of 2, or a vector representing a range of values k.}  
 
   \item{scaler}{a character with options \code{FALSE} (default), \code{"minmax"}, and \code{"zscore"}. 

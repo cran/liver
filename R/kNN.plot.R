@@ -12,25 +12,41 @@
 #     k-Nearest Neighbour Classification using formula interface
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
 
-kNN.plot = function(formula, train, test, k.max = 10, scaler = FALSE, 
+kNN.plot = function(formula, train, test = NULL, ratio = c(0.7, 0.3), k.max = 10, scaler = FALSE, 
                     base = "accuracy", reference = NULL, cutoff = NULL, 
                     type = "class", report = FALSE, set.seed = NULL, ...) 
 {
   if(any(is.na(train))) 
     stop("train dataset has NA")
   
-  if(any(is.na(test)))  
-    stop("test dataset has NA")
+    if(sum(ratio) > 1) 
+        stop(" Sum of the vector 'ratio' must be smaller or equal to 1")
+    else if(sum(ratio) < 1)
+        ratio = c(ratio, 1 - sum(ratio))
+    
+    if(length(ratio) > 2) 
+        stop(" length of 'ratio' must be smaller or equal to 2.")
+
+    if(!is.null(set.seed)) 
+        set.seed(set.seed)
   
+  if(is.null(test))
+  { 
+    partition_train = liver::partition(data = train, ratio = ratio, set.seed = set.seed)
+    
+    train = partition_train$part1
+    test  = partition_train$part2
+  }else{
+    if(any(is.na(test)))  
+      stop("test dataset has NA")
+  }
+    
   if(length(k.max) == 1)
-    if(k.max < 2)
-      stop("  k.max must be > 1")
+  if(k.max < 2)
+    stop("  k.max must be > 1")
   
   if(max(k.max) > nrow(train))
     stop("  k.max must be less or equal to the number of observations in the training set")
-  
-  if(!is.null(set.seed)) 
-    set.seed(set.seed)
   
   formula = stats::as.formula(formula)
   

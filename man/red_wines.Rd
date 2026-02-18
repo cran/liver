@@ -1,19 +1,19 @@
-\name{whiteWines}
-\alias{whiteWines}
+\name{red_wines}
+\alias{red_wines}
 \docType{data}
-\title{ White wines data set }
+\title{ Red wines data set }
 
 \description{ 
-the whiteWines datasets are related to white variants of the Portuguese "Vinho Verde" wine. Due to privacy and logistic issues, only physicochemical (inputs) and sensory (the output) variables are available (e.g. there is no data about grape types, wine brand, wine selling price, etc.).
+the red_wines datasets are related to red variants of the Portuguese "Vinho Verde" wine. Due to privacy and logistic issues, only physicochemical (inputs) and sensory (the output) variables are available (e.g. there is no data about grape types, wine brand, wine selling price, etc.).
 
 the dataset can be viewed as classification or regression tasks. the classes are ordered and not balanced (e.g. there are many more normal wines than excellent or poor ones). Outlier detection algorithms could be used to detect the few excellent or poor wines. Also, we are not sure if all input variables are relevant. So it could be interesting to test feature selection methods.
 }
 
-\usage{ data(whiteWines) }
+\usage{ data(red_wines) }
 
 \format{ 
 
-the \code{whiteWines} dataset, as a data frame, contains \eqn{4898} rows and \eqn{12} columns (variables/features). the \eqn{12} 
+the \code{red_wines} dataset, as a data frame, contains \eqn{1599} rows and \eqn{12} columns (variables/features). the \eqn{12} 
 variables are:
  \itemize{
 Input variables (based on physicochemical tests):
@@ -53,9 +53,9 @@ Reza Mohammadi (2025). Data Science Foundations and Machine Learning with R: Fro
 }
 
 \seealso{ \code{\link[liver]{bank}}, 
+          \code{\link[liver]{churn_mlc}}, 
           \code{\link[liver]{churn}}, 
-          \code{\link[liver]{churnCredit}}, 
-          \code{\link[liver]{churnTel}}, 
+          \code{\link[liver]{churn_tel}}, 
           \code{\link[liver]{adult}}, 
           \code{\link[liver]{risk}}, 
           \code{\link[liver]{cereal}}, 
@@ -63,8 +63,8 @@ Reza Mohammadi (2025). Data Science Foundations and Machine Learning with R: Fro
           \code{\link[liver]{marketing}}, 
           \code{\link[liver]{drug}}, 
           \code{\link[liver]{house}}, 
-          \code{\link[liver]{housePrice}}, 
-          \code{\link[liver]{redWines}}, 
+          \code{\link[liver]{house_price}}, 
+          \code{\link[liver]{white_wines}}, 
           \code{\link[liver]{insurance}}, 
           \code{\link[liver]{caravan}}, 
           \code{\link[liver]{fertilizer}}, 
@@ -72,8 +72,8 @@ Reza Mohammadi (2025). Data Science Foundations and Machine Learning with R: Fro
           }
 
 \examples{
-data(whiteWines)
-str(whiteWines)
+data(red_wines)
+str(red_wines)
 }
 
 \keyword{ datasets }

@@ -23,42 +23,42 @@ library(ggplot2)
 library(pROC)    
 ```
 
-Provides a suite of helper functions and a collection of datasets used in the book [Data Science Foundations and Machine Learning with R: From Data to Decisions](https://book-data-science-r.netlify.app). It is designed to make data science techniques accessible to individuals with minimal coding experience. Here is an example to show how to use the functionality of the package by using the *churn* dataset which is available in the package. For more examples and details, please refer to the book [Data Science Foundations and Machine Learning with R: From Data to Decisions](https://book-data-science-r.netlify.app).
+Provides a suite of helper functions and a collection of datasets used in the book [Data Science Foundations and Machine Learning with R: From Data to Decisions](https://book-data-science-r.netlify.app). It is designed to make data science techniques accessible to individuals with minimal coding experience. Here is an example to show how to use the functionality of the package by using the *churn_mlc* dataset which is available in the package. For more examples and details, please refer to the book [Data Science Foundations and Machine Learning with R: From Data to Decisions](https://book-data-science-r.netlify.app).
 
 ```{r}
-data(churn)       
+data(churn_mlc)       
 
-str(churn)
+str(churn_mlc)
 ```
 
-It shows that the 'churn' dataset as a `data.frame` has `r ncol(churn)` variables and `r nrow(churn)` observations. 
+It shows that the 'churn_mlc' dataset as a `data.frame` has `r ncol(churn_mlc)` variables and `r nrow(churn_mlc)` observations. 
 
 # Partitioning the dataset
 
-We partition the *churn* dataset randomly into two groups: train set (80%) and test set (20%). Here, we use the `partition` function from the *liver* package:
+We partition the *churn_mlc* dataset randomly into two groups: train set (80%) and test set (20%). Here, we use the `partition` function from the *liver* package:
 
 ```{r}
 set.seed(42)
 
-data_sets = partition(data = churn, ratio = c(0.8, 0.2))
+splits = partition(data = churn_mlc, ratio = c(0.8, 0.2))
 
-train_set = data_sets$part1
-test_set  = data_sets$part2
+train_set = splits$part1
+test_set  = splits$part2
 
 test_labels  = test_set$churn
 ```
 
 # Classification by kNN algorithm
 
-The *churn* dataset has `r ncol(churn) - 1` predictors along with the target variable `churn`. Here we use the following predictors:
+The *churn_mlc* dataset has `r ncol(churn_mlc) - 1` predictors along with the target variable `churn`. Here we use the following predictors:
 
-`account.length`, `voice.plan`, `voice.messages`, `intl.plan`, `intl.mins`, `day.mins`, `eve.mins`, `night.mins`, and `customer.calls`.
+`account_length`, `voice_plan`, `voice_messages`, `intl_plan`, `intl_mins`, `day_mins`, `eve_mins`, `night_mins`, and `customer_calls`.
 
 First, based on the above predictors, find the k-nearest neighbor for the test set, based on the training dataset, for the k = 8 as follows
 
 ```{r}
-formula = churn ~ account.length + voice.plan + voice.messages + intl.plan + intl.mins + 
-                  day.mins + eve.mins + night.mins + customer.calls
+formula = churn ~ account_length + voice_plan + voice_messages + intl_plan + intl_mins + 
+                  day_mins + eve_mins + night_mins + customer_calls
 
 predict_knn = kNN(formula, train = train_set, test = test_set, k = 6)
 ```
@@ -78,7 +78,7 @@ mse(predict_knn, test_labels)
 
 # Classification by kNN algorithm with data transformation
 
-The predictors that we used in the previous part, do not have the same scale. For example, variable `day.mins` change between `r min(churn$day.mins)` and `r max(churn$day.mins)`, whereas variable `voice.plan` is binary. In this case, the values of variable `day.mins` will overwhelm the contribution of `voice.plan`. To avoid this situation we use normalization. So, we use min-max normalization and transfer the predictors as follows:
+The predictors that we used in the previous part, do not have the same scale. For example, variable `day_mins` change between `r min(churn_mlc$day_mins)` and `r max(churn_mlc$day_mins)`, whereas variable `voice_plan` is binary. In this case, the values of variable `day_mins` will overwhelm the contribution of `voice_plan`. To avoid this situation we use normalization. So, we use min-max normalization and transfer the predictors as follows:
 
 ```{r}
 predict_knn_trans = kNN(formula, train = train_set, test = test_set, k = 6, scaler = "minmax")
@@ -121,7 +121,7 @@ ggroc(list(roc_knn, roc_knn_trans), linewidth = 0.8) +
 To find out the optimal value of `k` based on *Accuracy*, for the different values of k from 1 to 30, we run the k-nearest neighbor for the test set and compute the *Accuracy* for these models, by running `kNN.plot()` command 
 
 ```{r fig.align = "center" }
-kNN.plot(formula, train = train_set, test = test_set, scaler = "minmax", 
+kNN.plot(formula, train = train_set, ratio = c(0.7, 0.3), scaler = "minmax", 
           k.max = 30, set.seed = 3)
 ```
 

@@ -1,18 +1,18 @@
-\name{housePrice}
-\alias{housePrice}
+\name{house_price}
+\alias{house_price}
 
 \docType{data}
 
-\title{ housePrice dataset }
+\title{ house_price dataset }
 
 \description{ 
 This data set contains \eqn{1460} rows and \eqn{81} columns (features). the "SalePrice" column is the target.
 }
 
-\usage{ data(housePrice) }
+\usage{ data(house_price) }
 
 \format{ 
-the \code{housePrice} dataset, as a data frame, contains \eqn{1460} rows and \eqn{81} columns (variables/features). 
+the \code{house_price} dataset, as a data frame, contains \eqn{1460} rows and \eqn{81} columns (variables/features). 
 }
 
 \details{
@@ -30,9 +30,9 @@ Reza Mohammadi (2025). Data Science Foundations and Machine Learning with R: Fro
 }
 
 \seealso{ \code{\link[liver]{bank}}, 
+          \code{\link[liver]{churn_mlc}}, 
           \code{\link[liver]{churn}}, 
-          \code{\link[liver]{churnCredit}}, 
-          \code{\link[liver]{churnTel}}, 
+          \code{\link[liver]{churn_tel}}, 
           \code{\link[liver]{adult}}, 
           \code{\link[liver]{risk}}, 
           \code{\link[liver]{cereal}}, 
@@ -40,8 +40,8 @@ Reza Mohammadi (2025). Data Science Foundations and Machine Learning with R: Fro
           \code{\link[liver]{marketing}}, 
           \code{\link[liver]{drug}}, 
           \code{\link[liver]{house}}, 
-          \code{\link[liver]{redWines}}, 
-          \code{\link[liver]{whiteWines}}, 
+          \code{\link[liver]{red_wines}}, 
+          \code{\link[liver]{white_wines}}, 
           \code{\link[liver]{insurance}}, 
           \code{\link[liver]{caravan}}, 
           \code{\link[liver]{fertilizer}}, 
@@ -49,8 +49,8 @@ Reza Mohammadi (2025). Data Science Foundations and Machine Learning with R: Fro
           }
 
 \examples{
-data(housePrice)
-str(housePrice)
+data(house_price)
+str(house_price)
 }
 
 \keyword{ datasets }

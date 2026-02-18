@@ -10,9 +10,9 @@ the fertilizer dataset contains \eqn{4} features and \eqn{96} records. Results f
 \usage{ data(fertilizer) }
 
 \seealso{ \code{\link[liver]{bank}}, 
+          \code{\link[liver]{churn_mlc}}, 
           \code{\link[liver]{churn}}, 
-          \code{\link[liver]{churnCredit}}, 
-          \code{\link[liver]{churnTel}}, 
+          \code{\link[liver]{churn_tel}}, 
           \code{\link[liver]{adult}}, 
           \code{\link[liver]{risk}}, 
           \code{\link[liver]{cereal}}, 
@@ -20,9 +20,9 @@ the fertilizer dataset contains \eqn{4} features and \eqn{96} records. Results f
           \code{\link[liver]{marketing}}, 
           \code{\link[liver]{drug}}, 
           \code{\link[liver]{house}}, 
-          \code{\link[liver]{housePrice}}, 
-          \code{\link[liver]{redWines}}, 
-          \code{\link[liver]{whiteWines}}, 
+          \code{\link[liver]{house_price}}, 
+          \code{\link[liver]{red_wines}}, 
+          \code{\link[liver]{white_wines}}, 
           \code{\link[liver]{insurance}}, 
           \code{\link[liver]{caravan}}, 
           \code{\link[liver]{corona}}

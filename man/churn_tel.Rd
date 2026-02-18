@@ -1,18 +1,18 @@
-\name{churnTel}
-\alias{churnTel}
+\name{churn_tel}
+\alias{churn_tel}
 
 \docType{data}
 
-\title{ churnTel dataset }
+\title{ churn_tel dataset }
 
 \description{ 
-The \emph{churnTel} data set contains \eqn{7043} rows (customers) and \eqn{21} columns (features). The \emph{churn} column is our target which indicate whether customer churned (left the company) or not.   
+The \emph{churn_tel} data set contains \eqn{7043} rows (customers) and \eqn{21} columns (features). The \emph{churn} column is our target which indicate whether customer churned (left the company) or not.   
 }
 
-\usage{ data(churnTel) }
+\usage{ data(churn_tel) }
 
 \format{ 
-the \code{churnTel} dataset, as a data frame, contains \eqn{7043} rows (customers) and \eqn{21} columns (variables/features). the \eqn{21} variables are:
+the \code{churn_tel} dataset, as a data frame, contains \eqn{7043} rows (customers) and \eqn{21} columns (variables/features). the \eqn{21} variables are:
  \itemize{
 \item \code{customer.ID}: Customer ID.
 \item \code{gender}: Whether the customer is a male or a female.
@@ -53,8 +53,8 @@ Reza Mohammadi (2025). Data Science Foundations and Machine Learning with R: Fro
 }
 
 \seealso{ \code{\link[liver]{bank}}, 
+          \code{\link[liver]{churn_mlc}}, 
           \code{\link[liver]{churn}}, 
-          \code{\link[liver]{churnCredit}}, 
           \code{\link[liver]{adult}}, 
           \code{\link[liver]{risk}}, 
           \code{\link[liver]{cereal}}, 
@@ -62,9 +62,9 @@ Reza Mohammadi (2025). Data Science Foundations and Machine Learning with R: Fro
           \code{\link[liver]{marketing}}, 
           \code{\link[liver]{drug}}, 
           \code{\link[liver]{house}}, 
-          \code{\link[liver]{housePrice}}, 
-          \code{\link[liver]{redWines}}, 
-          \code{\link[liver]{whiteWines}}, 
+          \code{\link[liver]{house_price}}, 
+          \code{\link[liver]{red_wines}}, 
+          \code{\link[liver]{white_wines}}, 
           \code{\link[liver]{insurance}}, 
           \code{\link[liver]{caravan}}, 
           \code{\link[liver]{fertilizer}}, 
@@ -72,8 +72,8 @@ Reza Mohammadi (2025). Data Science Foundations and Machine Learning with R: Fro
           }
 
 \examples{
-data(churnTel)
-str(churnTel)
+data(churn_tel)
+str(churn_tel)
 }
 
 \keyword{ datasets }

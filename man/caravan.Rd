@@ -26,9 +26,9 @@ Reza Mohammadi (2025). Data Science Foundations and Machine Learning with R: Fro
 }
   
 \seealso{ \code{\link[liver]{bank}}, 
+          \code{\link[liver]{churn_mlc}}, 
           \code{\link[liver]{churn}}, 
-          \code{\link[liver]{churnCredit}}, 
-          \code{\link[liver]{churnTel}}, 
+          \code{\link[liver]{churn_tel}}, 
           \code{\link[liver]{adult}}, 
           \code{\link[liver]{risk}}, 
           \code{\link[liver]{cereal}}, 
@@ -36,9 +36,9 @@ Reza Mohammadi (2025). Data Science Foundations and Machine Learning with R: Fro
           \code{\link[liver]{marketing}}, 
           \code{\link[liver]{drug}}, 
           \code{\link[liver]{house}}, 
-          \code{\link[liver]{housePrice}}, 
-          \code{\link[liver]{redWines}}, 
-          \code{\link[liver]{whiteWines}}, 
+          \code{\link[liver]{house_price}}, 
+          \code{\link[liver]{red_wines}}, 
+          \code{\link[liver]{white_wines}}, 
           \code{\link[liver]{insurance}}, 
           \code{\link[liver]{fertilizer}}, 
           \code{\link[liver]{corona}}
