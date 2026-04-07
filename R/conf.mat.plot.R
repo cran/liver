@@ -14,7 +14,7 @@
 
 conf.mat.plot = function(pred, actual, cutoff = 0.5, reference = NULL, 
                          conf.level = 0, margin = c(1, 2), 
-                         color = c("#F4A582", "#A6D854"), ...)
+                         color = c("#F4A582", "#A8D5BA"), ...)
 {
   conf_mat = liver::conf.mat(pred = pred, actual = actual, cutoff = cutoff, reference = reference)
   

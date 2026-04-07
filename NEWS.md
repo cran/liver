@@ -7,6 +7,16 @@
 
 ## **liver** NEWS
 
+### **liver** Version 1.28
+
+* Data set `loan` is added.
+* Data set `credit` is added.
+* Data set `mortgage` is added.
+* Data set `bike_demand` is added.
+* Data set `doctor_visits` is added.
+* Data set `NMES1988` is added.
+* Data set `cpu_price` is added.
+
 ### **liver** Version 1.27
 
 * Function `kNN.plot()` is updated.

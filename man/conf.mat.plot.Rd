@@ -6,7 +6,7 @@
 
 \usage{
 conf.mat.plot(pred, actual, cutoff = 0.5, reference = NULL, conf.level = 0, 
-              margin = c(1, 2), color = c("#F4A582", "#A6D854"), ...)
+              margin = c(1, 2), color = c("#F4A582", "#A8D5BA"), ...)
 }
 
 \arguments{

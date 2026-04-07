@@ -1,17 +1,22 @@
 Package: liver
 Title: Toolkit and Datasets for Data Science
-Version: 1.27
+Version: 1.28
 Authors@R: 
     c(person(given = "Reza",
              family = "Mohammadi",
              role = c("aut", "cre"),
              email = "a.mohammadi@uva.nl",
              comment = c(ORCID = "0000-0001-9538-0648")),
-	  person(given = "Kevin",
+	    person(given = "Jeroen",
+             family = "van Raak",
+             role = c("aut"),
+             email = "j.j.f.vanraak@uva.nl",
+             comment = c(ORCID = "0000-0002-2190-0126")),
+	    person(given = "Kevin",
              family = "Burke",
              role = c("aut"),
-             email = "kevin.burke@ul.ie"
-             )
+             email = "kevin.burke@ul.ie",
+             comment = c(ORCID = "0000-0001-8724-809X"))
       )
 Description: Provides a collection of helper functions and illustrative datasets to support learning and teaching of data science with R. The package is designed as a companion to the book <https://book-data-science-r.netlify.app>, making key data science techniques accessible to individuals with minimal coding experience. Functions include tools for data partitioning, performance evaluation, and data transformations (e.g., z-score and min-max scaling). The included datasets are curated to highlight practical applications in data exploration, modeling, and multivariate analysis. An early inspiration for the package came from an ancient Persian idiom about "eating the liver", symbolizing deep and immersive engagement with knowledge.
 URL: https://book-data-science-r.netlify.app
@@ -23,8 +28,9 @@ License: GPL (>= 2)
 Repository: CRAN
 Author: Reza Mohammadi [aut, cre] (ORCID:
     <https://orcid.org/0000-0001-9538-0648>),
-  Kevin Burke [aut]
+  Jeroen van Raak [aut] (ORCID: <https://orcid.org/0000-0002-2190-0126>),
+  Kevin Burke [aut] (ORCID: <https://orcid.org/0000-0001-8724-809X>)
 Maintainer: Reza Mohammadi <a.mohammadi@uva.nl>
 NeedsCompilation: no
-Packaged: 2026-02-18 17:13:37 UTC; a.mohammadiuva.nl
-Date/Publication: 2026-02-18 17:40:02 UTC
+Packaged: 2026-04-06 19:39:41 UTC; a.mohammadiuva.nl
+Date/Publication: 2026-04-07 05:10:32 UTC

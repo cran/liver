@@ -18,7 +18,7 @@ the \code{adult} dataset, as a data frame, contains \eqn{48598} rows and \eqn{15
 \item \code{workclass}: a factor with 6 levels.
 \item \code{demogweight}: the demographics to describe a person.
 \item \code{education}: a factor with 16 levels.
-\item \code{education.num}: number of years of education.
+\item \code{education.num}: an ordinal encoding of the 'education' feature.
 \item \code{marital.status}: a factor with 5 levels.
 \item \code{occupation}: a factor with 15 levels.
 \item \code{relationship}: a factor with 6 levels.

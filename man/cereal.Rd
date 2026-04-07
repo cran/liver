@@ -43,7 +43,7 @@ This dataset is originally from \cr
 }
 
 \references{
-Reza Mohammadi (2025). Data Science Foundations and Machine Learning with R: From Data to Decisions. \url{https://book-data-science-r.netlify.app}.
+  Reza Mohammadi (2025). Data Science Foundations and Machine Learning with R: From Data to Decisions. \url{https://book-data-science-r.netlify.app}.
 }
 
 \seealso{ \code{\link[liver]{bank}}, 
