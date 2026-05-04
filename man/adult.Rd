@@ -32,18 +32,19 @@ the \code{adult} dataset, as a data frame, contains \eqn{48598} rows and \eqn{15
   }
 }
 
-\details{
-For more information related to the dataset see the UCI Machine Learning Repository:  \cr
-\url{http://www.cs.toronto.edu/~delve/data/adult/desc.html}  \cr
-\url{http://www.cs.toronto.edu/~delve/data/adult/adultDetail.html}
-}
-
 \source{
-This dataset comes from the UCI repository of machine learning databases: \cr
-\url{https://archive.ics.uci.edu}
+The data are based on the Adult, or Census Income, dataset from the
+UCI Machine Learning Repository. The original extraction was performed
+by Barry Becker from the 1994 Census database.
+
+The dataset is also associated with DOI:
+
+\doi{10.24432/C5XW20}
 }
 
 \references{
+Kohavi, R. and Becker, B. (1996). Adult. UCI Machine Learning Repository. \doi{10.24432/C5XW20}
+
 Kohavi, R. (1996). Scaling up the accuracy of naive-bayes classifiers: A decision-tree hybrid. \emph{Kdd}.
 
 Reza Mohammadi (2025). Data Science Foundations and Machine Learning with R: From Data to Decisions. \url{https://book-data-science-r.netlify.app}.
@@ -64,8 +65,7 @@ Reza Mohammadi (2025). Data Science Foundations and Machine Learning with R: Fro
           \code{\link[liver]{white_wines}}, 
           \code{\link[liver]{insurance}}, 
           \code{\link[liver]{caravan}}, 
-          \code{\link[liver]{fertilizer}}, 
-          \code{\link[liver]{corona}}
+          \code{\link[liver]{loan}}
           }
 
 \examples{

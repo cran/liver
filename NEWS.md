@@ -7,6 +7,16 @@
 
 ## **liver** NEWS
 
+### **liver** Version 1.29
+
+* Data set `purchase_intention` is added.
+* Data set `wholesale_customers` is added.
+* Data set `creditcard_fraud` is added.
+
+* Data set `corona` is removed.
+* Data set `fertilizer` is removed.
+* Data set `NMES1988` is removed.
+
 ### **liver** Version 1.28
 
 * Data set `loan` is added.

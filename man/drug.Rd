@@ -39,8 +39,7 @@ Reza Mohammadi (2025). Data Science Foundations and Machine Learning with R: Fro
           \code{\link[liver]{white_wines}}, 
           \code{\link[liver]{insurance}}, 
           \code{\link[liver]{caravan}}, 
-          \code{\link[liver]{fertilizer}}, 
-          \code{\link[liver]{corona}}
+          \code{\link[liver]{loan}}
           }
 
 \examples{

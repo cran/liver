@@ -58,7 +58,6 @@ Gr\"omping, U. (2019). South German credit data: Correcting a widely used data s
 }
 
 \seealso{ 
-          \code{\link[liver]{loan}}, 
           \code{\link[liver]{mortgage}}, 
           \code{\link[liver]{bank}}, 
           \code{\link[liver]{churn_mlc}}, 
@@ -75,8 +74,7 @@ Gr\"omping, U. (2019). South German credit data: Correcting a widely used data s
           \code{\link[liver]{white_wines}}, 
           \code{\link[liver]{insurance}}, 
           \code{\link[liver]{caravan}}, 
-          \code{\link[liver]{fertilizer}}, 
-          \code{\link[liver]{corona}}
+          \code{\link[liver]{loan}}
           }
 
 \examples{

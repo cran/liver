@@ -1,4 +1,3 @@
-NMES1988
 adult
 advertising
 bank
@@ -8,12 +7,11 @@ cereal
 churn
 churn_mlc
 churn_tel
-corona
 cpu_price
 credit
+creditcard_fraud
 doctor_visits
 drug
-fertilizer
 gapminder
 house
 house_price
@@ -21,6 +19,8 @@ insurance
 loan
 marketing
 mortgage
+purchase_intention
 red_wines
 risk
 white_wines
+wholesale_customers
