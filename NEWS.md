@@ -7,6 +7,10 @@
 
 ## **liver** NEWS
 
+### **liver** Version 1.30
+
+* Function `partition()`, option `strata` is added.
+
 ### **liver** Version 1.29
 
 * Data set `purchase_intention` is added.

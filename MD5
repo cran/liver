@@ -1,6 +1,6 @@
-cf7ec94dccac2bd4e23068650a966037 *DESCRIPTION
+a63cc191c3d1c0822a4b4375d3d60c57 *DESCRIPTION
 d4adac816b5344e70a573b46e0d2c9da *NAMESPACE
-bd1f87a74ad50f48a246c4056fdc3e3d *NEWS.md
+6164ee8e306129dbe33af2fc58e9cd95 *NEWS.md
 d0b052829c531f06da8fc4e348b22685 *R/accuracy.R
 eda65906db65e1e8bb127628758b3897 *R/conf.mat.R
 70c7503deb3386eb4c301b3c2f9e35ff *R/conf.mat.plot.R
@@ -11,7 +11,7 @@ d154a069c84a4c36926df04cf6fb32db *R/kNN.plot.R
 fc7adfc9f68edd53bddfb21a14d8c841 *R/minmax.R
 937586f2912f8351fc3f627425c84fcb *R/mse.R
 44699767ac412799b8cb4792d9b42146 *R/one.hot.R
-69aa2b5c74a91768baf8f6d44c27a4c0 *R/partition.R
+407e8c69580ff3d71b6a21249fe3db9a *R/partition.R
 57dfa15586972fd10af2dfe6c9498d2a *R/prop.conf.R
 6b8822180fc571a2693c375fd7ee5ff1 *R/scaler.R
 3f478a42cd3314a7ddd6bd174a0615f4 *R/skewness.R
@@ -51,7 +51,7 @@ b0d5a2eb261d366f810de3e2aac7cbf5 *data/risk.RData
 f076c79307720bd0449269a9eb37cee0 *data/wholesale_customers.RData
 b9e203ec8ded02c3767e84942a0f6412 *inst/doc/liver-example.R
 18bebffe5da8afb57d0cc8bd2c72c610 *inst/doc/liver-example.Rmd
-9327a2faa1542318cc9d6d916bacac69 *inst/doc/liver-example.html
+70e94e1e0aa0c606ac2de8e05e3aaf27 *inst/doc/liver-example.html
 f6f9ebb95ea081d6a2bd2ea5fda768d6 *man/accuracy.Rd
 1c72c71a2efcab1961db5ade905c10e8 *man/adult.Rd
 ae73aff354e5c1a5061fc8257cc991a5 *man/advertising.Rd
@@ -85,7 +85,7 @@ b16c46f8a7f115089d8d997abfaf6c3b *man/minmax.Rd
 23b0bc96daced9db5bb4161ba8fab5c9 *man/mortgage.Rd
 b0a55f730d06ac64d47cb6254c8cfa16 *man/mse.Rd
 0e8eebcce99fe2785d546284f52aa34a *man/one.hot.Rd
-048ce0086c8224cee05c397e7832159a *man/partition.Rd
+d92cff3be357765f49cb7032bbbc93f3 *man/partition.Rd
 c44df0bbfec968f5db5a928376804306 *man/prop.conf.Rd
 48c49314cc3f5d09fc48fe3601c4679c *man/purchase_intention.Rd
 0c765705fd88cbf637c09143472cdacd *man/red_wines.Rd
