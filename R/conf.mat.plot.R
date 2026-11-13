@@ -1,5 +1,5 @@
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
-#     Copyright (C) 2020 -   Reza Mohammadi & Kevin Burke                      |
+#     Copyright (C) 2020  Reza Mohammadi                                       |
 #                                                                              |
 #     This file is part of 'liver' package.                                    |
 #                                                                              |

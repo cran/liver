@@ -18,7 +18,7 @@ accuracy(pred, actual, cutoff = NULL, reference = NULL)
 
 \value{ the computed average classification accuracy (numeric value). }
 
-\author{ Reza Mohammadi \email{a.mohammadi@uva.nl} and Kevin Burke \email{kevin.burke@ul.ie} }
+\author{ Reza Mohammadi \email{a.mohammadi@uva.nl} }
 
 \seealso{ \code{\link[liver]{conf.mat}}, \code{\link[liver]{mse}}, \code{\link[liver]{mae}} }
 

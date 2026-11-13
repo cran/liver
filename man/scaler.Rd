@@ -21,7 +21,7 @@ scaler(x, scale = c("minmax", "zscore"), col = "auto",
 
 \value{ transformed version of \code{x}. }
 
-\author{ Reza Mohammadi \email{a.mohammadi@uva.nl} and Kevin Burke \email{kevin.burke@ul.ie} }
+\author{ Reza Mohammadi \email{a.mohammadi@uva.nl}  }
 
 \seealso{ \code{\link[liver]{zscore}}, \code{\link[liver]{minmax}} }
 

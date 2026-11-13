@@ -43,7 +43,7 @@ When \code{type = "prob"}, a matrix of confidence values is returned
   Venables, W. N. and Ripley, B. D. (2002) \emph{Modern Applied Statistics with S.} Fourth edition. Springer.
 }
 
-\author{ Reza Mohammadi \email{a.mohammadi@uva.nl} and Kevin Burke \email{kevin.burke@ul.ie} }
+\author{ Reza Mohammadi \email{a.mohammadi@uva.nl} }
 
 \seealso{ \code{\link[liver]{kNN}}, \code{\link[liver]{scaler}} }
 

@@ -24,7 +24,7 @@ conf.mat(pred, actual, cutoff = 0.5, reference = NULL,
 
 \value{ the results of \code{table} on \code{pred} and \code{actual}. }
 
-\author{ Reza Mohammadi \email{a.mohammadi@uva.nl} and Kevin Burke \email{kevin.burke@ul.ie} }
+\author{ Reza Mohammadi \email{a.mohammadi@uva.nl}}
 
 \seealso{ \code{\link[liver]{conf.mat.plot}}, \code{\link[liver]{accuracy}} }
 

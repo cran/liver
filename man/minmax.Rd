@@ -19,7 +19,7 @@ minmax(x, col = "auto", min = NULL, max = NULL, na.rm = FALSE)
 
 \value{ transformed version of \code{x}. }
 
-\author{ Reza Mohammadi \email{a.mohammadi@uva.nl} and Kevin Burke \email{kevin.burke@ul.ie} }
+\author{ Reza Mohammadi \email{a.mohammadi@uva.nl} }
 
 \seealso{ \code{\link[liver]{scaler}}, \code{\link[liver]{zscore}} }
 

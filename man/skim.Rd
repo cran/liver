@@ -17,7 +17,7 @@
   \item{...}{ columns to select for skimming. the default is to skim all columns.}
 }
 
-\author{ Reza Mohammadi \email{a.mohammadi@uva.nl} and Kevin Burke \email{kevin.burke@ul.ie} }
+\author{ Reza Mohammadi \email{a.mohammadi@uva.nl} }
 
 \seealso{ \code{\link[=summary]{summary()}} }
 

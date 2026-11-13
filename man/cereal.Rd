@@ -38,9 +38,10 @@ For more information related to the dataset see  \cr
 }
 
 \source{
-This dataset is originally from \cr
-\url{https://lib.stat.cmu.edu/DASL/Datafiles/Cereals.html}
+This dataset is originally from DASL (Data and Story Library): \cr
+\url{https://dasl.datadescription.com/datafile/cereals/}
 }
+
 
 \references{
   Reza Mohammadi (2025). Data Science Foundations and Machine Learning with R: From Data to Decisions. \url{https://book-data-science-r.netlify.app}.

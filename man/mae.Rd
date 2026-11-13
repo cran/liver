@@ -18,7 +18,7 @@ mae(pred, actual, weight = 1, na.rm = FALSE)
 
 \value{ the computed mean squared error (numeric value). }
 
-\author{ Reza Mohammadi \email{a.mohammadi@uva.nl} and Kevin Burke \email{kevin.burke@ul.ie} }
+\author{ Reza Mohammadi \email{a.mohammadi@uva.nl} }
 
 \seealso{ \code{\link[liver]{mse}} }
 

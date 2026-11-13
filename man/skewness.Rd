@@ -18,7 +18,7 @@ skewness(x, na.rm = FALSE)
 
 \value{ A numeric vector of skewness values. }
 
-\author{ Reza Mohammadi \email{a.mohammadi@uva.nl} and Kevin Burke \email{kevin.burke@ul.ie} }
+\author{ Reza Mohammadi \email{a.mohammadi@uva.nl} }
 
 \examples{
 x = c(2.3, -1.4, 0, 3.45)

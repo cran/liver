@@ -1,5 +1,5 @@
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
-#     Copyright (C) 2020  Reza Mohammadi & Kevin Burke                         |
+#     Copyright (C) 2020  Reza Mohammadi                                       |
 #                                                                              |
 #     This file is part of 'liver' package.                                    |
 #                                                                              |
@@ -12,59 +12,61 @@
 #     k-Nearest Neighbour Classification using formula interface
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
 
-kNN.plot = function(formula, train, test = NULL, ratio = c(0.7, 0.3), k.max = 10, scaler = FALSE, 
-                    base = "accuracy", reference = NULL, cutoff = NULL, 
-                    type = "class", report = FALSE, set.seed = NULL, ...) 
+kNN.plot = function(formula, train, test = NULL, ratio = c(0.7, 0.3), k.max = 10, scaler = FALSE,
+                    base = "accuracy", reference = NULL, cutoff = NULL,
+                    type = "class", report = FALSE, set.seed = NULL, ...)
 {
-  if(any(is.na(train))) 
-    stop("train dataset has NA")
-  
-    if(sum(ratio) > 1) 
-        stop(" Sum of the vector 'ratio' must be smaller or equal to 1")
-    else if(sum(ratio) < 1)
-        ratio = c(ratio, 1 - sum(ratio))
-    
-    if(length(ratio) > 2) 
-        stop(" length of 'ratio' must be smaller or equal to 2.")
+  if(!is.character(base) || length(base) != 1L || is.na(base))
+    stop("'base' must be 'accuracy', 'error', 'mse', or 'auc'.")
+  base = tolower(base)
+  if(!base %in% c("accuracy", "error", "mse", "auc"))
+    stop("'base' must be 'accuracy', 'error', 'mse', or 'auc'.")
 
-    if(!is.null(set.seed)) 
-        set.seed(set.seed)
-  
+  if(any(is.na(train)))
+    stop("train dataset has NA")
+
+  if(sum(ratio) > 1)
+    stop(" Sum of the vector 'ratio' must be smaller or equal to 1")
+  else if(sum(ratio) < 1)
+    ratio = c(ratio, 1 - sum(ratio))
+
+  if(length(ratio) > 2)
+    stop(" length of 'ratio' must be smaller or equal to 2.")
+
+  if(!is.null(set.seed))
+    set.seed(set.seed)
+
   if(is.null(test))
-  { 
+  {
     partition_train = liver::partition(data = train, ratio = ratio, set.seed = set.seed)
-    
     train = partition_train$part1
     test  = partition_train$part2
   }else{
-    if(any(is.na(test)))  
+    if(any(is.na(test)))
       stop("test dataset has NA")
   }
-    
+
   if(length(k.max) == 1)
-  if(k.max < 2)
-    stop("  k.max must be > 1")
-  
+    if(k.max < 2)
+      stop("  k.max must be > 1")
+
   if(max(k.max) > nrow(train))
     stop("  k.max must be less or equal to the number of observations in the training set")
-  
+
   formula = stats::as.formula(formula)
-  
   model_frame_train = stats::model.frame(formula, data = train)
   model_train       = attr(model_frame_train, "terms")
-  
   train_label = stats::model.response(model_frame_train)
   train       = stats::model.matrix(model_train, model_frame_train)[, -1]
-  
+
   model_frame_test = stats::model.frame(formula, data = test)
   model_test       = attr(model_frame_test, "terms")
-  
   test_label = stats::model.response(model_frame_test)
   test       = stats::model.matrix(model_test, model_frame_test)[, -1]
-  
-  if(scaler == TRUE) 
+
+  if(scaler == TRUE)
     scaler = "minmax"
-  
+
   if(scaler != FALSE)
   {
     na.rm = FALSE
@@ -79,7 +81,7 @@ kNN.plot = function(formula, train, test = NULL, ratio = c(0.7, 0.3), k.max = 10
         par2_train = apply(train, 2, max, na.rm = na.rm)
       }
     }
-    
+
     if(scaler == "zscore")
     {
       if(is.vector(train))
@@ -91,115 +93,144 @@ kNN.plot = function(formula, train, test = NULL, ratio = c(0.7, 0.3), k.max = 10
         par2_train = apply(train, 2, stats::sd, na.rm = na.rm)
       }
     }
-    
+
     col = "all"
-    
     train = liver::scaler(train, scale = scaler, col = col, par1 = par1_train, par2 = par2_train, na.rm = na.rm)
     test  = liver::scaler(test, scale = scaler, col = col, par1 = par1_train, par2 = par2_train, na.rm = na.rm)
   }
-  
-  if(is.null(dim(train))) 
+
+  if(is.null(dim(train)))
     train = as.matrix(train)
-  
-  if(is.null(dim(test)))  
+  if(is.null(dim(test)))
     test = as.matrix(test)
-  
+
   if(length(k.max) == 1)
-    k_list   = 1:k.max
-  else 
+    k_list = 1:k.max
+  else
     k_list = k.max
-  
+
   base_list = vector(length = length(k_list))
-  
-  # - - - -
+
   if(is.factor(train_label))
     levels = base::levels(train_label)
   else
     levels = base::levels(factor(train_label))
-  
-  if(length(levels) < 2) 
+
+  if(length(levels) < 2)
     stop("'actual' must have at least two levels.")
-  
-  if(is.numeric(levels) && levels[1] != (length(levels) - 1)) 
+
+  if(is.numeric(levels) && levels[1] != (length(levels) - 1))
     levels = c(max(levels), levels[-max(levels)])
-  
+
   if(!is.null(reference))
   {
-    if(length(reference) != 1) 
+    if(length(reference) != 1)
       stop(" 'reference' must have only one level.")
-    
     if(!is.character(reference))
       reference = as.character(reference)
-    
     if(!reference %in% levels)
       stop(" 'reference' must be one of the levels of 'actual'.")
-    
-    if(which(levels == reference) != 1) 
-      levels = c(levels[which(levels == reference)], levels[-which(levels == reference)]) 
+    if(which(levels == reference) != 1)
+      levels = c(levels[which(levels == reference)], levels[-which(levels == reference)])
   }else{
     if(length(levels) == 2)
       cat(paste(c("Setting levels: reference = \"", levels[1], "\", case = \"", levels[2],"\"  \n"), collapse = ""))
     else
       cat(paste(c("Setting levels: reference = \"", levels[1],"\"  \n"), collapse = ""))
   }
-  
   reference = levels[1]
-  
-  prob = ifelse(type == "prob", TRUE, FALSE)
-  # - - - 
-  
-  for(k in 1:length(k_list))
+
+  if(base == "auc")
   {
-    knn_k = class::knn(train = train, test = test, cl = train_label, k = k_list[k], prob = prob, ...)
-    
-    base_list[k] = liver::accuracy(knn_k, test_label, reference = reference, cutoff = cutoff)
+    if(length(levels) != 2L)
+      stop("base = 'auc' currently supports binary outcomes only.")
+
+    if(!all(levels %in% as.character(train_label)))
+      stop("base = 'auc' requires both outcome classes in the training data.")
+
+    if(!all(as.character(test_label) %in% levels))
+      stop("The evaluation outcome contains classes absent from the training data.")
+
+    case = levels[2]
+    is_case = as.character(test_label) == case
+    n_case = as.double(sum(is_case))
+    n_reference = length(is_case) - n_case
+    if(n_case == 0L || n_reference == 0L)
+      stop("base = 'auc' requires both outcome classes in the evaluation data.")
   }
-  
-  if((base == "accuracy") | (base == "Accuracy"))
+
+  prob = if(base == "auc") TRUE else ifelse(type == "prob", TRUE, FALSE)
+
+  for(k in seq_along(k_list))
+  {
+    knn_k = class::knn(train = train, test = test, cl = train_label,
+                       k = k_list[k], prob = prob, ...)
+
+    if(base == "auc")
+    {
+      # knn() supplies the vote proportion for the winning class.
+      winning_prob = attr(knn_k, "prob")
+      if(anyNA(knn_k) || length(winning_prob) != length(test_label) ||
+         any(!is.finite(winning_prob)))
+        stop("Cannot compute AUC from missing or invalid kNN predictions.")
+
+      case_prob = ifelse(as.character(knn_k) == case,
+                         winning_prob, 1 - winning_prob)
+
+      # Mann-Whitney rank formula: tied scores receive half credit.
+      score_ranks = rank(case_prob, ties.method = "average")
+      base_list[k] = (sum(score_ranks[is_case]) - n_case * (n_case + 1) / 2) /
+                     (n_case * n_reference)
+    }else{
+      base_list[k] = liver::accuracy(knn_k, test_label, reference = reference, cutoff = cutoff)
+    }
+  }
+
+  if(base == "accuracy")
   {
     title = "Accuracy for Different k Values"
     y_lab = "Accuracy"
   }
-  
-  if((base == "MSE") | (base == "mse"))
+  if(base == "mse")
   {
     base_list = 1 - base_list
-    
     title = "MSE for Different k Values"
     y_lab = "Mean Square Error (MSE)"
   }
-  
-  if((base == "Error") | (base == "error"))
+  if(base == "error")
   {
     base_list = 1 - base_list
-    
     title = "Error Rate for Different k Values"
     y_lab = "Error Rate"
   }
-  
+  if(base == "auc")
+  {
+    title = "Validation AUC for Different k Values"
+    y_lab = "Validation AUC"
+  }
+
   df = data.frame(k_list = as.factor(k_list), base_list = base_list, stringsAsFactors = TRUE)
-  
   df_gg = data.frame(k_list = k_list, base_list = base_list)
-  
+
   plot_knn = ggplot2::ggplot(df_gg, ggplot2::aes(x = k_list, y = base_list)) +
-    ggplot2::geom_line(color = "#9ECAE1") + 
-    ggplot2::geom_point(shape = 21, color = "#08519C", fill = "#08519C", size = 2) + 
-    ggplot2::theme_minimal() + 
+    ggplot2::geom_line(color = "#9ECAE1") +
+    ggplot2::geom_point(shape = 21, color = "#08519C", fill = "#08519C", size = 2) +
+    ggplot2::theme_minimal() +
     ggplot2::scale_x_continuous(breaks = k_list) +
     ggplot2::ggtitle(title) +
     ggplot2::labs(x = "Value of k", y = y_lab) +
     ggplot2::theme(axis.line = ggplot2::element_line(linewidth = 0.4, colour = "black"),
-                   panel.grid.major = ggplot2::element_line(colour = "#f2f2f2"), 
+                   panel.grid.major = ggplot2::element_line(colour = "#f2f2f2"),
                    panel.grid.minor = ggplot2::element_blank(),
-                   panel.border = ggplot2::element_blank(), 
+                   panel.border = ggplot2::element_blank(),
                    panel.background = ggplot2::element_blank(),
-                   plot.title = ggplot2::element_text(hjust = 0.5)) 
-  
-  if(report == FALSE) 
+                   plot.title = ggplot2::element_text(hjust = 0.5))
+
+  if(report == FALSE)
     return(plot_knn)
   else
     return(list(base_list, plot_knn))
 }
-   
+
 ## - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
    

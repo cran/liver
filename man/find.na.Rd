@@ -17,7 +17,7 @@ find.na(x)
 
 \value{ A numeric matrix with two columns. }
 
-\author{ Reza Mohammadi \email{a.mohammadi@uva.nl} and Kevin Burke \email{kevin.burke@ul.ie} }
+\author{ Reza Mohammadi \email{a.mohammadi@uva.nl} }
 
 \examples{
 x = c(2.3, NA, -1.4, 0, 3.45)

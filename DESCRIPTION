@@ -1,6 +1,6 @@
 Package: liver
 Title: Toolkit and Datasets for Data Science
-Version: 1.30
+Version: 1.31
 Authors@R: 
     c(person(given = "Reza",
              family = "Mohammadi",
@@ -9,12 +9,12 @@ Authors@R:
              comment = c(ORCID = "0000-0001-9538-0648")),
 	    person(given = "Jeroen",
              family = "van Raak",
-             role = c("aut"),
+             role = c("ctb"),
              email = "j.j.f.vanraak@uva.nl",
              comment = c(ORCID = "0000-0002-2190-0126")),
-	    person(given = "Kevin",
+      person(given = "Kevin",
              family = "Burke",
-             role = c("aut"),
+             role = "ctb",
              email = "kevin.burke@ul.ie",
              comment = c(ORCID = "0000-0001-8724-809X"))
       )
@@ -22,15 +22,15 @@ Description: Provides a collection of helper functions and illustrative datasets
 URL: https://book-data-science-r.netlify.app
 Depends: R (>= 3.5.0)
 Imports: class, ggplot2
-Suggests: pROC, skimr, knitr, rmarkdown, data.table, mltools, forcats
+Suggests: pROC, skimr, knitr, rmarkdown, data.table, forcats
 VignetteBuilder: knitr
 License: GPL (>= 2)
 Repository: CRAN
 Author: Reza Mohammadi [aut, cre] (ORCID:
     <https://orcid.org/0000-0001-9538-0648>),
-  Jeroen van Raak [aut] (ORCID: <https://orcid.org/0000-0002-2190-0126>),
-  Kevin Burke [aut] (ORCID: <https://orcid.org/0000-0001-8724-809X>)
+  Jeroen van Raak [ctb] (ORCID: <https://orcid.org/0000-0002-2190-0126>),
+  Kevin Burke [ctb] (ORCID: <https://orcid.org/0000-0001-8724-809X>)
 Maintainer: Reza Mohammadi <a.mohammadi@uva.nl>
 NeedsCompilation: no
-Packaged: 2026-09-10 12:41:03 UTC; a.mohammadiuva.nl
-Date/Publication: 2026-09-10 13:50:02 UTC
+Packaged: 2026-11-13 10:40:54 UTC; a.mohammadiuva.nl
+Date/Publication: 2026-11-13 13:40:03 UTC

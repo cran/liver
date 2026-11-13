@@ -7,6 +7,11 @@
 
 ## **liver** NEWS
 
+### **liver** Version 1.31
+
+* Function `one.hot()` is updated. Not dependent to `mltools` package.
+* In function `kNN.plot()`, option `base = auc` is added.
+
 ### **liver** Version 1.30
 
 * Function `partition()`, option `strata` is added.

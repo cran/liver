@@ -16,7 +16,7 @@ For more information related to the dataset see  \cr
 \url{https://www.kaggle.com/datasets/uciml/caravan-insurance-challenge}
 }
 
-\source{The data was supplied by Sentient Machine Research: \url{https://www.smr.nl}}
+\source{The data was supplied by Sentient Machine Research: \url{https://smr.nl/}}
 
 \references{
 P. van der Putten and M. van Someren (eds) . CoIL Challenge 2000: The Insurance Company Case.  Published by Sentient Machine Research, Amsterdam. Also a Leiden Institute of Advanced Computer Science Technical Report 2000-09. June 22, 2000.  \cr

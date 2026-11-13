@@ -21,7 +21,7 @@ kNN.plot(formula, train, test = NULL, ratio = c(0.7, 0.3), k.max = 10,
   \item{scaler}{a character with options \code{FALSE} (default), \code{"minmax"}, and \code{"zscore"}. 
   Option \code{"minmax"} means no transformation. This option allows the users to use normalized version of the train and test sets for the kNN aglorithm. 
   }  
-  \item{base}{ base measurement: \code{accuracy} (default), \code{error}, or \code{MSE} for Mean Square Error.  }  
+  \item{base}{ base measurement: \code{accuracy} (default), \code{error}, \code{MSE}, \code{auc} for Mean Square Error.  }  
   \item{reference}{a factor of classes to be used as the true results. }
   \item{cutoff}{cutoff value for the case that the output of knn algorithm is vector of probabilites. }  
   \item{type}{either \code{"class"} (default) for the predicted class or \code{"prob"} for model confidence values.}
@@ -38,7 +38,7 @@ kNN.plot(formula, train, test = NULL, ratio = c(0.7, 0.3), k.max = 10,
   Venables, W. N. and Ripley, B. D. (2002) \emph{Modern Applied Statistics with S.} Fourth edition.  Springer.
 }
 
-\author{ Reza Mohammadi \email{a.mohammadi@uva.nl} and Kevin Burke \email{kevin.burke@ul.ie} }
+\author{ Reza Mohammadi \email{a.mohammadi@uva.nl}}
 
 \seealso{ \code{\link[liver]{kNN}}, \code{\link[liver]{scaler}} }
 
@@ -48,10 +48,10 @@ data(risk)
 partition_risk <- partition(data = risk, ratio = c(0.6, 0.4))
 
 train <- partition_risk$part1
-test  <- partition_risk$part1
+test  <- partition_risk$part2
 
-kNN.plot(risk ~ income + age, train = train, test = test)
-kNN.plot(risk ~ income + age, train = train, test = test, base = "error")
+kNN.plot(risk ~ income + age, train = train)
+kNN.plot(risk ~ income + age, train = train, base = "error")
 }
 
 \keyword{models}
