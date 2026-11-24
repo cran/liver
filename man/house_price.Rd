@@ -29,23 +29,7 @@ This dataset comes from: \cr
 Reza Mohammadi (2025). Data Science Foundations and Machine Learning with R: From Data to Decisions. \url{https://book-data-science-r.netlify.app}.
 }
 
-\seealso{ \code{\link[liver]{bank}}, 
-          \code{\link[liver]{churn_mlc}}, 
-          \code{\link[liver]{churn}}, 
-          \code{\link[liver]{churn_tel}}, 
-          \code{\link[liver]{adult}}, 
-          \code{\link[liver]{risk}}, 
-          \code{\link[liver]{cereal}}, 
-          \code{\link[liver]{advertising}}, 
-          \code{\link[liver]{marketing}}, 
-          \code{\link[liver]{drug}}, 
-          \code{\link[liver]{house}}, 
-          \code{\link[liver]{red_wines}}, 
-          \code{\link[liver]{white_wines}}, 
-          \code{\link[liver]{insurance}}, 
-          \code{\link[liver]{caravan}}, 
-          \code{\link[liver]{loan}}
-          }
+\seealso{ \code{\link[liver]{house}}}
 
 \examples{
 data(house_price)

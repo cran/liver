@@ -11,42 +11,17 @@ time, transaction amount, and a binary fraud indicator.
 \usage{
 data(creditcard_fraud)
 }
+
 \format{
-A data frame with 10000 observations and 31 variables:
-\describe{
-  \item{Time}{Seconds elapsed between each transaction and the first transaction in the dataset.}
-  \item{V1}{Anonymized predictor obtained from a PCA transformation of the original variables.}
-  \item{V2}{Anonymized predictor obtained from a PCA transformation of the original variables.}
-  \item{V3}{Anonymized predictor obtained from a PCA transformation of the original variables.}
-  \item{V4}{Anonymized predictor obtained from a PCA transformation of the original variables.}
-  \item{V5}{Anonymized predictor obtained from a PCA transformation of the original variables.}
-  \item{V6}{Anonymized predictor obtained from a PCA transformation of the original variables.}
-  \item{V7}{Anonymized predictor obtained from a PCA transformation of the original variables.}
-  \item{V8}{Anonymized predictor obtained from a PCA transformation of the original variables.}
-  \item{V9}{Anonymized predictor obtained from a PCA transformation of the original variables.}
-  \item{V10}{Anonymized predictor obtained from a PCA transformation of the original variables.}
-  \item{V11}{Anonymized predictor obtained from a PCA transformation of the original variables.}
-  \item{V12}{Anonymized predictor obtained from a PCA transformation of the original variables.}
-  \item{V13}{Anonymized predictor obtained from a PCA transformation of the original variables.}
-  \item{V14}{Anonymized predictor obtained from a PCA transformation of the original variables.}
-  \item{V15}{Anonymized predictor obtained from a PCA transformation of the original variables.}
-  \item{V16}{Anonymized predictor obtained from a PCA transformation of the original variables.}
-  \item{V17}{Anonymized predictor obtained from a PCA transformation of the original variables.}
-  \item{V18}{Anonymized predictor obtained from a PCA transformation of the original variables.}
-  \item{V19}{Anonymized predictor obtained from a PCA transformation of the original variables.}
-  \item{V20}{Anonymized predictor obtained from a PCA transformation of the original variables.}
-  \item{V21}{Anonymized predictor obtained from a PCA transformation of the original variables.}
-  \item{V22}{Anonymized predictor obtained from a PCA transformation of the original variables.}
-  \item{V23}{Anonymized predictor obtained from a PCA transformation of the original variables.}
-  \item{V24}{Anonymized predictor obtained from a PCA transformation of the original variables.}
-  \item{V25}{Anonymized predictor obtained from a PCA transformation of the original variables.}
-  \item{V26}{Anonymized predictor obtained from a PCA transformation of the original variables.}
-  \item{V27}{Anonymized predictor obtained from a PCA transformation of the original variables.}
-  \item{V28}{Anonymized predictor obtained from a PCA transformation of the original variables.}
-  \item{Amount}{Transaction amount.}
-  \item{Class}{Fraud indicator: \code{0} for non-fraudulent transactions and \code{1} for fraudulent transactions.}
+A data frame with 10,000 rows and 31 variables. Each row represents one credit card transaction.
+\itemize{
+  \item \code{Time} gives the number of seconds since the first transaction in the original dataset.
+  \item \code{V1} through \code{V28} are the 28 principal component scores derived from the original transaction features. The original features are confidential.
+  \item \code{Amount} gives the transaction amount.
+  \item \code{Class} indicates whether the transaction was genuine (\code{0}) or fraudulent (\code{1}).
 }
 }
+
 \details{
 This dataset is a teaching subset derived from the original Credit Card Fraud
 Detection dataset available on Kaggle. The original dataset is highly imbalanced.

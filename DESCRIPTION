@@ -1,6 +1,6 @@
 Package: liver
 Title: Toolkit and Datasets for Data Science
-Version: 1.31
+Version: 1.32
 Authors@R: 
     c(person(given = "Reza",
              family = "Mohammadi",
@@ -22,7 +22,7 @@ Description: Provides a collection of helper functions and illustrative datasets
 URL: https://book-data-science-r.netlify.app
 Depends: R (>= 3.5.0)
 Imports: class, ggplot2
-Suggests: pROC, skimr, knitr, rmarkdown, data.table, forcats
+Suggests: pROC, tidyselect, knitr, rmarkdown, data.table, forcats
 VignetteBuilder: knitr
 License: GPL (>= 2)
 Repository: CRAN
@@ -32,5 +32,5 @@ Author: Reza Mohammadi [aut, cre] (ORCID:
   Kevin Burke [ctb] (ORCID: <https://orcid.org/0000-0001-8724-809X>)
 Maintainer: Reza Mohammadi <a.mohammadi@uva.nl>
 NeedsCompilation: no
-Packaged: 2026-11-13 10:40:54 UTC; a.mohammadiuva.nl
-Date/Publication: 2026-11-13 13:40:03 UTC
+Packaged: 2026-11-24 15:44:12 UTC; a.mohammadiuva.nl
+Date/Publication: 2026-11-24 19:30:10 UTC

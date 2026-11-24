@@ -18,8 +18,8 @@ the \code{marketing} dataset, as a data frame, contains \eqn{40} rows and \eqn{8
 \item \code{impressions}: amount of impressions per day.
 \item \code{display}: whether or not a display campaign was running.
 \item \code{transactions}: number of transactions per day.
-\item \code{click.rate}:  click-through-rate.
-\item \code{conversion.rate}: conversion rate.
+\item \code{click_rate}:  click-through-rate.
+\item \code{conversion_rate}: conversion rate.
 \item \code{revenue}: daily revenue.
   }
 }

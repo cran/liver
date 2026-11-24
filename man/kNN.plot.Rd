@@ -43,6 +43,7 @@ kNN.plot(formula, train, test = NULL, ratio = c(0.7, 0.3), k.max = 10,
 \seealso{ \code{\link[liver]{kNN}}, \code{\link[liver]{scaler}} }
 
 \examples{
+\dontrun{
 data(risk)
 
 partition_risk <- partition(data = risk, ratio = c(0.6, 0.4))
@@ -52,6 +53,7 @@ test  <- partition_risk$part2
 
 kNN.plot(risk ~ income + age, train = train)
 kNN.plot(risk ~ income + age, train = train, base = "error")
+}
 }
 
 \keyword{models}

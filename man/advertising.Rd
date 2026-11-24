@@ -13,9 +13,9 @@ the dataset is from an anonymous organisation's social media ad campaign. the ad
 the \code{advertising} dataset, as a data frame, contains \eqn{1143} rows and \eqn{11} columns (variables/features). the \eqn{11} variables are:
  \itemize{
 
-\item \code{ad.id}: an unique ID for each ad.
-\item \code{xyz.campaign.id}: an ID associated with each ad campaign of XYZ company.
-\item \code{fb.campaign.id}: an ID associated with how Facebook tracks each campaign.
+\item \code{ad_id}: an unique ID for each ad.
+\item \code{xyz_campaign_id}: an ID associated with each ad campaign of XYZ company.
+\item \code{fb_campaign_id}: an ID associated with how Facebook tracks each campaign.
 \item \code{age}: age of the person to whom the ad is shown.
 \item \code{gender}: gender of the person to whim the add is shown.
 \item \code{interest}: a code specifying the category to which the person's interest belongs (interests are as mentioned in the person's Facebook public profile).

@@ -13,20 +13,20 @@ data(bike_demand)
 \format{
 A data frame with 8760 observations and 14 variables:
 \describe{
-  \item{date}{Date of observation.}
-  \item{hour}{Hour of the day, ranging from 0 to 23.}
-  \item{temperature}{Temperature in degrees Celsius.}
-  \item{humidity}{Humidity percentage.}
-  \item{wind_speed}{Wind speed in meters per second.}
-  \item{visibility}{Visibility in units recorded by the source dataset.}
-  \item{dew_point_temperature}{Dew point temperature in degrees Celsius.}
-  \item{solar_radiation}{Solar radiation in megajoules per square meter.}
-  \item{rainfall}{Rainfall in millimeters.}
-  \item{snowfall}{Snowfall in centimeters.}
-  \item{season}{Season of the year: \code{"spring"}, \code{"summer"}, \code{"autumn"}, or \code{"winter"}.}
-  \item{holiday}{Holiday status: \code{"holiday"} or \code{"no holiday"}.}
-  \item{functioning_day}{Whether the bike rental system was operating: \code{"yes"} or \code{"no"}.}
-  \item{bike_count}{Number of rented bikes (target variable).}
+  \item{\code{date}}{Date of observation.}
+  \item{\code{hour}}{Hour of the day, ranging from 0 to 23.}
+  \item{\code{temperature}}{Temperature in degrees Celsius.}
+  \item{\code{humidity}}{Humidity percentage.}
+  \item{\code{wind_speed}}{Wind speed in meters per second.}
+  \item{\code{visibility}}{Visibility in units recorded by the source dataset.}
+  \item{\code{dew_point_temperature}}{Dew point temperature in degrees Celsius.}
+  \item{\code{solar_radiation}}{Solar radiation in megajoules per square meter.}
+  \item{\code{rainfall}}{Rainfall in millimeters.}
+  \item{\code{snowfall}}{Snowfall in centimeters.}
+  \item{\code{season}}{Season of the year: \code{"spring"}, \code{"summer"}, \code{"autumn"}, or \code{"winter"}.}
+  \item{\code{holiday}}{Holiday status: \code{"holiday"} or \code{"no holiday"}.}
+  \item{\code{functioning_day}}{Whether the bike rental system was operating: \code{"yes"} or \code{"no"}.}
+  \item{\code{bike_count}}{Number of rented bikes (target variable).}
 }
 }
 \details{

@@ -13,18 +13,18 @@ data(doctor_visits)
 \format{
 A data frame with 5190 observations and 12 variables:
 \describe{
-  \item{age}{Age of the individual.}
-  \item{income}{Income level of the individual.}
-  \item{illness}{Number of illnesses experienced by the individual.}
-  \item{reduced}{Number of days with reduced activity.}
-  \item{health}{Self-reported health score.}
-  \item{gender}{Gender of the individual: \code{"male"} or \code{"female"}.}
-  \item{private}{Whether the individual has private health insurance: \code{"yes"} or \code{"no"}.}
-  \item{freepoor}{Whether the individual is covered by free government health care due to low income: \code{"yes"} or \code{"no"}.}
-  \item{freerepat}{Whether the individual is covered by free government health care due to repatriation status: \code{"yes"} or \code{"no"}.}
-  \item{nchronic}{Whether the individual has a chronic condition that is not limiting: \code{"yes"} or \code{"no"}.}
-  \item{lchronic}{Whether the individual has a chronic condition that is limiting: \code{"yes"} or \code{"no"}.}
-  \item{visits}{Number of doctor visits (target variable).}
+  \item{\code{age}}{Age of the individual.}
+  \item{\code{income}}{Income level of the individual.}
+  \item{\code{illness}}{Number of illnesses experienced by the individual.}
+  \item{\code{reduced}}{Number of days with reduced activity.}
+  \item{\code{health}}{Self-reported health score.}
+  \item{\code{gender}}{Gender of the individual: \code{"male"} or \code{"female"}.}
+  \item{\code{private}}{Whether the individual has private health insurance: \code{"yes"} or \code{"no"}.}
+  \item{\code{freepoor}}{Whether the individual is covered by free government health care due to low income: \code{"yes"} or \code{"no"}.}
+  \item{\code{freerepat}}{Whether the individual is covered by free government health care due to repatriation status: \code{"yes"} or \code{"no"}.}
+  \item{\code{nchronic}}{Whether the individual has a chronic condition that is not limiting: \code{"yes"} or \code{"no"}.}
+  \item{\code{lchronic}}{Whether the individual has a chronic condition that is limiting: \code{"yes"} or \code{"no"}.}
+  \item{\code{visits}}{Number of doctor visits (target variable).}
 }
 }
 \details{

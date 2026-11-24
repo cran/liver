@@ -18,3 +18,4 @@ export( mse,
         prop.conf
       )
 
+S3method(print,liver_skim)

@@ -13,19 +13,19 @@ data(loan)
 \format{
 A data frame with 4269 observations and 13 variables:
 \describe{
-  \item{loan_id}{Unique identifier for each loan application; not intended as a predictor in modeling.}
-  \item{no_of_dependents}{Number of dependents of the applicant.}
-  \item{education}{Education level of the applicant: \code{"graduate"} or \code{"not-graduate"}.}
-  \item{self_employed}{Whether the applicant is self-employed: \code{"yes"} or \code{"no"}.}
-  \item{income_annum}{Annual income of the applicant.}
-  \item{loan_amount}{Requested loan amount.}
-  \item{loan_term}{Loan term.}
-  \item{cibil_score}{Applicant's CIBIL credit score.}
-  \item{residential_assets_value}{Value of the applicant's residential assets.}
-  \item{commercial_assets_value}{Value of the applicant's commercial assets.}
-  \item{luxury_assets_value}{Value of the applicant's luxury assets.}
-  \item{bank_asset_value}{Value of the applicant's bank assets.}
-  \item{loan_status}{Loan application outcome: \code{"approved"} or \code{"rejected"}.}
+  \item{\code{loan_id}}{Unique identifier for each loan application; not intended as a predictor in modeling.}
+  \item{\code{no_of_dependents}}{Number of dependents of the applicant.}
+  \item{\code{education}}{Education level of the applicant: \code{"graduate"} or \code{"not-graduate"}.}
+  \item{\code{self_employed}}{Whether the applicant is self-employed: \code{"yes"} or \code{"no"}.}
+  \item{\code{income_annum}}{Annual income of the applicant.}
+  \item{\code{loan_amount}}{Requested loan amount.}
+  \item{\code{loan_term}}{Loan term.}
+  \item{\code{cibil_score}}{Applicant's CIBIL credit score.}
+  \item{\code{residential_assets_value}}{Value of the applicant's residential assets.}
+  \item{\code{commercial_assets_value}}{Value of the applicant's commercial assets.}
+  \item{\code{luxury_assets_value}}{Value of the applicant's luxury assets.}
+  \item{\code{bank_asset_value}}{Value of the applicant's bank assets.}
+  \item{\code{loan_status}}{Loan application outcome: \code{"approved"} or \code{"rejected"}.}
 }
 }
 \details{

@@ -11,29 +11,22 @@ the dataset can be viewed as classification or regression tasks. the classes are
 
 \usage{ data(white_wines) }
 
-\format{ 
-
-the \code{white_wines} dataset, as a data frame, contains \eqn{4898} rows and \eqn{12} columns (variables/features). the \eqn{12} 
-variables are:
- \itemize{
-Input variables (based on physicochemical tests):
-
-\item \code{fixed acidity}
-\item \code{volatile acidity}
-\item \code{citric acid}
-\item \code{residual sugar}
-\item \code{chlorides}
-\item \code{free sulfur dioxide}
-\item \code{total sulfur dioxide}
-\item \code{density}
-\item \code{pH}
-\item \code{sulphates}
-\item \code{alcohol}
-
-Output variable (based on sensory data)
-
-\item \code{quality}: score between 0 and 10.
-  }
+\format{
+A data frame with 4,898 rows and 12 variables. Each row represents one sample of Portuguese white Vinho Verde wine. The first 11 variables are physicochemical measurements, and \code{quality} is the sensory outcome.
+\describe{
+  \item{\code{fixed_acidity}}{Fixed acidity, expressed as grams of tartaric acid per liter.}
+  \item{\code{volatile_acidity}}{Volatile acidity, expressed as grams of acetic acid per liter.}
+  \item{\code{citric_acid}}{Citric acid concentration in grams per liter.}
+  \item{\code{residual_sugar}}{Sugar remaining after fermentation, measured in grams per liter.}
+  \item{\code{chlorides}}{Chloride concentration, expressed as grams of sodium chloride per liter.}
+  \item{\code{free_sulfur_dioxide}}{Concentration of free sulfur dioxide in milligrams per liter.}
+  \item{\code{total_sulfur_dioxide}}{Combined concentration of free and bound sulfur dioxide in milligrams per liter.}
+  \item{\code{density}}{Wine density in grams per milliliter.}
+  \item{\code{pH}}{Wine pH. Lower values indicate greater acidity.}
+  \item{\code{sulphates}}{Sulfate concentration, expressed as grams of potassium sulfate per liter.}
+  \item{\code{alcohol}}{Alcohol content by volume, expressed as a percentage.}
+  \item{\code{quality}}{Integer quality score. At least three assessors rated each wine in a blind tasting on a scale from 0 (very poor) to 10 (excellent). The recorded score is the median of their ratings. Scores in this dataset range from 3 to 9.}
+}
 }
 
 \details{
@@ -52,23 +45,7 @@ Cortez, P., Cerdeira, A., Almeida, F., Matos, T., and Reis, J. (2009). Modeling 
 Reza Mohammadi (2025). Data Science Foundations and Machine Learning with R: From Data to Decisions. \url{https://book-data-science-r.netlify.app}.
 }
 
-\seealso{ \code{\link[liver]{bank}}, 
-          \code{\link[liver]{churn_mlc}}, 
-          \code{\link[liver]{churn}}, 
-          \code{\link[liver]{churn_tel}}, 
-          \code{\link[liver]{adult}}, 
-          \code{\link[liver]{risk}}, 
-          \code{\link[liver]{cereal}}, 
-          \code{\link[liver]{advertising}}, 
-          \code{\link[liver]{marketing}}, 
-          \code{\link[liver]{drug}}, 
-          \code{\link[liver]{house}}, 
-          \code{\link[liver]{house_price}}, 
-          \code{\link[liver]{red_wines}}, 
-          \code{\link[liver]{insurance}}, 
-          \code{\link[liver]{caravan}}, 
-          \code{\link[liver]{loan}}
-          }
+\seealso{ \code{\link[liver]{red_wines}}    }
 
 \examples{
 data(white_wines)

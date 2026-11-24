@@ -16,24 +16,24 @@ data(purchase_intention)
 \format{
 A data frame with 12330 observations and 18 variables:
 \describe{
-  \item{administrative}{Number of administrative pages visited during the session.}
-  \item{administrative_duration}{Total time spent on administrative pages during the session.}
-  \item{informational}{Number of informational pages visited during the session.}
-  \item{informational_duration}{Total time spent on informational pages during the session.}
-  \item{product_related}{Number of product-related pages visited during the session.}
-  \item{product_related_duration}{Total time spent on product-related pages during the session.}
-  \item{bounce_rates}{Average bounce rate associated with the visited pages.}
-  \item{exit_rates}{Average exit rate associated with the visited pages.}
-  \item{page_values}{Average page value for pages visited before a completed transaction.}
-  \item{special_day}{Closeness of the session date to a special shopping day, scaled between 0 and 1.}
-  \item{month}{Month of the session.}
-  \item{operating_systems}{Visitor operating system, recorded as a categorical factor.}
-  \item{browser}{Visitor browser, recorded as a categorical factor.}
-  \item{region}{Visitor region, recorded as a categorical factor.}
-  \item{traffic_type}{Traffic source type, recorded as a categorical factor.}
-  \item{visitor_type}{Visitor type: \code{"New_Visitor"}, \code{"Returning_Visitor"}, or \code{"Other"}.}
-  \item{weekend}{Whether the session occurred on a weekend: \code{"no"} or \code{"yes"}.}
-  \item{revenue}{Whether the session ended in a purchase: \code{"no"} or \code{"yes"}.}
+  \item{\code{administrative}}{Number of administrative pages visited during the session.}
+  \item{\code{administrative_duration}}{Total time spent on administrative pages during the session.}
+  \item{\code{informational}}{Number of informational pages visited during the session.}
+  \item{\code{informational_duration}}{Total time spent on informational pages during the session.}
+  \item{\code{product_related}}{Number of product-related pages visited during the session.}
+  \item{\code{product_related_duration}}{Total time spent on product-related pages during the session.}
+  \item{\code{bounce_rates}}{Average bounce rate associated with the visited pages.}
+  \item{\code{exit_rates}}{Average exit rate associated with the visited pages.}
+  \item{\code{page_values}}{Average page value for pages visited before a completed transaction.}
+  \item{\code{special_day}}{Closeness of the session date to a special shopping day, scaled between 0 and 1.}
+  \item{\code{month}}{Month of the session.}
+  \item{\code{operating_systems}}{Visitor operating system, recorded as a categorical factor.}
+  \item{\code{browser}}{Visitor browser, recorded as a categorical factor.}
+  \item{\code{region}}{Visitor region, recorded as a categorical factor.}
+  \item{\code{traffic_type}}{Traffic source type, recorded as a categorical factor.}
+  \item{\code{visitor_type}}{Visitor type: \code{"New_Visitor"}, \code{"Returning_Visitor"}, or \code{"Other"}.}
+  \item{\code{weekend}}{Whether the session occurred on a weekend: \code{"no"} or \code{"yes"}.}
+  \item{\code{revenue}}{Whether the session ended in a purchase: \code{"no"} or \code{"yes"}.}
 }
 }
 \details{

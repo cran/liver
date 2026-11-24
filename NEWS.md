@@ -7,6 +7,10 @@
 
 ## **liver** NEWS
 
+### **liver** Version 1.32
+
+* Function `skim()` is updated. Not dependent to `skimr` package.
+
 ### **liver** Version 1.31
 
 * Function `one.hot()` is updated. Not dependent to `mltools` package.

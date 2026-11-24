@@ -1,46 +1,44 @@
 \name{churn}
 \alias{churn}
-
 \docType{data}
 
-\title{ Churn dataset for Credit Card Customers }
+\title{Credit Card Customer Churn}
 
-\description{ 
-The \emph{churn} data set contains \eqn{10127} rows (customers) and \eqn{21} columns (features). The \emph{churn} column is our target which indicate whether customer churned (left the company) or not.   
+\description{
+The \code{churn} dataset contains demographic information, account characteristics, and transaction activity for credit card customers. The outcome variable, \code{churn}, indicates whether the customer closed the account (\code{"yes"}) or kept it active (\code{"no"}).
 }
 
-\usage{ data(churn) }
+\usage{data(churn)}
 
-\format{ 
-the \code{churn} dataset, as a data frame, contains \eqn{10127} rows (customers) and \eqn{21} columns (variables/features). the \eqn{21} variables are:
- \itemize{
-\item \code{customer.ID}: Unique identifier for each account holder.
-\item \code{age}: Age of the customer, in years.
-\item \code{gender}: Gender of the account holder.
-\item \code{education}: Educational qualification (high-school, college, graduate, uneducated, post-graduate, doctorate, unknown).
-\item \code{marital}: Marital status (married, single, divorced, unknown).
-\item \code{income}: Annual income bracket (less than $40K, $40K-$60K, $60K-$80K, $80K-$120K, over $120K, unknown).
-\item \code{card.category}: Credit card type (blue, silver, gold, platinum).
-\item \code{dependent.count}: Number of dependents.
-\item \code{months.on.book}: Tenure with the bank, in months.
-\item \code{relationship.count}: Total number of products held by the customer (1-6).
-\item \code{months.inactive}: Number of inactive months in the past 12 months.
-\item \code{contacts.count.12}: Number of customer service contacts in the past 12 months.
-\item \code{credit.limit}: Total credit card limit.
-\item \code{revolving.balance}: Current revolving balance on the credit card.
-\item \code{available.credit}: Available credit line, representing the unused portion of the credit limit. Calculated as \code{credit.limit - revolving.balance}.
-\item \code{transaction.amount.12}: Total transaction amount in the past 12 months.
-\item \code{transaction.count.12}: Total number of transactions in the past 12 months.
-\item \code{ratio.amount.Q4.Q1}: Ratio of total transaction amount in the fourth quarter to that in the first quarter.
-\item \code{ratio.count.Q4.Q1}: Ratio of total transaction count in the fourth quarter to that in the first quarter.
-\item \code{utilization.ratio}: Average credit utilization ratio, defined as \code{revolving.balance / credit.limit}.
-\item \code{churn}: Indicator of whether the account was closed (\code{yes}) or remained active (\code{no}).
-  }
+\format{
+A data frame with 10,127 rows and 21 variables. Each row represents one credit card customer.
+\describe{
+  \item{\code{customer_ID}}{Unique customer identifier.}
+  \item{\code{age}}{Customer age in years.}
+  \item{\code{gender}}{Gender. A factor with levels \code{"female"} and \code{"male"}.}
+  \item{\code{education}}{Education level. A factor with levels \code{"uneducated"}, \code{"highschool"}, \code{"college"}, \code{"graduate"}, \code{"post-graduate"}, \code{"doctorate"}, and \code{"unknown"}.}
+  \item{\code{marital}}{Marital status. A factor with levels \code{"married"}, \code{"single"}, \code{"divorced"}, and \code{"unknown"}.}
+  \item{\code{income}}{Annual income bracket, in thousands of dollars. A factor with levels \code{"<40K"}, \code{"40K-60K"}, \code{"60K-80K"}, \code{"80K-120K"}, \code{">120K"}, and \code{"unknown"}.}
+  \item{\code{card_category}}{Credit card type. A factor with levels \code{"blue"}, \code{"silver"}, \code{"gold"}, and \code{"platinum"}.}
+  \item{\code{dependent_count}}{Number of dependents.}
+  \item{\code{months_on_book}}{Number of months the customer has been with the bank.}
+  \item{\code{relationship_count}}{Number of bank products the customer holds (1 to 6).}
+  \item{\code{months_inactive}}{Number of months the account was inactive in the past 12 months.}
+  \item{\code{contacts_count_12}}{Number of customer service contacts in the past 12 months.}
+  \item{\code{credit_limit}}{Credit limit on the card.}
+  \item{\code{revolving_balance}}{Revolving balance on the card.}
+  \item{\code{available_credit}}{Unused credit, calculated as \code{credit_limit - revolving_balance}.}
+  \item{\code{transaction_amount_12}}{Total transaction amount in the past 12 months.}
+  \item{\code{transaction_count_12}}{Total number of transactions in the past 12 months.}
+  \item{\code{ratio_amount_Q4_Q1}}{Total transaction amount in the fourth quarter divided by the total transaction amount in the first quarter.}
+  \item{\code{ratio_count_Q4_Q1}}{Number of transactions in the fourth quarter divided by the number of transactions in the first quarter.}
+  \item{\code{utilization_ratio}}{Proportion of the credit limit in use, calculated as \code{revolving_balance / credit_limit} and rounded to three decimal places.}
+  \item{\code{churn}}{Account closure indicator. A factor with levels \code{"yes"} (the account was closed) and \code{"no"} (the account remained active).}
+}
 }
 
 \details{
-For more information related to the dataset see:  \cr
-\url{https://www.kaggle.com/sakshigoyal7/credit-card-customers}
+The variables \code{education}, \code{marital}, and \code{income} use the factor level \code{"unknown"} for customers whose information is unavailable. These entries are included when counting factor levels and are not counted as missing by \code{is.na()}.
 }
 
 \source{
@@ -51,28 +49,15 @@ This dataset is originally from https://leaps.analyttica.com/home
 Reza Mohammadi (2025). Data Science Foundations and Machine Learning with R: From Data to Decisions. \url{https://book-data-science-r.netlify.app}.
 }
 
-\seealso{ \code{\link[liver]{bank}}, 
-          \code{\link[liver]{churn_mlc}}, 
-          \code{\link[liver]{churn_tel}}, 
-          \code{\link[liver]{adult}}, 
-          \code{\link[liver]{risk}}, 
-          \code{\link[liver]{cereal}}, 
-          \code{\link[liver]{advertising}}, 
-          \code{\link[liver]{marketing}}, 
-          \code{\link[liver]{drug}}, 
-          \code{\link[liver]{house}}, 
-          \code{\link[liver]{house_price}}, 
-          \code{\link[liver]{red_wines}}, 
-          \code{\link[liver]{white_wines}}, 
-          \code{\link[liver]{insurance}}, 
-          \code{\link[liver]{caravan}}, 
-          \code{\link[liver]{loan}}
-          }
+\seealso{
+\code{\link{churn_mlc}}, \code{\link{churn_tel}}
+}
 
 \examples{
 data(churn)
-
 str(churn)
+table(churn$churn)
 }
 
-\keyword{ datasets }
+
+\keyword{datasets}

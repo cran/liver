@@ -13,12 +13,12 @@ the house dataset contains \eqn{6} features and \eqn{414} records. the target fe
 
 the \code{house} dataset, as a data frame, contains \eqn{414} rows and \eqn{6} columns (variables/features). the \eqn{6} variables are:
  \itemize{
-\item \code{house.age}: house age (numeric, in year).
-\item \code{distance.to.MRT}: distance to the nearest MRT station (numeric).
-\item \code{stores.number}: number of convenience stores (numeric).
+\item \code{house_age}: house age (numeric, in year).
+\item \code{distance_to_MRT}: distance to the nearest MRT station (numeric).
+\item \code{stores_number}: number of convenience stores (numeric).
 \item \code{latitude}: latitude (numeric).
 \item \code{longitude}: longitude (numeric).
-\item \code{unit.price}: house price of unit area (numeric).
+\item \code{unit_price}: house price of unit area (numeric).
   }
 }
 
@@ -37,23 +37,7 @@ This dataset originally comes from the UCI repository of machine learning databa
 Reza Mohammadi (2025). Data Science Foundations and Machine Learning with R: From Data to Decisions. \url{https://book-data-science-r.netlify.app}.
 }
 
-\seealso{ \code{\link[liver]{bank}}, 
-          \code{\link[liver]{churn_mlc}}, 
-          \code{\link[liver]{churn}}, 
-          \code{\link[liver]{churn_tel}}, 
-          \code{\link[liver]{adult}}, 
-          \code{\link[liver]{risk}}, 
-          \code{\link[liver]{cereal}}, 
-          \code{\link[liver]{advertising}}, 
-          \code{\link[liver]{marketing}}, 
-          \code{\link[liver]{drug}}, 
-          \code{\link[liver]{house_price}}, 
-          \code{\link[liver]{red_wines}}, 
-          \code{\link[liver]{white_wines}}, 
-          \code{\link[liver]{insurance}}, 
-          \code{\link[liver]{caravan}}, 
-          \code{\link[liver]{loan}}
-          }
+\seealso{ \code{\link[liver]{house_price}}}
 
 \examples{
 data(house)

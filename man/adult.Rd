@@ -18,16 +18,16 @@ the \code{adult} dataset, as a data frame, contains \eqn{48598} rows and \eqn{15
 \item \code{workclass}: a factor with 6 levels.
 \item \code{demogweight}: the demographics to describe a person.
 \item \code{education}: a factor with 16 levels.
-\item \code{education.num}: an ordinal encoding of the 'education' feature.
-\item \code{marital.status}: a factor with 5 levels.
+\item \code{education_num}: an ordinal encoding of the 'education' feature.
+\item \code{marital_status}: a factor with 5 levels.
 \item \code{occupation}: a factor with 15 levels.
 \item \code{relationship}: a factor with 6 levels.
 \item \code{race}: a factor with 5 levels.
 \item \code{gender}: a factor with levels "Female","Male".
-\item \code{capital.gain}: capital gains.
-\item \code{capital.loss}: capital losses.
-\item \code{hours.per.week}: number of hours of work per week.
-\item \code{native.country}: a factor with 42 levels.
+\item \code{capital_gain}: capital gains.
+\item \code{capital_loss}: capital losses.
+\item \code{hours_per_week}: number of hours of work per week.
+\item \code{native_country}: a factor with 42 levels.
 \item \code{income}: yearly income as a factor with levels "<=50K" and ">50K".
   }
 }

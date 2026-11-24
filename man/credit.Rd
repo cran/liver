@@ -14,27 +14,27 @@ data(credit)
 \format{
 A data frame with 1000 observations and 21 variables:
 \describe{
-  \item{status}{Status of the debtor's checking account with the bank.}
-  \item{duration}{Credit duration in months.}
-  \item{credit_history}{History of compliance with previous or concurrent credit contracts.}
-  \item{purpose}{Purpose for which the credit is needed.}
-  \item{amount}{Credit amount in Deutsche Mark (DM).}
-  \item{savings}{Debtor's savings.}
-  \item{employment_duration}{Duration of the debtor's employment with the current employer.}
-  \item{installment_rate}{Credit installments as a percentage of the debtor's disposable income.}
-  \item{personal_status_sex}{Combined information on personal status and sex.}
-  \item{other_debtors}{Whether there is another debtor or a guarantor for the credit.}
-  \item{present_residence}{Length of time the debtor has lived in the present residence.}
-  \item{property}{The debtor's most valuable property.}
-  \item{age}{Age in years.}
-  \item{other_installment_plans}{Installment plans from providers other than the credit-giving bank.}
-  \item{housing}{Type of housing the debtor lives in.}
-  \item{number_credits}{Number of credits the debtor has or had at this bank, including the current one.}
-  \item{job}{Quality of the debtor's job.}
-  \item{people_liable}{Number of persons financially dependent on the debtor.}
-  \item{telephone}{Whether a telephone landline is registered in the debtor's name.}
-  \item{foreign_worker}{Whether the debtor is a foreign worker.}
-  \item{credit_risk}{Credit risk outcome: \code{"good risk"} or \code{"bad risk"}.}
+  \item{\code{status}}{Status of the debtor's checking account with the bank.}
+  \item{\code{duration}}{Credit duration in months.}
+  \item{\code{credit_history}}{History of compliance with previous or concurrent credit contracts.}
+  \item{\code{purpose}}{Purpose for which the credit is needed.}
+  \item{\code{amount}}{Credit amount in Deutsche Mark (DM).}
+  \item{\code{savings}}{Debtor's savings.}
+  \item{\code{employment_duration}}{Duration of the debtor's employment with the current employer.}
+  \item{\code{installment_rate}}{Credit installments as a percentage of the debtor's disposable income.}
+  \item{\code{personal_status_sex}}{Combined information on personal status and sex.}
+  \item{\code{other_debtors}}{Whether there is another debtor or a guarantor for the credit.}
+  \item{\code{present_residence}}{Length of time the debtor has lived in the present residence.}
+  \item{\code{property}}{The debtor's most valuable property.}
+  \item{\code{age}}{Age in years.}
+  \item{\code{other_installment_plans}}{Installment plans from providers other than the credit-giving bank.}
+  \item{\code{housing}}{Type of housing the debtor lives in.}
+  \item{\code{number_credits}}{Number of credits the debtor has or had at this bank, including the current one.}
+  \item{\code{job}}{Quality of the debtor's job.}
+  \item{\code{people_liable}}{Number of persons financially dependent on the debtor.}
+  \item{\code{telephone}}{Whether a telephone landline is registered in the debtor's name.}
+  \item{\code{foreign_worker}}{Whether the debtor is a foreign worker.}
+  \item{\code{credit_risk}}{Credit risk outcome: \code{"good risk"} or \code{"bad risk"}.}
 }
 }
 
@@ -83,6 +83,7 @@ data(credit)
 str(credit)
 summary(credit)
 }
+
 \keyword{datasets}
 
 

@@ -14,14 +14,14 @@ data(wholesale_customers)
 \format{
 A data frame with 440 observations and 8 variables:
 \describe{
-  \item{fresh}{Annual spending on fresh products (in monetary units).}
-  \item{milk}{Annual spending on milk products (in monetary units).}
-  \item{grocery}{Annual spending on grocery products (in monetary units).}
-  \item{frozen}{Annual spending on frozen products (in monetary units).}
-  \item{detergents_paper}{Annual spending on detergents and paper products (in monetary units).}
-  \item{delicassen}{Annual spending on delicatessen products (in monetary units).}
-  \item{channel}{Customer sales channel: \code{"Horeca"} or \code{"Retail"}.}
-  \item{region}{Customer region: \code{"Lisbon"}, \code{"Oporto"}, or \code{"Other"}.}
+  \item{\code{fresh}}{Annual spending on fresh products (in monetary units).}
+  \item{\code{milk}}{Annual spending on milk products (in monetary units).}
+  \item{\code{grocery}}{Annual spending on grocery products (in monetary units).}
+  \item{\code{frozen}}{Annual spending on frozen products (in monetary units).}
+  \item{\code{detergents_paper}}{Annual spending on detergents and paper products (in monetary units).}
+  \item{\code{delicassen}}{Annual spending on delicatessen products (in monetary units).}
+  \item{\code{channel}}{Customer sales channel: \code{"Horeca"} or \code{"Retail"}.}
+  \item{\code{region}}{Customer region: \code{"Lisbon"}, \code{"Oporto"}, or \code{"Other"}.}
 }
 }
 \details{
